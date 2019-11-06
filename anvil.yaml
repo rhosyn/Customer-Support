@@ -2,7 +2,7 @@ dependencies: []
 services: []
 package_name: TicketingAppdesign
 allow_embedding: false
-name: Clone of Ticketing App design
+name: Ticketing App design
 runtime_options: {version: 1, server_version: python2-sandbox}
 metadata: {}
 startup_form: Homepage

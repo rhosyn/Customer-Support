@@ -8,16 +8,19 @@ container:
       dash-label\" anvil-drop-here>Drop a label here</div>\n  </div>\n  <div class=\"\
       dash-comparison\" anvil-slot=\"dash-comparison\">\n      <div class=\"placeholder\
       \ anvil-designer-only\" anvil-if-slot-empty=\"dash-comparison\" anvil-drop-here>Drop\
-      \ a label here</div>\n  </div>\n\n</div>\n\n<style>\n  .dash-card {\n    background-color:\
-      \ white;\n    width: 200px;\n    height: 150px;\n  }\n  .placeholder {\n   \
-      \ border: 1px dotted grey;\n    padding: 10px 10px;\n    text-align: center;\n\
-      \  }\n  .dash-stat {\n    font-size: 72px;\n    color: #3A3366;\n  }\n  .dash-label\
-      \ {\n    color: #656565;\n  }\n  .anvil-label > .label-text {\n    padding:\
-      \ 0;\n  }\n</style>"}
+      \ a label here</div>\n  </div>\n\n</div>\n\n<style>\n\n  .dash-card {\n/*  \
+      \  background-color: pink;*/\n    width: 300px;\n    height: 200px;\n    background-image:\
+      \ url(\"/_/theme/up-arrow.png\");\n    background-position: bottom right;\n\
+      \    background-repeat: no-repeat;\n    flex: 0 0 0;\n    \n  }\n  .placeholder\
+      \ {\n    border: 1px dotted grey;\n    padding: 10px 10px;\n    text-align:\
+      \ center;\n  }\n  .dash-stat .label-text {\n    font-size: 72px;\n    color:\
+      \ #3A3366;\n  }\n  .dash-label .label-text {\n    color: #656565;\n    font-size:\
+      \ 18px;\n  }\n  .dash-comparison .label-text {\n    font-size: 12px;\n    color:\
+      \ #A0A0A0;\n  }\n  .anvil-label > .label-text {\n    padding: 0;\n  }\n</style>"}
 components:
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: '67', font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: '15', font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: false, underline: false,
     icon: ''}
   name: label_1
@@ -29,4 +32,12 @@ components:
     icon: ''}
   name: label_2
   layout_properties: {slot: dash-label}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 3 vs last month, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_3
+  layout_properties: {slot: dash-comparison}
 custom_component: true
+properties: []
