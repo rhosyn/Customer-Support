@@ -2,3 +2,4 @@ roles:
 - name: active
   components: [Link]
 - {name: dash-up}
+- {name: dash-down}

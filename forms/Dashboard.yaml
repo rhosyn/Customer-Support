@@ -3,10 +3,10 @@ container:
   properties: {}
 components:
 - type: form:DashStats
-  properties: {}
+  properties: {title: default, delta: -3, value: 15, time_period: month}
   name: dash_stats_1
   layout_properties: {}
 - type: form:DashStats
-  properties: {}
+  properties: {title: default, delta: 35, value: 65, time_period: default}
   name: dash_stats_2
   layout_properties: {}
