@@ -1,0 +1,24 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', html: "<div class=\"dash-card\">\n  <div class=\"dash-stat\"\
+      \ anvil-slot=\"dash-stat\">\n      <div class=\"placeholder anvil-designer-only\"\
+      \ anvil-if-slot-empty=\"dash-stat\" anvil-drop-here>To add a headline stat,\
+      \ drop a Label here</div>\n  </div>\n  <div class=\"dash-label\" anvil-slot=\"\
+      dash-label\">\n      <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"\
+      dash-label\" anvil-drop-here>Drop a label here</div>\n  </div>\n  <div class=\"\
+      dash-comparison\" anvil-slot=\"dash-comparison\">\n      <div class=\"placeholder\
+      \ anvil-designer-only\" anvil-if-slot-empty=\"dash-comparison\" anvil-drop-here>Drop\
+      \ a label here</div>\n  </div>\n\n</div>\n\n<style>\n  .dash-card {\n    background-color:\
+      \ white;\n    width: 200px;\n    height: 150px;\n  }\n  .placeholder {\n   \
+      \ border: 1px dotted grey;\n    padding: 10px 10px;\n    text-align: center;\n\
+      \  }\n</style>"}
+components:
+- type: Label
+  properties: {}
+  name: label_1
+  layout_properties: {slot: dash-stat}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {slot: dash-label}
+custom_component: true
