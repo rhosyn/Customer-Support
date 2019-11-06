@@ -11,14 +11,22 @@ container:
       \ a label here</div>\n  </div>\n\n</div>\n\n<style>\n  .dash-card {\n    background-color:\
       \ white;\n    width: 200px;\n    height: 150px;\n  }\n  .placeholder {\n   \
       \ border: 1px dotted grey;\n    padding: 10px 10px;\n    text-align: center;\n\
-      \  }\n</style>"}
+      \  }\n  .dash-stat {\n    font-size: 72px;\n    color: #3A3366;\n  }\n  .dash-label\
+      \ {\n    color: #656565;\n  }\n  .anvil-label > .label-text {\n    padding:\
+      \ 0;\n  }\n</style>"}
 components:
 - type: Label
-  properties: {}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '67', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   name: label_1
   layout_properties: {slot: dash-stat}
 - type: Label
-  properties: {}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Unresolved, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   name: label_2
   layout_properties: {slot: dash-label}
 custom_component: true
