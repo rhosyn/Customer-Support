@@ -1,0 +1,12 @@
+container:
+  type: FlowPanel
+  properties: {}
+components:
+- type: form:DashStats
+  properties: {}
+  name: dash_stats_1
+  layout_properties: {}
+- type: form:DashStats
+  properties: {}
+  name: dash_stats_2
+  layout_properties: {}

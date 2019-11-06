@@ -1,6 +1,6 @@
 from anvil import *
 
-class Dash(DashTemplate):
+class Dashboard(DashboardTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
