@@ -10,21 +10,23 @@ container:
       dash-comparison\" anvil-slot=\"dash-comparison\">\n      <div class=\"placeholder\
       \ anvil-designer-only\" anvil-if-slot-empty=\"dash-comparison\" anvil-drop-here>Drop\
       \ a FlowPanel here</div>\n  </div>\n\n</div>\n\n<style>\n\n  .dash-card {\n\
-      \    width: 300px;\n    height: 200px;\n    flex: 0 0 0;\n    border-radius:\
-      \ 30px;\n    box-shadow: \n             0 0  10px 1px #F2F2F2,\n           \
-      \  0.3em 0.3em 1em #F2F2F2;\n    margin: 20px;\n  }\n  \n .anvil-role-dash-up\
-      \ .dash-card {\n    background-image: url(\"/_/theme/up-arrow.png\");\n    background-position:\
-      \ bottom right;\n    background-repeat: no-repeat;\n  }\n  \n .anvil-role-dash-down\
-      \ .dash-card {\n    background-image: url(\"/_/theme/down-arrow.png\");\n  \
-      \  background-position: top right;\n    background-repeat: no-repeat;\n  }\n\
-      \  \n  .anvil-role-dash-up.anvil-label, .anvil-role-dash-up.anvil-label > .label-text\
-      \ {\n    color: #FE6061;\n  }\n\n  .anvil-role-dash-down.anvil-label, .anvil-role-dash-down.anvil-label\
-      \ > .label-text {\n    color: #2CD99F;\n  }\n  \n  .placeholder {\n    border:\
-      \ 1px dotted grey;\n    padding: 10px 10px;\n    text-align: center;\n  }\n\
-      \  .dash-stat .label-text {\n    font-size: 72px;\n    color: #3A3366;\n  }\n\
-      \  .dash-label .label-text {\n    color: #656565;\n    font-size: 18px;\n  }\n\
-      \  .dash-comparison .label-text {\n    font-size: 12px;\n    color: #A0A0A0;\n\
-      \  }\n  .anvil-label > .label-text {\n    padding: 0;\n  }\n</style>"}
+      \    width: 300px;\n    height: 200px;\n    padding: 5px 30px;\n    flex: 0\
+      \ 0 0;\n    border-radius: 30px;\n    box-shadow: \n             0 0  10px 1px\
+      \ #F2F2F2,\n             0.3em 0.3em 1em #F2F2F2;\n    margin: 20px;\n  }\n\
+      \  \n .anvil-role-dash-up .dash-card {\n    background-image: url(\"/_/theme/up-arrow.png\"\
+      );\n    background-position: bottom right;\n    background-repeat: no-repeat;\n\
+      \  }\n  \n .anvil-role-dash-down .dash-card {\n    background-image: url(\"\
+      /_/theme/down-arrow.png\");\n    background-position: top right;\n    background-repeat:\
+      \ no-repeat;\n  }\n  \n  .anvil-role-dash-up.anvil-label, .anvil-role-dash-up.anvil-label\
+      \ > .label-text {\n    color: #FE6061;\n  }\n\n  .anvil-role-dash-down.anvil-label,\
+      \ .anvil-role-dash-down.anvil-label > .label-text {\n    color: #2CD99F;\n \
+      \ }\n  \n  .placeholder {\n    border: 1px dotted grey;\n    padding: 10px 10px;\n\
+      \    text-align: center;\n  }\n  .dash-stat .label-text {\n    font-size: 72px;\n\
+      \    color: #3A3366;\n  }\n  .dash-label .label-text {\n    color: #656565;\n\
+      \    font-size: 18px;\n  }\n  .dash-comparison .label-text {\n    font-size:\
+      \ 14px;\n    color: #A0A0A0;\n  }\n  .dash-comparison i {\n    margin-right:\
+      \ 0.2em !important;\n  }\n  .anvil-label > .label-text {\n    padding: 0;\n\
+      \  }\n</style>"}
 components:
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,

@@ -47,4 +47,4 @@ class DashStats(DashStatsTemplate):
   @time_period.setter
   def time_period(self, value):
     self._my_time_period = value
-    self.time_period_label.text = " vs last {value}".format(value)
+    self.time_period_label.text = " vs last " + value

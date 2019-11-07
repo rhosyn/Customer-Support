@@ -3,3 +3,7 @@ roles:
   components: [Link]
 - {name: dash-up}
 - {name: dash-down}
+- name: no-margin
+  components: [ColumnPanel]
+- name: tickets-data-grid
+  components: [DataGrid]

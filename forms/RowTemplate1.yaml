@@ -1,0 +1,56 @@
+container: {type: DataRowPanel}
+components:
+- type: CheckBox
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, spacing_below: small,
+    italic: false, background: '', bold: false, checked: false, underline: false}
+  name: check_box_1
+  layout_properties: {column: FEORLK}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: 'fa:user'}
+  name: label_1
+  layout_properties: {column: SVDJFK}
+- type: Label
+  properties: {}
+  name: cust_name_label
+  layout_properties: {column: DZHAXL}
+- type: Label
+  properties: {}
+  name: ticket_title_label
+  layout_properties: {column: DZHAXL}
+- type: FlowPanel
+  properties: {}
+  name: flow_panel_1
+  layout_properties: {column: DZHAXL}
+  components:
+  - type: Label
+    properties: {}
+    name: ticket_cat_label
+    layout_properties: {}
+  - type: Label
+    properties: {}
+    name: agent_name_label
+    layout_properties: {}
+- type: Label
+  properties: {}
+  name: label_6
+  layout_properties: {column: XZFXCS}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: 'fa:ellipsis-v'}
+  name: label_7
+  layout_properties: {column: JKSXLL}
+- type: DropDown
+  properties: {}
+  name: drop_down_1
+  layout_properties: {column: USDYWJ}
+- type: Link
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+    spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: 'fa:unlock-alt'}
+  name: link_1
+  layout_properties: {column: HCOREJ}
