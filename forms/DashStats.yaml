@@ -10,7 +10,9 @@ container:
       dash-comparison\" anvil-slot=\"dash-comparison\">\n      <div class=\"placeholder\
       \ anvil-designer-only\" anvil-if-slot-empty=\"dash-comparison\" anvil-drop-here>Drop\
       \ a FlowPanel here</div>\n  </div>\n\n</div>\n\n<style>\n\n  .dash-card {\n\
-      \    width: 300px;\n    height: 200px;\n    flex: 0 0 0;\n  }\n  \n .anvil-role-dash-up\
+      \    width: 300px;\n    height: 200px;\n    flex: 0 0 0;\n    border-radius:\
+      \ 30px;\n    box-shadow: \n             0 0  10px 1px #F2F2F2,\n           \
+      \  0.3em 0.3em 1em #F2F2F2;\n    margin: 20px;\n  }\n  \n .anvil-role-dash-up\
       \ .dash-card {\n    background-image: url(\"/_/theme/up-arrow.png\");\n    background-position:\
       \ bottom right;\n    background-repeat: no-repeat;\n  }\n  \n .anvil-role-dash-down\
       \ .dash-card {\n    background-image: url(\"/_/theme/down-arrow.png\");\n  \
@@ -55,4 +57,4 @@ properties:
 - {name: title, type: string, default_value: default}
 - {name: delta, type: number, default_value: null}
 - {name: value, type: number, default_value: null}
-- {name: time_period, type: string, default_value: default}
+- {name: time_period, type: string, default_value: month}

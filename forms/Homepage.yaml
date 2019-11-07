@@ -1,7 +1,8 @@
 container:
   type: HtmlTemplate
-  properties: {tooltip: '', html: "<div class=\"main\">\n  \n  <div class=\"left-sidebar\"\
-      >\n    <div class=\"avatar\" anvil-slot=\"avatar\">\n        <div class=\"placeholder\
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<div class=\"main\">\n  \n  <div class=\"left-sidebar\">\n\
+      \    <div class=\"avatar\" anvil-slot=\"avatar\">\n        <div class=\"placeholder\
       \ anvil-designer-only\" anvil-if-slot-empty=\"avatar\" anvil-drop-here>Drop\
       \ avatar here</div>\n    </div>\n    <div class=\"sidebar-items\" anvil-slot=\"\
       sidebar-items\">\n      <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"\
@@ -46,16 +47,15 @@ container:
       \  flex: 1 0 0;\n  }\n  \n.right-nav {\n  display: flex;\n  justify-content:\
       \ space-between;\n  height: 85px;\n  align-items: center;\n  /*background-color:\
       \ pink;*/\n  }\n\n.content {\n  background-color: white;\n  border-radius: 100px\
-      \ 0 0 0;\n  flex: 1 0 0;\n/*  display: flex;*/\n  }\n  \n.search-box {\n  color:\
-      \ white;\n  padding-right: 20px;\n}\n  \n.search-box input {\n  color: grey;\n\
-      \  background-color: #2F2A52;\n  padding: 10px 20px;\n  border-radius: 30px;\n\
-      \  border: none;\n  }\n\n.anvil-role-primary-color i {\n  padding-right: 35px;\n\
-      \  font-size: 24px;\n  }\n  \n.content .placeholder {\n  padding: 30px;\n}\n\
-      \  \n.placeholder {\n    border: 1px dotted grey;\n    padding: 10px 10px;\n\
-      \    text-align: center;\n  }\n\n.form-control:focus {\n  border-color: #2f2a52;\n\
-      \  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175,\
-      \ 233, .6);\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(47,\
-      \ 42, 82);\n  }\n\n\n</style>\n"}
+      \ 0 0 0;\n  flex: 1 0 0;\n  padding: 50px 70px;\n\n  }\n  \n.content .placeholder\
+      \ {\n  padding: 30px;\n}\n  \n.search-box {\n  color: white;\n  padding-right:\
+      \ 20px;\n}\n  \n.search-box input {\n  color: grey;\n  background-color: #2F2A52;\n\
+      \  padding: 10px 20px;\n  border-radius: 30px;\n  border: none;\n  }\n\n.anvil-role-primary-color\
+      \ i {\n  padding-right: 35px;\n  font-size: 24px;\n  }\n  \n  \n.placeholder\
+      \ {\n    border: 1px dotted grey;\n    padding: 10px 10px;\n    text-align:\
+      \ center;\n  }\n\n.form-control:focus {\n  border-color: #2f2a52;\n  -webkit-box-shadow:\
+      \ inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);\n  box-shadow:\
+      \ inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(47, 42, 82);\n  }\n\n\n</style>\n"}
 components:
 - type: form:Avatar
   properties: {}
@@ -97,7 +97,9 @@ components:
     name: button_1
     layout_properties: {}
 - type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: none, spacing_above: small, col_widths: '{}', spacing_below: small,
+    background: ''}
   name: column_panel_1
   layout_properties: {slot: default}
   components:

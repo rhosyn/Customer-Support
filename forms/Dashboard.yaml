@@ -3,10 +3,14 @@ container:
   properties: {}
 components:
 - type: form:DashStats
-  properties: {title: default, delta: -3, value: 15, time_period: month}
+  properties: {title: Unresolved, delta: -3, value: 15, time_period: month}
   name: dash_stats_1
   layout_properties: {}
 - type: form:DashStats
-  properties: {title: default, delta: 35, value: 65, time_period: default}
+  properties: {title: Urgent, delta: 1, value: 5, time_period: month}
   name: dash_stats_2
+  layout_properties: {}
+- type: form:DashStats
+  properties: {title: Unassigned, delta: 1, value: 7, time_period: month}
+  name: dash_stats_3
   layout_properties: {}
