@@ -35,23 +35,38 @@ components:
     layout_properties: {grid_position: 'IAVDTQ,XQNKGY', full_width_row: true}
     components:
     - type: Label
-      properties: {}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: fds, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       name: label_5
       layout_properties: {grid_position: 'DKMIGF,BDTGQJ'}
     - type: Label
-      properties: {}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: hdfs, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       name: label_6
       layout_properties: {grid_position: 'WFZNSH,MCYTXG'}
     - type: Label
-      properties: {}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: hdfg, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       name: label_7
       layout_properties: {grid_position: 'GRZGJY,PTNLHQ'}
     - type: Label
-      properties: {}
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: hgds, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       name: label_8
       layout_properties: {grid_position: 'GRZGJY,JEBVUL'}
   - type: Label
-    properties: {}
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: bridget, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
     name: label_2
     layout_properties: {grid_position: 'IAVDTQ,KUWNJQ', full_width_row: true}
   - type: Label
