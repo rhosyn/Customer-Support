@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.anvil-role-tickets-form {
+/*   background-color: pink; */
+  font-family: 'Lato';
+}
+
+.anvil-role-grey-bottom-border {
+  border-bottom: 5px solid #F2F2F2;
+  padding: 30px;
+}

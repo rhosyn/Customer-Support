@@ -7,3 +7,5 @@ roles:
   components: [ColumnPanel]
 - name: tickets-data-grid
   components: [DataGrid]
+- {name: tickets-form}
+- {name: grey-bottom-border}
