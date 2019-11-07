@@ -1,6 +1,6 @@
 from anvil import *
 
-class Tickets(TicketsTemplate):
+class zzzz(zzzzTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

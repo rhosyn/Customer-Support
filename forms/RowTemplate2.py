@@ -1,6 +1,6 @@
 from anvil import *
 
-class RowTemplate1(RowTemplate1Template):
+class RowTemplate2(RowTemplate2Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

@@ -100,7 +100,7 @@ components:
   layout_properties: {grid_position: 'EYZQAX,UKRCNI'}
   components:
   - type: RepeatingPanel
-    properties: {spacing_above: none, spacing_below: none, item_template: RowTemplate1}
+    properties: {spacing_above: none, spacing_below: none, item_template: zzzzz}
     name: repeating_panel_1
     layout_properties: {}
 custom_component: true
