@@ -7,7 +7,7 @@ container:
       \ here.</div>\n</div>\n\n<style>\n  .anvil-role-tickets-data-grid {\n    \n\
       \  }\n</style>"}
 components:
-- type: form:zzz
+- type: form:Tickets
   properties: {}
   name: custom_1
   layout_properties: {slot: default}

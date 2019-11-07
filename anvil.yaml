@@ -5,5 +5,5 @@ allow_embedding: false
 name: Ticketing App design
 runtime_options: {version: 1, server_version: python2-sandbox}
 metadata: {}
-startup_form: TicketGrid
+startup_form: Homepage
 renamed: true

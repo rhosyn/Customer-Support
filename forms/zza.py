@@ -1,6 +1,6 @@
 from anvil import *
 
-class TicketsView(TicketsViewTemplate):
+class zza(zzaTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

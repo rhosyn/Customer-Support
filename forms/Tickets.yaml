@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"JDBZHF":10,"CGGUZI":30}'}
+  properties: {col_widths: '{"CGGUZI":30}'}
 components:
 - type: FlowPanel
   properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
@@ -63,18 +63,6 @@ components:
         underline: false, icon: ''}
       name: button_2
       layout_properties: {grid_position: 'XBNHJZ,FKSXEW', full_width_row: true}
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_2
-  layout_properties: {grid_position: 'XBNHJZ,JDBZHF'}
-  components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Ticket Filters, font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'HHJVRZ,SNTGOY', full_width_row: true}
 - type: DataGrid
   properties:
     role: tickets-data-grid
@@ -97,10 +85,10 @@ components:
     spacing_below: small
     background: ''
   name: data_grid_1
-  layout_properties: {grid_position: 'EYZQAX,UKRCNI'}
+  layout_properties: {grid_position: 'EYZQAX,UKRCNI', full_width_row: true}
   components:
   - type: RepeatingPanel
-    properties: {spacing_above: none, spacing_below: none, item_template: zzzzz}
+    properties: {spacing_above: none, spacing_below: none, item_template: TicketsPanel}
     name: repeating_panel_1
     layout_properties: {}
 custom_component: true
