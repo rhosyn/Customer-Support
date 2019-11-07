@@ -80,7 +80,7 @@ components:
     role: tickets-data-grid
     columns:
     - {width: 48, title: Column 1, id: FEORLK, data_key: column_1, expand: false}
-    - {width: 107, title: Column 2, id: SVDJFK, data_key: column_2, expand: false}
+    - {width: 87, title: Column 2, id: SVDJFK, data_key: column_2, expand: false}
     - {width: 409, title: Column 3, id: DZHAXL, data_key: column_3, expand: false}
     - {width: 176, title: Column 4, id: XZFXCS, data_key: column_4, expand: false}
     - {width: 69, title: Column 5, id: JKSXLL, data_key: column_5, expand: false}

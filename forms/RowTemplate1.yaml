@@ -1,4 +1,9 @@
-container: {type: DataRowPanel}
+container:
+  type: DataRowPanel
+  properties: {role: null, align: left, tooltip: '', border: '1px solid #F2F2F2',
+    foreground: '', auto_display_data: true, visible: true, font_size: null, font: '',
+    spacing_above: none, spacing_below: none, italic: false, background: '', bold: false,
+    underline: false}
 components:
 - type: CheckBox
   properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
@@ -13,7 +18,9 @@ components:
   name: label_1
   layout_properties: {column: SVDJFK}
 - type: Label
-  properties: {}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
   name: cust_name_label
   layout_properties: {column: DZHAXL}
 - type: Label
