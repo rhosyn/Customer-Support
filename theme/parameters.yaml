@@ -5,7 +5,6 @@ roles:
 - {name: dash-down}
 - name: no-margin
   components: [ColumnPanel]
-- name: tickets-data-grid
-  components: [DataGrid]
 - {name: tickets-form}
 - {name: grey-bottom-border}
+- {name: tickets-repeating-panel}

@@ -9,3 +9,8 @@
   border-bottom: 5px solid #F2F2F2;
   padding: 30px;
 }
+
+.anvil-role-tickets-repeating-panel {
+  padding-top: 40px;
+  background-color: pink;
+}
