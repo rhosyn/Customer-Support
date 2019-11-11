@@ -8,3 +8,4 @@ roles:
 - {name: tickets-form}
 - {name: grey-bottom-border}
 - {name: tickets-repeating-panel}
+- {name: avatar}

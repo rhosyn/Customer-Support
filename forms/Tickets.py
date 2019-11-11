@@ -6,3 +6,4 @@ class Tickets(TicketsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    self.repeating_panel_1.items = [{'name': 'bridge'}]

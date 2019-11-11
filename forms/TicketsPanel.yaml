@@ -12,9 +12,10 @@ components:
   name: check_box_1
   layout_properties: {column: FEORLK}
 - type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: '', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-    italic: false, background: '', bold: false, underline: false, icon: 'fa:user'}
+  properties: {role: avatar, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: 'fa:user'}
   name: label_1
   layout_properties: {column: SVDJFK}
 - type: Label
@@ -23,6 +24,8 @@ components:
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: cust_name_label
   layout_properties: {column: DZHAXL}
+  data_bindings:
+  - {property: text, code: 'self.item[''name'']'}
 - type: Label
   properties: {}
   name: ticket_title_label
