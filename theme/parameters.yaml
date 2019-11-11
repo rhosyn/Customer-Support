@@ -9,3 +9,4 @@ roles:
 - {name: grey-bottom-border}
 - {name: tickets-repeating-panel}
 - {name: avatar}
+- {name: ticket-filters-form}

@@ -1,6 +1,6 @@
 from anvil import *
 
-class zzab(zzabTemplate):
+class TicketFilters(TicketFiltersTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

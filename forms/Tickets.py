@@ -6,4 +6,6 @@ class Tickets(TicketsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.repeating_panel_1.items = [{'name': 'bridge'}]
+    self.repeating_panel_1.items = [
+      {'name': 'Usman A', 'title': 'How do I update my DNS records?', 'category': 'Technical Support', 'agent':'Meredydd L', 'priority': 'Urgent', 'date': 'Just now'}
+    ]
