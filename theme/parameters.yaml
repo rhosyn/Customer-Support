@@ -10,3 +10,6 @@ roles:
 - {name: tickets-repeating-panel}
 - {name: avatar}
 - {name: ticket-filters-form}
+- {name: grey-link}
+- {name: scrollable}
+- {name: dashboard-form}

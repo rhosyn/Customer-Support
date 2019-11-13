@@ -6,4 +6,6 @@ name: Ticketing App design
 runtime_options: {version: 1, server_version: python2-sandbox}
 metadata: {}
 startup_form: Homepage
+dependency_order: []
+dependency_code: {}
 renamed: true

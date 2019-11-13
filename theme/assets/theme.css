@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+.anvil-role-dashboard-form {
+  padding-left: 50px;
+}
+
 .anvil-role-tickets-form {
-/*   background-color: pink; */
   font-family: 'Lato';
+  padding: 0 0 0 70px;
+}
+
+.anvil-role-tickets-form select {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.anvil-role-tickets-form .link-text {
+  color: grey;
 }
 
 .anvil-role-grey-bottom-border {
   border-bottom: 5px solid #F2F2F2;
-  padding: 30px;
+  padding: 0 30px 30px 30px;
 }
 
 .anvil-role-tickets-repeating-panel {
@@ -29,9 +42,15 @@
   color: #332F5B;
 }
 
-.anvil-role-tickets-repeating-panel select {
-  border: none !important;
-  box-shadow: none !important;
+
+
+.anvil-role-grey-link {
+  color: grey;
+}
+
+.anvil-role-scrollable {
+  overflow-y: scroll;
+  max-height: 65vh;
 }
 
 select {
@@ -48,6 +67,10 @@ select::-ms-expand {
 
 .anvil-role-ticket-filters-form {
   padding: 20px 40px;
-/*   background-color: green; */
+}
+
+.anvil-role-ticke-filters-form select {
+  padding: 5px 10px;
+  border: 0.5px solid grey;
 }
 

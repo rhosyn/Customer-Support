@@ -49,7 +49,7 @@ container:
       \  flex: 1 0 0;\n  }\n  \n.right-nav {\n  display: flex;\n  justify-content:\
       \ space-between;\n  height: 105px;\n  align-items: center;\n  /*background-color:\
       \ pink;*/\n  }\n\n.content {\n  background-color: white;\n  border-radius: 100px\
-      \ 0 0 0;\n  flex: 1 0 0;\n  padding: 50px 70px;\n\n  }\n  \n.content .placeholder\
+      \ 0 0 0;\n  flex: 1 0 0;\n  padding: 20px 30px;\n  }\n  \n.content .placeholder\
       \ {\n  padding: 30px;\n}\n  \n.search-box {\n  color: white;\n  padding-right:\
       \ 30px;\n  padding-top: 20px;\n}\n  \n.search-box input {\n  color: grey;\n\
       \  background-color: #2F2A52;\n  padding: 10px 50px 10px 20px;\n  border-radius:\
@@ -106,7 +106,7 @@ components:
     layout_properties: {}
 - type: ColumnPanel
   properties: {role: no-margin, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: none, spacing_above: small, col_widths: '{"WOKZMA":50,"HRHCHL":10}',
+    wrap_on: mobile, col_spacing: none, spacing_above: small, col_widths: '{"PFQYAV":45,"MOISIU":15}',
     spacing_below: small, background: ''}
   name: column_panel_1
   layout_properties: {slot: default}
@@ -114,11 +114,11 @@ components:
   - type: form:Tickets
     properties: {}
     name: custom_1
-    layout_properties: {grid_position: 'DGXFQN,WOKZMA', full_width_row: true}
+    layout_properties: {grid_position: 'FICVMO,PFQYAV', full_width_row: true}
   - type: form:TicketFilters
     properties: {}
     name: custom_2
-    layout_properties: {grid_position: 'DGXFQN,HRHCHL', full_width_row: true}
+    layout_properties: {grid_position: 'FICVMO,MOISIU', full_width_row: true}
 - type: LinearPanel
   properties: {}
   name: linear_panel_3
