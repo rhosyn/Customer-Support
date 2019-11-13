@@ -73,7 +73,15 @@ select::-ms-expand {
 }
 
 .anvil-role-dropdown-border {
+  background: url("/_/theme/purple-arrow.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.anvil-role-dropdown-border select {
   height: 50px;
   border: 0.5px solid #EEEEEE;
+  
 }
 
