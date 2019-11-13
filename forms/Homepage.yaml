@@ -68,7 +68,7 @@ components:
   layout_properties: {slot: avatar}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Dashboard, font_size: null, font: '', spacing_above: small, icon_align: left,
+    text: Tickets, font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: false, underline: false,
     icon: ''}
   name: label_1
@@ -106,39 +106,37 @@ components:
     layout_properties: {}
 - type: ColumnPanel
   properties: {role: no-margin, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: none, spacing_above: small, col_widths: '{"PFQYAV":45,"MOISIU":15}',
-    spacing_below: small, background: ''}
-  name: column_panel_1
+    wrap_on: mobile, col_spacing: none, spacing_above: small, col_widths: '{}', spacing_below: small,
+    background: ''}
+  name: content_panel
   layout_properties: {slot: default}
   components:
-  - type: form:Tickets
+  - type: form:TicketsForm
     properties: {}
     name: custom_1
-    layout_properties: {grid_position: 'FICVMO,PFQYAV', full_width_row: true}
-  - type: form:TicketFilters
-    properties: {}
-    name: custom_2
-    layout_properties: {grid_position: 'FICVMO,MOISIU', full_width_row: true}
+    layout_properties: {grid_position: 'SWKJSO,TJNERT', full_width_row: true}
 - type: LinearPanel
   properties: {}
   name: linear_panel_3
   layout_properties: {slot: sidebar-items-2}
   components:
   - type: Link
-    properties: {role: active, url: '', align: left, tooltip: '', border: '', foreground: '',
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Dashboard, font_size: null, wrap_on: mobile, font: '',
       col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: 'fa:bar-chart'}
-    name: link_2
+    name: dash_link
     layout_properties: {}
+    event_bindings: {click: link_2_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Tickets, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
       spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
       italic: false, background: '', bold: false, underline: false, icon: 'fa:ticket'}
-    name: link_3
+    name: ticket_link
     layout_properties: {}
+    event_bindings: {click: link_3_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Customers, font_size: null, wrap_on: mobile, font: '',

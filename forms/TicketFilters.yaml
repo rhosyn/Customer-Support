@@ -46,7 +46,7 @@ components:
   layout_properties: {grid_position: 'OSNJJA,GBUXLP'}
 - type: DropDown
   properties:
-    role: null
+    role: dropdown-border
     align: full
     tooltip: ''
     placeholder: ''
@@ -68,7 +68,7 @@ components:
   layout_properties: {grid_position: 'AEDFFQ,JFHZOB'}
 - type: DropDown
   properties:
-    role: null
+    role: dropdown-border
     align: full
     tooltip: ''
     placeholder: ''
@@ -90,7 +90,7 @@ components:
   layout_properties: {grid_position: 'OHPOES,SUMKER'}
 - type: DropDown
   properties:
-    role: null
+    role: dropdown-border
     align: full
     tooltip: ''
     placeholder: ''
@@ -112,7 +112,7 @@ components:
   layout_properties: {grid_position: 'VJEXUK,CSFZBC'}
 - type: DropDown
   properties:
-    role: null
+    role: dropdown-border
     align: full
     tooltip: ''
     placeholder: ''
@@ -133,6 +133,9 @@ components:
   name: drop_down_5
   layout_properties: {grid_position: 'GDFSYH,KFKMPR'}
 - type: DatePicker
-  properties: {}
+  properties: {role: dropdown-border, align: left, max_date: '', pick_time: false,
+    tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true,
+    font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+    date: '', min_date: '', background: '', bold: false, underline: false, format: ''}
   name: date_picker_1
   layout_properties: {grid_position: 'RULIPG,YWXGKX'}

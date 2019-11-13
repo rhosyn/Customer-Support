@@ -14,4 +14,4 @@ roles:
 - {name: scrollable}
 - {name: dashboard-form}
 - name: dropdown-border
-  components: [DropDown]
+  components: [DropDown, DatePicker]

@@ -26,11 +26,17 @@ body {
   padding: 0 30px 30px 30px;
 }
 
+/* The only thing to make the top row of the Tickets form line its items up */
+
+.flow-panel-gutter {
+  align-items: center;
+}
+
 .anvil-role-tickets-repeating-panel {
   padding: 20px 10px;
   display: flex;
   align-items: center;
-  margin-top: 30px;
+/*   margin-top: 30px; */
   border-radius: 10px;
 }
 
@@ -70,18 +76,67 @@ select::-ms-expand {
 
 .anvil-role-ticket-filters-form {
   padding: 20px 40px;
+  background-color: white;
+  box-shadow: -10px 0px 10px 1px lightgrey;
+  height: 100%;
 }
 
 .anvil-role-dropdown-border {
-  background: url("/_/theme/purple-arrow.png");
+  font-size: 18px;
+}
+
+.anvil-role-dropdown-border input {
+  height: 50px !important;
+  border: 0.5px solid #EEEEEE;
+  background: url("/_/theme/chev.png");
   background-position: center right;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+}
+
+.anvil-role-dropdown-border i {
+  display: none;
 }
 
 .anvil-role-dropdown-border select {
   height: 50px;
   border: 0.5px solid #EEEEEE;
-  
+  background: url("/_/theme/chev.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
+
+/* Style the expanded datepicker */
+
+.daterangepicker {
+  font-size: 16px;
+  color: #515151;
+  padding: 24px;
+}
+
+.calendar-table td.active {
+  background-color: #00FFAF;
+  color: #515151;
+}
+
+.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+  background-color: #322E59;
+  color: white;
+}
+
+.daterangepicker td.off {
+  color: #C5C5C5;
+}
+
+.daterangepicker select.monthselect {
+  border: none;
+  font-size: 18px;
+}
+
+.daterangepicker select.yearselect {
+  border: none;
+  font-size: 18px;
+}
+
 
