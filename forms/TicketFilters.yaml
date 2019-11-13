@@ -24,7 +24,7 @@ components:
     layout_properties: {grid_position: 'JFBEHH,MUSPMU'}
 - type: DropDown
   properties:
-    role: null
+    role: dropdown-border
     align: full
     tooltip: ''
     placeholder: ''

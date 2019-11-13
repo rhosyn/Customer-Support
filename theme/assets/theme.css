@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
+body {
+  font-family: 'Lato';
+}
+
 .anvil-role-dashboard-form {
   padding-left: 50px;
 }
 
 .anvil-role-tickets-form {
-  font-family: 'Lato';
   padding: 0 0 0 70px;
 }
 
@@ -69,8 +72,8 @@ select::-ms-expand {
   padding: 20px 40px;
 }
 
-.anvil-role-ticke-filters-form select {
-  padding: 5px 10px;
-  border: 0.5px solid grey;
+.anvil-role-dropdown-border {
+  height: 50px;
+  border: 0.5px solid #EEEEEE;
 }
 
