@@ -1,16 +1,16 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: "<div class=\"tickets-holder flex-me flex-grow row\">\n  <div\
-      \ class=\"col-xs-10 flex-grow\">\n    <div class=\"ticket-form\" anvil-slot=\"\
-      ticket-form\">\n       <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"\
+    role: null, html: "<div class=\"tickets-holder row flex-me\">\n  <div class=\"\
+      col-xs-10 flex-me\">\n    <div class=\"ticket-form\" anvil-slot=\"ticket-form\"\
+      >\n       <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"\
       ticket-form\" anvil-drop-here>Drop your 'Tickets' Form here</div>\n    </div>\n\
-      \  </div>\n  <div class=\"col-xs-2 flex-grow\">\n    <div class=\"ticket-filters-form\"\
+      \  </div>\n  <div class=\"col-xs-2 flex-one\">\n    <div class=\"ticket-filters-form\"\
       \ anvil-slot=\"ticket-filters-form\">\n       <div class=\"placeholder anvil-designer-only\"\
       \ anvil-if-slot-empty=\"ticket-filters-form\" anvil-drop-here>Drop your 'TicketFilters'\
-      \ Form here</div>\n    </div>\n  </div>\n \n</div>\n\n<style>\n  .placeholder\
-      \ {\n    border: 1px dotted grey;\n    padding: 10px 10px;\n    text-align:\
-      \ center;\n  }\n  .ticket-filters-form {\n    height: 100%;\n  }\n</style>"}
+      \ Form here</div>\n    </div>\n  </div>\n \n</div>\n\n<style>\n  \n  .tickets-holder\
+      \ {\n    flex-grow: 1;\n  }\n  \n  .placeholder {\n    border: 1px dotted grey;\n\
+      \    padding: 10px 10px;\n    text-align: center;\n  }\n\n\n</style>"}
 components:
 - type: form:Tickets
   properties: {}

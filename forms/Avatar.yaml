@@ -1,9 +1,10 @@
 container:
   type: HtmlTemplate
-  properties: {tooltip: '', html: "<div class=\"avatar\">\n    <div class=\"circle\"\
-      >\n      <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\n    </div>\n   \
-      \ <div class=\"avatar-name\" anvil-slot=\"avatar-name\">\n        <div class=\"\
-      placeholder anvil-designer-only\" anvil-if-slot-empty=\"avatar-name\" anvil-drop-here>Drop\
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<div class=\"avatar\">\n    <div class=\"circle\">\n      <i\
+      \ class=\"fa fa-user\" aria-hidden=\"true\"></i>\n    </div>\n    <div class=\"\
+      avatar-name\" anvil-slot=\"avatar-name\">\n        <div class=\"placeholder\
+      \ anvil-designer-only\" anvil-if-slot-empty=\"avatar-name\" anvil-drop-here>Drop\
       \ name label here</div>\n    </div>\n    <div class=\"avatar-status\" anvil-slot=\"\
       avatar-status\">\n        <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"\
       avatar-status\" anvil-drop-here>Drop status label here</div>\n    </div> \n\
@@ -12,9 +13,7 @@ container:
       \ font-size: 42px;\n  color: white;\n  border: 1px dashed white;\n  padding:\
       \ 10px 15px;\n  border-radius: 50%;\n  }\n.avatar-name {\n  color: white;\n\
       \  font-size: 16px;\n }\n.avatar-status {\n  color: #00FFAE;\n  font-size: 10px;\n\
-      \ }\n.anvil-label > .label-text {\n  padding: 0;\n  }\n.placeholder {\n    border:\
-      \ 1px dotted grey;\n    padding: 10px 10px;\n    text-align: center;\n  }\n\
-      \  \n</style>"}
+      \ }\n  \n</style>"}
 components:
 - type: Label
   properties: {role: null, align: center, tooltip: '', border: '', foreground: '',

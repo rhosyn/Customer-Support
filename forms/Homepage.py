@@ -9,18 +9,21 @@ class Homepage(HomepageTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.add_component(TicketsForm(), slot="default")
+    self.current_form = TicketsForm()
+    self.add_component(self.current_form, slot="default")
     self.ticket_link.role = 'active'
 
   def link_2_click(self, **event_args):
-    self.content_panel.clear()
-    self.content_panel.add_component(Dashboard(), full_width_row=True)
+    self.current_form.remove_from_parent()
+    self.current_form = Dashboard()
+    self.add_component(self.current_form, slot="default")
     self.dash_link.role = 'active'
     
     
   def link_3_click(self, **event_args):
-    self.content_panel.clear()
-    self.content_panel.add_component(TicketsForm(), full_width_row=True)
+    self.current_form.remove_from_parent()
+    self.current_form = TicketsForm()
+    self.add_component(self.current_form, slot="default")
     self.ticket_link.role = 'active'
 
 

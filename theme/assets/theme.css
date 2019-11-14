@@ -4,6 +4,30 @@ body {
   font-family: 'Lato';
 }
 
+.flex-me {
+  display: flex;
+  align-items: stretch;
+  }
+  
+.flex-me > div {
+   flex: 0 1 auto;
+}
+
+.flex-child-html > .html-templated-panel {
+  display: flex;
+  align-items: stretch;
+}
+
+.anvil-label > .label-text {
+  padding: 0;
+ }
+  
+.placeholder {
+    border: 1px dotted grey;
+    padding: 10px 10px;
+    text-align: center;
+  }
+
 .anvil-role-dashboard-form {
   padding-left: 50px;
 }
@@ -14,6 +38,7 @@ body {
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 400px 700px;
+  flex-grow: 1;
 }
 
 .anvil-role-tickets-form select {
@@ -59,36 +84,36 @@ body {
   color: #332F5B;
 }
 
-
-
 .anvil-role-grey-link {
   color: grey;
 }
 
 .anvil-role-scrollable {
   overflow-y: scroll;
-  max-height: 65vh;
+/*   position: fixed; */
+/*   max-height: 65vh; */
 }
 
+/* Remove built-in dropdown arrows */
 select {
   /* for Firefox */
   -moz-appearance: none;
   /* for Chrome */
   -webkit-appearance: none;
 }
-}
-
 select::-ms-expand {
     display: none;
 }
 
+
 .anvil-role-ticket-filters-form {
-  padding: 20px 40px;
+  padding: 20px 0 20px 40px;
   background-color: white;
-  box-shadow: -6px 0px 10px 1px #f4f4f4;
+  box-shadow: -6px 6px 10px 1px #f4f4f4;
   height: 100%;
 }
 
+/* Dropdowns with border */
 .anvil-role-dropdown-border {
   font-size: 18px;
 }
@@ -116,32 +141,26 @@ select::-ms-expand {
 }
 
 /* Style the expanded datepicker */
-
 .daterangepicker {
   font-size: 16px;
   color: #515151;
   padding: 24px;
 }
-
 .calendar-table td.active {
   background-color: #00FFAF;
   color: #515151;
 }
-
 .daterangepicker td.available:hover, .daterangepicker th.available:hover {
   background-color: #322E59;
   color: white;
 }
-
 .daterangepicker td.off {
   color: #C5C5C5;
 }
-
 .daterangepicker select.monthselect {
   border: none;
   font-size: 18px;
 }
-
 .daterangepicker select.yearselect {
   border: none;
   font-size: 18px;

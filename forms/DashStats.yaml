@@ -20,13 +20,10 @@ container:
       \ no-repeat;\n  }\n  \n  .anvil-role-dash-up.anvil-label, .anvil-role-dash-up.anvil-label\
       \ > .label-text {\n    color: #FE6061;\n  }\n\n  .anvil-role-dash-down.anvil-label,\
       \ .anvil-role-dash-down.anvil-label > .label-text {\n    color: #2CD99F;\n \
-      \ }\n  \n  .placeholder {\n    border: 1px dotted grey;\n    padding: 10px 10px;\n\
-      \    text-align: center;\n  }\n  .dash-stat .label-text {\n    font-size: 72px;\n\
-      \    color: #3A3366;\n  }\n  .dash-label .label-text {\n    color: #656565;\n\
-      \    font-size: 18px;\n  }\n  .dash-comparison .label-text {\n    font-size:\
-      \ 14px;\n    color: #A0A0A0;\n  }\n  .dash-comparison i {\n    margin-right:\
-      \ 0.2em !important;\n  }\n  .anvil-label > .label-text {\n    padding: 0;\n\
-      \  }\n</style>"}
+      \ }\n  \n  .dash-stat .label-text {\n    font-size: 72px;\n    color: #3A3366;\n\
+      \  }\n  .dash-label .label-text {\n    color: #656565;\n    font-size: 18px;\n\
+      \  }\n  .dash-comparison .label-text {\n    font-size: 14px;\n    color: #A0A0A0;\n\
+      \  }\n  .dash-comparison i {\n    margin-right: 0.2em !important;\n  }\n\n</style>"}
 components:
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
