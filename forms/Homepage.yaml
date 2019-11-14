@@ -49,7 +49,7 @@ container:
       \  flex: 1 0 0;\n  }\n  \n.right-nav {\n  display: flex;\n  justify-content:\
       \ space-between;\n  height: 105px;\n  align-items: center;\n  /*background-color:\
       \ pink;*/\n  }\n\n.content {\n  background-color: white;\n  border-radius: 100px\
-      \ 0 0 0;\n  flex: 1 0 0;\n  padding: 20px 30px;\n  }\n  \n.content .placeholder\
+      \ 0 0 0;\n  flex: 1 0 0;\n  padding: 0px 30px;\n  }\n  \n.content .placeholder\
       \ {\n  padding: 30px;\n}\n  \n.search-box {\n  color: white;\n  padding-right:\
       \ 30px;\n  padding-top: 20px;\n}\n  \n.search-box input {\n  color: grey;\n\
       \  background-color: #2F2A52;\n  padding: 10px 50px 10px 20px;\n  border-radius:\

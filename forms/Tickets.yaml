@@ -1,7 +1,7 @@
 container:
   type: ColumnPanel
   properties: {role: tickets-form, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"CGGUZI":30}',
+    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"CGGUZI":30}',
     spacing_below: small, background: ''}
 components:
 - type: FlowPanel
