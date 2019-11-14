@@ -110,11 +110,7 @@ components:
     background: ''}
   name: content_panel
   layout_properties: {slot: default}
-  components:
-  - type: form:TicketsForm
-    properties: {}
-    name: custom_1
-    layout_properties: {grid_position: 'SWKJSO,TJNERT', full_width_row: true}
+  components: []
 - type: LinearPanel
   properties: {}
   name: linear_panel_3
