@@ -9,7 +9,7 @@ class Homepage(HomepageTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.content_panel.add_component(TicketsForm(), full_width_row=True)
+    self.add_component(TicketsForm(), slot="default")
     self.ticket_link.role = 'active'
 
   def link_2_click(self, **event_args):
