@@ -22,12 +22,13 @@ container:
       \      \n      <div class=\"search-box\" anvil-slot=\"search-box\">\n      \
       \   <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"search-box\"\
       \ anvil-drop-here>Drop TextBox here</div>\n      </div>\n    </div>\n    <div\
-      \ class=\"content flex-me\">\n        <div anvil-slot-repeat=\"default\" class=\"\
-      anvil-measure-this flex-me flex-child-html flex-grow\"></div>\n        <div\
-      \ class=\"placeholder drop-here\" anvil-if-slot-empty=\"default\" anvil-drop-slot=\"\
-      default\">Drop a ColumnPanel here.</div>\n    </div>\n  </div> \n</div>\n<div\
-      \ anvil-drop-default anvil-drop-redirect=\".placeholder\" anvil-drop-container=\"\
-      .anvil-container\"></div>\n\n<style>\n\n  \n /* Remove margin from main ContentPanel\
+      \ class=\"content\">\n      <div class=\"height-container\">\n        <div anvil-slot-repeat=\"\
+      default\" class=\"anvil-measure-this full-height full-height-child\"></div>\n\
+      \        <div class=\"placeholder drop-here\" anvil-if-slot-empty=\"default\"\
+      \ anvil-drop-slot=\"default\">Drop a ColumnPanel here.</div>\n      </div>\n\
+      \    </div>\n  </div> \n</div>\n<div anvil-drop-default anvil-drop-redirect=\"\
+      .placeholder\" anvil-drop-container=\".anvil-container\"></div>\n\n<style>\n\
+      \  \n.content {\n  flex: 1 0 0;\n  }\n /* Remove margin from main ContentPanel\
       \ */\n.anvil-panel-section-container {\n  margin: 0 !important;\n  }\n  \n.main\
       \ {\n  background-color:#3C3569; \n  height: 100vh;\n  padding-top: 50px;\n\
       \  display: flex;\n  flex-direction: row;\n }\n  \n.tab {\n  height: 200px;\n\

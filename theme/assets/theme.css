@@ -6,16 +6,14 @@ body {
 
 .flex-me {
   display: flex;
-  align-items: stretch;
   }
-  
-.flex-me > div {
-   flex: 0 1 auto;
-}
 
-.flex-child-html > .html-templated-panel {
-  display: flex;
-  align-items: stretch;
+.full-height {
+  height: 100%;
+}
+  
+.full-height-child > div {
+  height: 100%;
 }
 
 .anvil-label > .label-text {
