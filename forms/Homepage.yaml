@@ -22,26 +22,27 @@ container:
       \      \n      <div class=\"search-box\" anvil-slot=\"search-box\">\n      \
       \   <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"search-box\"\
       \ anvil-drop-here>Drop TextBox here</div>\n      </div>\n    </div>\n    <div\
-      \ class=\"content\">\n      <div>\n      <div anvil-slot-repeat=\"default\"\
-      \ class=\"anvil-measure-this full-height full-height-child\"></div>\n      <div\
-      \ class=\"placeholder drop-here\" anvil-if-slot-empty=\"default\" anvil-drop-slot=\"\
-      default\">Drop a ColumnPanel here.</div>\n      </div>\n    </div>\n  </div>\
-      \ \n</div>\n<div anvil-drop-default anvil-drop-redirect=\".placeholder\" anvil-drop-container=\"\
-      .anvil-container\"></div>\n\n<style>\n  \n.content {\n  flex: 1 0 0;\n  }\n\
-      \ /* Remove margin from main ContentPanel */\n.anvil-panel-section-container\
-      \ {\n  margin: 0 !important;\n  }\n  \n.main {\n  background-color:#3C3569;\
-      \ \n  height: 100vh;\n  padding-top: 50px;\n  display: flex;\n  flex-direction:\
-      \ row;\n }\n  \n.tab {\n  height: 200px;\n  background-color: #2F2A52; \n  font-size:\
-      \ 34px;\n  color: white;\n  border-radius: 0 80px 0 0;\n  padding: 20px 80px;\n\
-      \  margin-top: auto;\n}\n\n.title {\n    padding-top: 6px;\n  }\n  \n.left-sidebar\
-      \ {\n  background-color: #2F2A52;\n  display: flex;\n  flex-direction: column;\n\
-      \  flex: 0 0 auto;\n  align-items: center;\n  min-width: 200px;\n  max-width:\
-      \ 25vw;\n  color: white;\n  padding-top: 50px;\n }\n  \n.left-sidebar button\
-      \ {\n    background-color: #00FFAF;\n    color: #2F2A53;\n    font-size: 20px;\n\
-      \    padding: 5px 15px;\n    border-radius: 30px;\n    border: none;\n    margin-bottom:\
-      \ 10px;\n  }\n  \n.left-sidebar button i {\n  margin-right: 10px;\n  }\n  \n\
-      .left-sidebar a {\n    color: #8F8F99;\n    font-size: 16px;\n  }\n  \n.left-sidebar\
-      \ a i {\n    color: #8F8F99;\n    font-size: 22px;\n  }\n  \n.left-sidebar a.anvil-role-active\
+      \ class=\"content\">\n      <div class=\"absolute-div\">\n        <div anvil-slot-repeat=\"\
+      default\" class=\"anvil-measure-this full-height full-height-child\"></div>\n\
+      \        <div class=\"placeholder drop-here\" anvil-if-slot-empty=\"default\"\
+      \ anvil-drop-slot=\"default\">Drop a ColumnPanel here.</div>\n      </div>\n\
+      \    </div>\n  </div> \n</div>\n<div anvil-drop-default anvil-drop-redirect=\"\
+      .placeholder\" anvil-drop-container=\".anvil-container\"></div>\n\n<style>\n\
+      \  \n.content {\n  flex: 1 0 0;\n  position: relative;\n  }\n /* Remove margin\
+      \ from main ContentPanel */\n.anvil-panel-section-container {\n  margin: 0 !important;\n\
+      \  }\n  \n.main {\n  background-color:#3C3569; \n  height: 100vh;\n  padding-top:\
+      \ 50px;\n  display: flex;\n  flex-direction: row;\n }\n  \n.tab {\n  height:\
+      \ 200px;\n  background-color: #2F2A52; \n  font-size: 34px;\n  color: white;\n\
+      \  border-radius: 0 80px 0 0;\n  padding: 20px 80px;\n  margin-top: auto;\n\
+      }\n\n.title {\n    padding-top: 6px;\n  }\n  \n.left-sidebar {\n  background-color:\
+      \ #2F2A52;\n  display: flex;\n  flex-direction: column;\n  flex: 0 0 auto;\n\
+      \  align-items: center;\n  min-width: 200px;\n  max-width: 25vw;\n  color: white;\n\
+      \  padding-top: 50px;\n }\n  \n.left-sidebar button {\n    background-color:\
+      \ #00FFAF;\n    color: #2F2A53;\n    font-size: 20px;\n    padding: 5px 15px;\n\
+      \    border-radius: 30px;\n    border: none;\n    margin-bottom: 10px;\n  }\n\
+      \  \n.left-sidebar button i {\n  margin-right: 10px;\n  }\n  \n.left-sidebar\
+      \ a {\n    color: #8F8F99;\n    font-size: 16px;\n  }\n  \n.left-sidebar a i\
+      \ {\n    color: #8F8F99;\n    font-size: 22px;\n  }\n  \n.left-sidebar a.anvil-role-active\
       \ {\n    color: white;\n  }\n  \n.left-sidebar a.anvil-role-active i {\n   \
       \ color: #00FFAF;\n  }\n\n.sidebar-centre {\n  flex: 1 0 0;\n }\n\n.avatar {\n\
       \  margin-bottom: 50px;\n  }\n  \n.sidebar-items {\n    margin-bottom: 50px;\n\
