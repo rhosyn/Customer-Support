@@ -45,6 +45,11 @@ body {
   background-repeat: no-repeat;
   background-size: 400px 700px;
   flex-grow: 1;
+  height: 100%;
+}
+
+.anvil-role-tickets-form *:last-child {
+  height: 100%;
 }
 
 .anvil-role-tickets-form select {

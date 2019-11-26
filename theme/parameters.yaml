@@ -15,3 +15,4 @@ roles:
 - {name: dashboard-form}
 - name: dropdown-border
   components: [DropDown, DatePicker]
+- {name: full-height}
