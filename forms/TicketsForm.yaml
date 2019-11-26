@@ -10,7 +10,7 @@ container:
       \ anvil-if-slot-empty=\"ticket-filters-form\" anvil-drop-here>Drop your 'TicketFilters'\
       \ Form here</div>\n    </div>\n  </div>\n \n</div>\n\n<style>\n  \n  .placeholder\
       \ {\n    border: 1px dotted grey;\n    padding: 10px 10px;\n    text-align:\
-      \ center;\n  }\n\n  .scrollable {\n    overflow-y: scroll;\n  }\n\n</style>"}
+      \ center;\n  }\n\n  .scrollable {\n    /*overflow-y: scroll;*/\n  }\n\n</style>"}
 components:
 - type: form:Tickets
   properties: {}
