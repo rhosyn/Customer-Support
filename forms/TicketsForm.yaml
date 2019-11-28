@@ -13,7 +13,7 @@ container:
       \ center;\n  }\n  \n  .ticket-form {\n    height: 100%;\n  }\n  \n  .ticket-filters-form\
       \ {\n    height: 100%;\n  }\n\n</style>"}
 components:
-- type: form:Tickets
+- type: form:zztickets
   properties: {}
   name: custom_1
   layout_properties: {slot: ticket-form}

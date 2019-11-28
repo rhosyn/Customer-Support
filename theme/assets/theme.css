@@ -48,6 +48,9 @@ body {
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 400px 700px;
+  height: 100%;
+  padding: 36px 0 0 100px;
+  margin-right: 10px;
 }
 
 .anvil-role-tickets-form *:last-child {
