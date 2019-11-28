@@ -1,8 +1,4 @@
 components:
-- type: form:Tickets
-  properties: {}
-  name: tickets_1
-  layout_properties: {slot: slot-1}
 - type: form:TicketFilters
   properties: {}
   name: ticket_filters_1
@@ -11,6 +7,10 @@ components:
   properties: {}
   name: customer_details_1
   layout_properties: {slot: slot-3}
+- type: form:FormScroll
+  properties: {}
+  name: form_scroll_1
+  layout_properties: {slot: slot-1}
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,

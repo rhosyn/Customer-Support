@@ -11,3 +11,4 @@ components:
   properties: {}
   name: tickets_grid_1
   layout_properties: {slot: slot-content}
+custom_component: true
