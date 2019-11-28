@@ -18,3 +18,7 @@ roles:
 - {name: full-height}
 - {name: details-repeating-panel}
 - {name: customer-details-form}
+- {name: primary-button}
+- {name: card-no-border}
+- {name: card-with-border}
+- {name: background-image}

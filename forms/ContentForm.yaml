@@ -17,12 +17,12 @@ container:
     role: null, html: "<div class=\"flex-me row full-height no-margin\">\n    <div\
       \ class=\"slot large\" anvil-slot=\"slot-1\">\n       <div class=\"placeholder\
       \ anvil-designer-only\" anvil-if-slot-empty=\"slot-1\" anvil-drop-here>Drop\
-      \ your Main Form here</div>\n    </div>\n    <div class=\"slot\" anvil-slot=\"\
-      slot-2\">\n       <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"\
-      slot-2\" anvil-drop-here>Drop your Secondary Form here</div>\n    </div>\n \
-      \   <div class=\"slot\" anvil-slot=\"slot-3\">\n       <div class=\"placeholder\
-      \ anvil-designer-only\" anvil-if-slot-empty=\"slot-3\" anvil-drop-here>Drop\
-      \ your Third Form here</div>\n    </div>\n</div>\n\n<style>\n  \n  .no-margin\
+      \ your Main Form here</div>\n    </div>\n    <div class=\"slot\" anvil-slot-repeat=\"\
+      slot-2\"></div>\n    <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"\
+      slot-2\" anvil-drop-slot=\"slot-2\">Drop your Secondary Form here</div>\n  \
+      \  <div class=\"slot\" anvil-slot-repeat=\"slot-3\"></div>\n    <div class=\"\
+      placeholder anvil-designer-only\" anvil-if-slot-empty=\"slot-3\" anvil-drop-slot=\"\
+      slot-3\">Drop your Third Form here</div>\n</div>\n\n<style>\n  \n  .no-margin\
       \ {\n    margin: 0;\n  }\n  \n  .placeholder {\n    border: 1px dotted grey;\n\
       \    padding: 10px 10px;\n    text-align: center;\n  }\n  \n  .slot {\n    height:\
       \ 100%;\n    min-width: 20vw;\n  }\n  \n  .slot.large {\n    flex: 1 0 auto;\n\

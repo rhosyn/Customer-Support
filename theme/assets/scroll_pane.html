@@ -1,0 +1,25 @@
+<div class="flex-me flex-col no-margin form-scroll">
+    <div class="header" anvil-slot="slot-header">
+       <div class="placeholder anvil-designer-only" anvil-if-slot-empty="slot-header" anvil-drop-here>Drop your Header here</div>
+    </div>
+    <div class="content-scroll" anvil-slot="slot-content">
+       <div class="placeholder anvil-designer-only" anvil-if-slot-empty="slot-content" anvil-drop-here>Drop your Content here</div>
+    </div>
+</div>
+
+<style>
+  
+  
+  .no-margin {
+    margin: 0;
+  }
+  
+  .placeholder {
+    border: 1px dotted grey;
+    padding: 10px 10px;
+    text-align: center;
+  }
+  
+  
+
+</style>

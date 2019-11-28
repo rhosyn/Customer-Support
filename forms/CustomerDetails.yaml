@@ -60,7 +60,7 @@ components:
       col_widths: {}
       grid_position: JFBEHH,MUSPMU TLDBFD,AIIJMU
   - type: RepeatingPanel
-    properties: {item_template: ItemTemplate1}
+    properties: {item_template: CustomerTicketsRP}
     name: repeating_panel_1
     layout_properties: {grid_position: 'JFBEHH,MUSPMU VRJNKC,YOQPCL'}
 container:

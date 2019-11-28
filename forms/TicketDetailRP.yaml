@@ -1,0 +1,42 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_1
+  layout_properties: {grid_position: 'ZGUJFK,ACKDOA', full_width_row: true}
+  components:
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: white}
+    name: column_panel_1
+    layout_properties: {width: 798}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Daniel B, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'OYAUZP,PZOJEP'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '22 Oct 19 at 18:37', font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_2
+      layout_properties: {grid_position: 'UXEFKE,TXJIZG'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: "Hi Bridget, \n\nHere's the problem:\n\nLorem ipsum dolor\
+          \ sit amet, consectetur adipisicing elit. Cupiditate eius, sint quos veniam\
+          \ illum, quae dolor suscipit est quia quo maxime nobis delectus alias, atque\
+          \ aliquid odio incidunt, voluptatem corporis!\n\nThanks!", font_size: 18,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'EYWLSS,OPCWXX'}
+item_type: {table_id: null}
