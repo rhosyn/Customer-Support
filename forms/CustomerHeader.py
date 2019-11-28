@@ -1,6 +1,6 @@
 from anvil import *
 
-class CustomerDetails(CustomerDetailsTemplate):
+class CustomerHeader(CustomerHeaderTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

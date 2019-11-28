@@ -7,6 +7,10 @@ components:
   properties: {}
   name: form_scroll_1
   layout_properties: {slot: slot-1}
+- type: form:CustomerDetails
+  properties: {}
+  name: customer_details_1
+  layout_properties: {slot: slot-3}
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,

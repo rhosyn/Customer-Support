@@ -1,71 +1,14 @@
-components:
-- type: ColumnPanel
-  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ZTPEUH":2,"MUSPMU":58}',
-    spacing_below: small, background: ''}
-  name: column_panel_1
-  layout_properties: {grid_position: 'WJFFQO,GAUXSE'}
-  components:
-  - type: Spacer
-    properties: {height: 32}
-    name: spacer_3
-    layout_properties: {grid_position: 'BEXWXR,YCUKHE'}
-  - type: Spacer
-    properties: {height: 32}
-    name: spacer_1
-    layout_properties: {grid_position: 'JFBEHH,ZTPEUH'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#00FFB0',
-      visible: true, text: Customer Details, font_size: 28, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'JFBEHH,MUSPMU QRKXIK,UNTRUC'}
-  - type: Spacer
-    properties: {height: 16}
-    name: spacer_2
-    layout_properties: {grid_position: 'JFBEHH,MUSPMU KYMEKO,KFXKPS'}
-  - type: form:AvatarBlank
-    properties: {}
-    name: avatar_blank_1
-    layout_properties: {grid_position: 'JFBEHH,MUSPMU VHPWJF,TJVXPH'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-      visible: true, text: Daniel Barnes, font_size: 28, font: '', spacing_above: medium,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_2
-    layout_properties: {grid_position: 'JFBEHH,MUSPMU DHUHTT,SLGVRY'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#9395A1',
-      visible: true, text: +44(0)20 710 13348, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_3
-    layout_properties: {grid_position: 'JFBEHH,MUSPMU PIPLSZ,UXGOSW'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#9395A1',
-      visible: true, text: daniel@forty8creates.com, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: large, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_4
-    layout_properties: {grid_position: 'JFBEHH,MUSPMU XZQAEX,IJEZMC'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#00FFB0',
-      visible: true, text: Recent Tickets, font_size: 28, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_1_copy
-    layout_properties:
-      col_widths: {}
-      grid_position: JFBEHH,MUSPMU TLDBFD,AIIJMU
-  - type: RepeatingPanel
-    properties: {item_template: CustomerTicketsRP}
-    name: repeating_panel_1
-    layout_properties: {grid_position: 'JFBEHH,MUSPMU VRJNKC,YOQPCL'}
 container:
-  type: ColumnPanel
-  properties: {role: customer-details-form, tooltip: '', border: '', foreground: '',
-    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}',
-    spacing_below: small, background: '#2f2853'}
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: background-colour, html: '@theme:scroll_pane.html'}
+components:
+- type: form:CustomerHeader
+  properties: {}
+  name: customer_header_1
+  layout_properties: {slot: slot-header}
+- type: form:CustomerGrid
+  properties: {}
+  name: customer_grid_1
+  layout_properties: {slot: slot-content}
 custom_component: true
