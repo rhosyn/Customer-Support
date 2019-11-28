@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
 
 body {
-  font-family: 'Lato';
+  font-family: 'Barlow', sans-serif;
 }
 
 .flex-me {
@@ -117,7 +117,7 @@ select::-ms-expand {
 
 
 .anvil-role-ticket-filters-form {
-  padding: 20px 0 20px 40px;
+  padding: 32px 36px 24px 40px;
   background-color: white;
   box-shadow: -6px 6px 10px 1px #f4f4f4;
   height: 100%;
