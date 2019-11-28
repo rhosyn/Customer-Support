@@ -9,7 +9,7 @@ container:
       avatar-status\">\n        <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"\
       avatar-status\" anvil-drop-here>Drop status label here</div>\n    </div> \n\
       </div>\n\n<style>\n.avatar {\n  display: flex;\n  flex-direction: column;\n\
-      \  align-items: center;\n  background-color: #2F2A52;\n }\n\n.avatar i {\n \
+      \  align-items: center;\n  background-color: #2f2853;\n }\n\n.avatar i {\n \
       \ font-size: 42px;\n  color: white;\n  border: 1px dashed white;\n  padding:\
       \ 10px 15px;\n  border-radius: 50%;\n  }\n.avatar-name {\n  color: white;\n\
       \  font-size: 22px;\n }\n.avatar-status {\n  color: #00FFAE;\n  font-size: 12px;\n\

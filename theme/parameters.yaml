@@ -16,3 +16,5 @@ roles:
 - name: dropdown-border
   components: [DropDown, DatePicker]
 - {name: full-height}
+- {name: details-repeating-panel}
+- {name: customer-details-form}

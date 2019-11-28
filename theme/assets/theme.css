@@ -88,6 +88,11 @@ body {
     margin-top: 30px;
 }
 
+.anvil-role-details-repeating-panel {
+  padding: 24px 36px;
+  border-radius: 10px;
+}
+
 .anvil-role-scrollable {
   overflow-y: scroll;
 }
@@ -124,6 +129,11 @@ select::-ms-expand {
   padding: 32px 36px 24px 40px;
   background-color: white;
   box-shadow: -6px 6px 10px 1px #f4f4f4;
+  height: 100%;
+}
+
+.anvil-role-customer-details-form {
+  padding: 32px 36px 24px 40px;
   height: 100%;
 }
 

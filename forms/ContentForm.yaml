@@ -7,6 +7,10 @@ components:
   properties: {}
   name: ticket_filters_1
   layout_properties: {slot: slot-2}
+- type: form:CustomerDetails
+  properties: {}
+  name: customer_details_1
+  layout_properties: {slot: slot-3}
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
@@ -23,3 +27,4 @@ container:
       \    padding: 10px 10px;\n    text-align: center;\n  }\n  \n  .slot {\n    height:\
       \ 100%;\n    min-width: 20vw;\n  }\n  \n  .slot.large {\n    flex: 1 0 auto;\n\
       \  }\n  \n  \n\n</style>"}
+custom_component: false
