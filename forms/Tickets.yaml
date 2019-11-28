@@ -118,4 +118,4 @@ components:
       background: ''}
     name: repeating_panel_1
     layout_properties: {}
-custom_component: false
+custom_component: true

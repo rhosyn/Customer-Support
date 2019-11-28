@@ -2,6 +2,7 @@ from anvil import *
 import plotly.graph_objs as go
 from .TicketsForm import TicketsForm
 from Dashboard import Dashboard
+from .ContentForm import ContentForm
 
 class Homepage(HomepageTemplate):
   def __init__(self, **properties):
@@ -9,7 +10,7 @@ class Homepage(HomepageTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.current_form = TicketsForm()
+    self.current_form = ContentForm()
     self.add_component(self.current_form, slot="default")
     self.ticket_link.role = 'active'
 
