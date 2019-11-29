@@ -9,26 +9,35 @@ components:
   layout_properties: {grid_position: 'ZGUJFK,ACKDOA', full_width_row: true}
   components:
   - type: ColumnPanel
-    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    properties: {role: thick-grey-border, tooltip: '', border: '', foreground: '',
+      visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"WRPKKR":8,"ZISSXB":52}',
       spacing_below: small, background: white}
     name: column_panel_1
-    layout_properties: {width: 798}
+    layout_properties: {width: 547}
     components:
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Daniel B, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_1
-      layout_properties: {grid_position: 'OYAUZP,PZOJEP'}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '22 Oct 19 at 18:37', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_2
-      layout_properties: {grid_position: 'UXEFKE,TXJIZG'}
+    - type: form:Avatars.AvatarWhite
+      properties: {}
+      name: avatar_white_1
+      layout_properties: {grid_position: 'OYAUZP,WRPKKR'}
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: column_panel_2
+      layout_properties: {grid_position: 'OYAUZP,ZISSXB'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Daniel B, font_size: 18, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_1
+        layout_properties: {grid_position: 'EYMRJF,SWPMWG'}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '22 Oct 19 at 18:37', font_size: 18, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_2
+        layout_properties: {grid_position: 'BJQAPD,UXEVXA'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: "Hi Bridget, \n\nHere's the problem:\n\nLorem ipsum dolor\
@@ -39,5 +48,18 @@ components:
         background: '', bold: false, underline: false, icon: ''}
       name: label_3
       layout_properties: {grid_position: 'EYWLSS,OPCWXX'}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_3
+    layout_properties: {width: 292}
+    components:
+    - type: Spacer
+      properties: {height: 387}
+      name: spacer_1
+      layout_properties: {grid_position: 'PQTHSD,SCQKNH'}
+    - type: form:Avatars.AvatarSmall
+      properties: {}
+      name: avatar_small_1
+      layout_properties: {grid_position: 'HDZZXN,MPSQGN'}
 item_type: {table_id: null}
 is_package: true

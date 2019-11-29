@@ -23,6 +23,8 @@ roles:
 - {name: card-with-border}
 - {name: background-image}
 - {name: background-colour}
+- {name: thick-grey-border}
+- {name: full-height}
 color_scheme:
   preset_groups:
   - name: Primary Colour
@@ -164,8 +166,8 @@ color_scheme:
   - {name: Secondary 700, color: '#00FEAF'}
   - {name: White, color: '#FFFFFF'}
   - {name: Gray 50, color: '#F1F2F3'}
-  - {name: Gray 100, color: '#F5F5F5'}
-  - {name: Gray 200, color: '#EEEEEE'}
+  - {name: Gray 100, color: '#BEBEBE'}
+  - {name: Primary 200, color: '#BFBDCB'}
   - {name: Gray 300, color: '#E0E0E0'}
   - {name: Gray 600, color: '#757575'}
   - {name: Gray 800, color: '#424242'}

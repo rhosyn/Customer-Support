@@ -1,99 +1,4 @@
 components:
-- type: FlowPanel
-  properties: {role: grey-bottom-border, spacing: medium, align: justify, tooltip: '',
-    border: '', foreground: '', visible: true, spacing_above: none, spacing_below: none,
-    background: ''}
-  name: flow_panel_2
-  layout_properties: {grid_position: 'XBNHJZ,CGGUZI', full_width_row: true}
-  components:
-  - type: FlowPanel
-    properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
-      foreground: '', visible: true, spacing_above: medium, spacing_below: none, background: ''}
-    name: flow_panel_3
-    layout_properties: {}
-    components:
-    - type: Link
-      properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#332F5B',
-        visible: true, text: Delete, font_size: 18, wrap_on: mobile, font: '', col_spacing: medium,
-        spacing_above: small, icon_align: left, col_widths: '{}', spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
-      name: link_1
-      layout_properties: {}
-      components: []
-  - type: FlowPanel
-    properties: {role: null, spacing: tiny, align: left, tooltip: '', border: '',
-      foreground: '', visible: true, spacing_above: none, spacing_below: none, background: ''}
-    name: flow_panel_4
-    layout_properties: {}
-    components:
-    - type: Button
-      properties: {role: primary-button, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Edit, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: 'fa:pencil'}
-      name: button_1
-      layout_properties: {}
-    - type: Button
-      properties: {role: primary-button, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Reply, font_size: null, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: 'fa:reply'}
-      name: button_2
-      layout_properties: {}
-- type: ColumnPanel
-  properties: {role: card-no-border, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}', spacing_below: small,
-    background: white}
-  name: column_panel_1
-  layout_properties: {grid_position: 'LLJSYV,ZTQXCM', full_width_row: true}
-  components:
-  - type: FlowPanel
-    properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
-      foreground: '', visible: true, spacing_above: medium, spacing_below: none, background: ''}
-    name: flow_panel_1
-    layout_properties: {grid_position: 'SDUQYR,NNYADS', full_width_row: true}
-    components:
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: '#112', font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      name: label_1
-      layout_properties: {}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: red,
-        visible: true, text: OVERDUE, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_2
-      layout_properties: {}
-  - type: FlowPanel
-    properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
-      foreground: '', visible: true, spacing_above: none, spacing_below: none, background: ''}
-    name: flow_panel_5
-    layout_properties: {grid_position: 'XMSMNK,FPXWEA', full_width_row: true}
-    components:
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: Daniel Barnes, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_3
-      layout_properties: {}
-    - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: 22 Oct 2019, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-        underline: false, icon: ''}
-      name: label_4
-      layout_properties: {}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Something went wrong..., font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_5
-    layout_properties: {grid_position: 'DYNIOX,RZTSZA', full_width_row: true}
 - type: RepeatingPanel
   properties: {role: card-with-border, tooltip: '', border: '', foreground: '', items: null,
     visible: true, spacing_above: small, spacing_below: small, item_template: Tickets.TicketDetailRP,
@@ -103,6 +8,6 @@ components:
 container:
   type: ColumnPanel
   properties: {role: tickets-form, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"CGGUZI":30}',
-    spacing_below: small, background: ''}
+    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}', spacing_below: small,
+    background: ''}
 is_package: true

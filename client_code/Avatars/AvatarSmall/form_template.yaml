@@ -1,0 +1,13 @@
+components: []
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<div class=\"avatar small\">\n    <div class=\"circle\">\n\
+      \      <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\n    </div>\n</div>\n\
+      \n<style>\n.avatar.small {\n  display: block !important;\n  /*display: flex;\n\
+      \  flex-direction: column;\n  align-items: flex-start;*/\n  margin-bottom: 0\
+      \ !important;\n }\n\n.avatar.small i {\n  font-size: 22px;\n  color: white;\n\
+      \  background-color: #2f2853;\n  padding: 10px 15px;\n  border-radius: 50%;\n\
+      \  border: none;\n  }\n\n  \n</style>"}
+is_package: true
+custom_component: true

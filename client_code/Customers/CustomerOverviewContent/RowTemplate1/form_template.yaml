@@ -1,0 +1,53 @@
+container:
+  type: DataRowPanel
+  properties: {role: tickets-repeating-panel, align: left, tooltip: '', border: '',
+    foreground: '', auto_display_data: true, visible: true, font_size: null, font: '',
+    spacing_above: none, spacing_below: none, italic: false, background: 'theme:White',
+    bold: false, underline: false}
+components:
+- type: CheckBox
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, spacing_below: small,
+    italic: false, background: '', bold: false, checked: false, underline: false}
+  name: check_box_1
+  layout_properties: {column: ASGSHC}
+- type: Label
+  properties: {role: avatar, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: 'fa:user'}
+  name: label_1
+  layout_properties: {column: WUGQWN}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 16, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: name_label
+  layout_properties: {column: VOVIZQ}
+  data_bindings:
+  - {property: text, code: 'self.item[''name'']'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 16, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: company_label
+  layout_properties: {column: IWRLRI}
+  data_bindings:
+  - {property: text, code: 'self.item[''company'']'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 16, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: telephone_label
+  layout_properties: {column: AQVDYA}
+  data_bindings:
+  - {property: text, code: 'self.item[''telephone'']'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: '', font_size: 16, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: email_label
+  layout_properties: {column: UJEGRO}
+  data_bindings:
+  - {property: text, code: 'self.item[''email'']'}
+is_package: true

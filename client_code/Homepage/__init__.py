@@ -2,8 +2,10 @@ from ._anvil_designer import HomepageTemplate
 from anvil import *
 import anvil.server
 import plotly.graph_objs as go
-from ..Tickets import TicketInboxSlots
+from ..Tickets.TicketInboxSlots import TicketInboxSlots
 from ..Dashboard.DashboardHome import DashboardHome
+from ..Tickets.TicketDetailSlots import TicketDetailSlots
+from ..Customers.CustomerOverviewSlots import CustomerOverviewSlots
 
 class Homepage(HomepageTemplate):
   def __init__(self, **properties):
@@ -11,9 +13,9 @@ class Homepage(HomepageTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.current_form = DashboardHome()
+    self.current_form = CustomerOverviewSlots()
     self.add_component(self.current_form, slot="default")
-    self.dash_link.role = 'active'
+    self.ticket_link.role = 'active'
 
   def link_2_click(self, **event_args):
     self.current_form.remove_from_parent()
@@ -26,5 +28,12 @@ class Homepage(HomepageTemplate):
     self.current_form = TicketInboxSlots()
     self.add_component(self.current_form, slot="default")
     self.ticket_link.role = 'active'
+
+  def link_4_click(self, **event_args):
+    self.current_form.remove_from_parent()
+    self.current_form = CustomerOverviewSlots()
+    self.add_component(self.current_form, slot="default")
+    self.ticket_link.role = 'active'
+
 
 

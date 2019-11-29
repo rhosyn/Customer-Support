@@ -39,16 +39,21 @@ body {
     text-align: center;
   }
 
+.anvil-role-full-height {
+  height: 100%;
+}
+
 .anvil-role-dashboard-form {
   padding-left: 50px;
 }
 
 .anvil-role-background-image {
-  background: url(/_/theme/grey-background.png);
+  background: url(/_/theme/grey-squiggles.png);
   background-position: bottom left;
   background-repeat: no-repeat;
-  background-size: 400px 700px;
+  background-size: 100% 70%;
   height: 100%;
+  width: 100%;
   padding: 36px 0 0 100px;
   margin-right: 10px;
 }
@@ -85,6 +90,7 @@ body {
 
 .anvil-role-card-no-border {
   padding: 0 30px 30px 30px;
+  margin-right: 32px;
 }
 
 .anvil-role-card-with-border {
@@ -197,8 +203,8 @@ select::-ms-expand {
 .anvil-role-primary-button button {
     background-color: #2D2B52;
     color: white;
-    font-size: 22px;
-    padding: 12px 14px;
+    font-size: 18px;
+    padding: 9px 20px;
     border-radius: 30px;
     border: none;
     margin-bottom: 10px;
@@ -207,6 +213,14 @@ select::-ms-expand {
 .anvil-role-primary-button button i {
     margin-right: 10px;
  }
+
+/* Style the TicketDetail RepeatingPanel */
+
+.anvil-role-thick-grey-border {
+  border: 4px solid %color:Gray 100%;
+  padding: 30px 60px 50px 55px;
+  border-radius: 10px;
+}
 
 
 /* Style the expanded datepicker */

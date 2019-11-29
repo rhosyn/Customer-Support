@@ -1,8 +1,8 @@
-from ._anvil_designer import TicketInboxContentRPTemplate
+from ._anvil_designer import AvatarSmallTemplate
 from anvil import *
 import anvil.server
 
-class TicketInboxContentRP(TicketInboxContentRPTemplate):
+class AvatarSmall(AvatarSmallTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

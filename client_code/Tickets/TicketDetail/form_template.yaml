@@ -1,0 +1,14 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: background-image, html: '@theme:scroll_pane.html'}
+components:
+- type: form:Tickets.TicketDetailHeader
+  properties: {}
+  name: custom_1
+  layout_properties: {slot: slot-header}
+- type: form:Tickets.TicketDetailContent
+  properties: {}
+  name: custom_2
+  layout_properties: {slot: slot-content}
+is_package: true
