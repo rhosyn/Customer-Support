@@ -1,0 +1,14 @@
+components: []
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<div class=\"avatar blank\">\n    <div class=\"circle\">\n\
+      \      <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\n    </div>\n</div>\n\
+      \n<style>\n.avatar.blank {\n  display: flex;\n  flex-direction: column;\n  align-items:\
+      \ flex-start;\n  background-color: #2f2853;\n  margin-bottom: 0 !important;\n\
+      \ }\n\n.avatar i {\n  font-size: 42px;\n  color: white;\n  border: 1px dashed\
+      \ white;\n  padding: 10px 15px;\n  border-radius: 50%;\n  }\n.avatar-name {\n\
+      \  color: white;\n  font-size: 22px;\n }\n.avatar-status {\n  color: #00FFAE;\n\
+      \  font-size: 12px;\n }\n  \n</style>"}
+custom_component: true
+is_package: true

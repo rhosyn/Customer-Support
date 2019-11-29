@@ -1,0 +1,15 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: background-image, html: '@theme:scroll_pane.html'}
+components:
+- type: form:Tickets.TicketInboxContent
+  properties: {}
+  name: tickets_grid_1
+  layout_properties: {slot: slot-content}
+- type: form:Tickets.TicketInboxHeader
+  properties: {}
+  name: ticket_inbox_header_1
+  layout_properties: {slot: slot-header}
+custom_component: true
+is_package: true
