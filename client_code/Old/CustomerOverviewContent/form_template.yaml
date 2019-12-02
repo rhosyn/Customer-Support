@@ -1,0 +1,71 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+components:
+- type: DataGrid
+  properties:
+    role: null
+    columns:
+    - {width: 72, title: '', id: ASGSHC, data_key: selected, expand: false}
+    - {width: 78, title: '', id: WUGQWN, data_key: avatar, expand: false}
+    - {width: 60, title: Column 1, id: LKDWLC, data_key: column_1, expand: false}
+    - {title: Name, id: VOVIZQ, data_key: name}
+    - {title: Company, id: IWRLRI, data_key: company}
+    - {title: Telephone, id: AQVDYA, data_key: telephone}
+    - {title: Email, id: UJEGRO, data_key: email}
+    auto_header: false
+    tooltip: ''
+    border: ''
+    foreground: ''
+    rows_per_page: 0
+    visible: true
+    show_page_controls: false
+    spacing_above: small
+    spacing_below: small
+    background: ''
+  name: data_grid_1
+  layout_properties: {grid_position: 'OGFCIS,SBVLJB', full_width_row: true}
+  components:
+  - type: DataRowPanel
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      auto_display_data: true, visible: true, item: null, font_size: null, font: '',
+      spacing_above: none, spacing_below: medium, italic: false, background: '', bold: false,
+      underline: false}
+    name: data_row_panel_1
+    layout_properties: {grid_position: 'NTXCYE,PEOFYC', full_width_row: true}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Company, font_size: null, font: '16', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_1
+      layout_properties: {column: IWRLRI}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Telephone, font_size: 16, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_2
+      layout_properties: {column: AQVDYA}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Email, font_size: 16, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {column: UJEGRO}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Name, font_size: 16, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_4
+      layout_properties: {column: VOVIZQ}
+  - type: RepeatingPanel
+    properties: {spacing_above: none, spacing_below: none, item_template: Old.CustomerOverviewContent.RowTemplate1}
+    name: repeating_panel_1
+    layout_properties: {}
+is_package: true

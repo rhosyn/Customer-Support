@@ -7,7 +7,7 @@ components:
   properties: {}
   name: custom_1
   layout_properties: {slot: slot-header}
-- type: form:Customers.Test
+- type: form:Customers.CustomerOverviewContent
   properties: {}
   name: custom_2
   layout_properties: {slot: slot-content}

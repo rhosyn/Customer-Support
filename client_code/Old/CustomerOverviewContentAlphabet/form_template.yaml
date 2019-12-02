@@ -25,7 +25,7 @@ components:
   components: []
 - type: RepeatingPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', items: null, visible: true,
-    spacing_above: small, spacing_below: small, item_template: Customers.CustomerOverviewContentAlphabet.ItemTemplate1,
+    spacing_above: small, spacing_below: small, item_template: Old.CustomerOverviewContentAlphabet.ItemTemplate1,
     background: ''}
   name: repeating_panel_1
   layout_properties: {grid_position: 'HBJAJC,OGPZQB', full_width_row: true}

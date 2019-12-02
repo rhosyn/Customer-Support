@@ -8,7 +8,7 @@ components:
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: '', font_size: 18, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-    italic: false, background: '', bold: false, underline: false, icon: ''}
+    italic: false, background: '', bold: true, underline: false, icon: ''}
   name: label_3
   layout_properties: {column: GBQNGE}
   data_bindings:
@@ -53,3 +53,11 @@ components:
     underline: false, icon: 'fa:ellipsis-v'}
   name: label_1
   layout_properties: {column: YNRWXO}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:Primary
+      700', visible: true, text: '', font_size: 22, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: 'fa:user'}
+  name: label_2
+  layout_properties: {column: IDOAON}
+is_package: true

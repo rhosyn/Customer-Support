@@ -1,8 +1,8 @@
-from ._anvil_designer import RowTemplate1Template
+from ._anvil_designer import CustomerOverviewDGRPTemplate
 from anvil import *
 import anvil.server
 
-class RowTemplate1(RowTemplate1Template):
+class CustomerOverviewDGRP(CustomerOverviewDGRPTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
