@@ -3,7 +3,7 @@ from anvil import *
 import anvil.server
 import plotly.graph_objs as go
 from ..Tickets.TicketInboxSlots import TicketInboxSlots
-from ..Dashboard.DashboardHome import DashboardHome
+from ..Dashboard.DashboardSlots import DashboardSlots
 from ..Tickets.TicketDetailSlots import TicketDetailSlots
 from ..Customers.CustomerOverviewSlots import CustomerOverviewSlots
 
@@ -19,7 +19,7 @@ class Homepage(HomepageTemplate):
 
   def dash_link_click(self, **event_args):
     self.current_form.remove_from_parent()
-    self.current_form = DashboardHome()
+    self.current_form = DashboardSlots()
     self.add_component(self.current_form, slot="default")
     self.clear_links()
     self.dash_link.role = 'active'

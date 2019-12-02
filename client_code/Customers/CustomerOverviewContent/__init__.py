@@ -3,6 +3,7 @@ from anvil import *
 import anvil.server
 import string
 
+
 class CustomerOverviewContent(CustomerOverviewContentTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -24,15 +25,17 @@ class CustomerOverviewContent(CustomerOverviewContentTemplate):
                 {'name': 'Daniel Coz', 'company': 'Forty8Creates', 'telephone': '+44(0)20 710 13348', 'email':'daniel@forty8creates.com'}
                ]
     
+    
+    
     data = [{'letter':'B', 'people': people},{'letter':'C', 'people': people_c}]
     
-    self.repeating_panel_2.items = data
-    letters = list(string.ascii_lowercase)
+    visible_letters = [x['letter'] for x in data]
     
-    alphabet = {}
-    for d in data:
-      letter = d['letter']
-      alphabet[letter] = True
- 
-    print(alphabet)
-    self.repeating_panel_1.items = list(string.ascii_uppercase)
+    self.repeating_panel_2.items = data
+    
+    letters = [{
+        'letter': x,
+        'visible': x in visible_letters
+      } for x in string.ascii_uppercase]
+
+    self.repeating_panel_1.items = letters

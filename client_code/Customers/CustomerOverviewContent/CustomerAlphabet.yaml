@@ -10,5 +10,6 @@ components:
   name: link_1
   layout_properties: {grid_position: 'IZWCYI,EPCMJW'}
   data_bindings:
-  - {property: text, code: self.item}
+  - {property: text, code: 'self.item[''letter'']'}
+  - {property: foreground, code: '''black'' if self.item[''visible''] else ''red'''}
 item_type: {table_id: null}
