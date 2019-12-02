@@ -15,25 +15,33 @@ class Homepage(HomepageTemplate):
     # Any code you write here will run when the form opens.
     self.current_form = CustomerOverviewSlots()
     self.add_component(self.current_form, slot="default")
-    self.ticket_link.role = 'active'
+    self.customer_link.role = 'active'
 
-  def link_2_click(self, **event_args):
+  def dash_link_click(self, **event_args):
     self.current_form.remove_from_parent()
     self.current_form = DashboardHome()
     self.add_component(self.current_form, slot="default")
+    self.clear_links()
     self.dash_link.role = 'active'
     
-  def link_3_click(self, **event_args):
+  def ticket_link_click(self, **event_args):
     self.current_form.remove_from_parent()
     self.current_form = TicketInboxSlots()
     self.add_component(self.current_form, slot="default")
+    self.clear_links()
     self.ticket_link.role = 'active'
 
-  def link_4_click(self, **event_args):
+  def clear_links(self):
+    for link in self.links_panel.get_components():
+      link.role = ""
+
+  def customer_link_click(self, **event_args):
     self.current_form.remove_from_parent()
     self.current_form = CustomerOverviewSlots()
     self.add_component(self.current_form, slot="default")
-    self.ticket_link.role = 'active'
+    self.clear_links()
+    self.customer_link.role = 'active'
+
 
 
 

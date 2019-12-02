@@ -43,5 +43,7 @@ components:
         underline: false, icon: 'fa:plus-circle'}
       name: button_1
       layout_properties: {}
-container: {type: ColumnPanel}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
 is_package: true

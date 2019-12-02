@@ -1,0 +1,68 @@
+container:
+  type: ColumnPanel
+  properties: {role: customers-repeating-panel, tooltip: '', border: '', foreground: '',
+    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}',
+    spacing_below: none, background: ''}
+components:
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_1
+  layout_properties: {grid_position: 'YIQDBX,VIIQZU', full_width_row: true}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_1
+    layout_properties: {width: 169}
+    components:
+    - type: CheckBox
+      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: medium,
+        spacing_below: small, italic: false, background: '', bold: false, checked: false,
+        underline: false}
+      name: check_box_1
+      layout_properties: {grid_position: 'GXYRPF,LDAQUE'}
+    - type: Label
+      properties: {role: avatar, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: 'fa:user'}
+      name: label_1
+      layout_properties: {grid_position: 'GXYRPF,KAGMDH'}
+  - type: Label
+    properties: {}
+    name: label_2
+    layout_properties: {}
+    data_bindings:
+    - {property: text, code: 'self.item[''name'']'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: 'fa:ellipsis-v'}
+    name: label_6
+    layout_properties: {}
+  - type: Label
+    properties: {}
+    name: label_3
+    layout_properties: {}
+    data_bindings:
+    - {property: text, code: 'self.item[''company'']'}
+  - type: Label
+    properties: {}
+    name: label_4
+    layout_properties: {}
+    data_bindings:
+    - {property: text, code: 'self.item[''telephone'']'}
+  - type: Label
+    properties: {}
+    name: label_5
+    layout_properties: {}
+    data_bindings:
+    - {property: text, code: 'self.item[''email'']'}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {grid_position: 'YIQDBX,VAQXTC', full_width_row: true, width: 121}
+is_package: true
+item_type: {table_id: null}

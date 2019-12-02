@@ -50,4 +50,8 @@ components:
   layout_properties: {column: UJEGRO}
   data_bindings:
   - {property: text, code: 'self.item[''email'']'}
+- type: FlowPanel
+  properties: {}
+  name: flow_panel_1
+  layout_properties: {column: null}
 is_package: true

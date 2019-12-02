@@ -108,7 +108,7 @@ components:
     layout_properties: {}
 - type: LinearPanel
   properties: {}
-  name: linear_panel_3
+  name: links_panel
   layout_properties: {slot: sidebar-items-2}
   components:
   - type: Link
@@ -119,7 +119,7 @@ components:
       icon: 'fa:bar-chart'}
     name: dash_link
     layout_properties: {}
-    event_bindings: {click: link_2_click}
+    event_bindings: {click: dash_link_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Tickets, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
@@ -127,17 +127,17 @@ components:
       italic: false, background: '', bold: false, underline: false, icon: 'fa:ticket'}
     name: ticket_link
     layout_properties: {}
-    event_bindings: {click: link_3_click}
+    event_bindings: {click: ticket_link_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Customers, font_size: null, wrap_on: mobile, font: '',
       col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '{}',
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: 'fa:users'}
-    name: link_4
+    name: customer_link
     layout_properties: {}
     components: []
-    event_bindings: {click: link_4_click}
+    event_bindings: {click: customer_link_click}
   - type: Link
     properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: Settings, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,

@@ -25,6 +25,7 @@ roles:
 - {name: background-colour}
 - {name: thick-grey-border}
 - {name: full-height}
+- {name: customers-repeating-panel}
 color_scheme:
   preset_groups:
   - name: Primary Colour
