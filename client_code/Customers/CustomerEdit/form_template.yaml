@@ -33,7 +33,7 @@ components:
     border: ''
     enabled: true
     foreground: ''
-    items: ['Category: Technical Support']
+    items: [Mr]
     visible: true
     font_size: null
     font: ''
@@ -46,6 +46,10 @@ components:
     include_placeholder: false
   name: drop_down_1
   layout_properties: {grid_position: 'OSNJJA,GBUXLP'}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_2
+  layout_properties: {grid_position: 'OSNJJA,LOJGXT'}
 - type: DropDown
   properties:
     role: dropdown-border
@@ -55,7 +59,7 @@ components:
     border: ''
     enabled: true
     foreground: ''
-    items: ['Status: Open', '']
+    items: [Daniel, '']
     visible: true
     font_size: null
     font: ''
@@ -77,7 +81,7 @@ components:
     border: ''
     enabled: true
     foreground: ''
-    items: ['Priority: Urgent']
+    items: [Barnes]
     visible: true
     font_size: null
     font: ''
@@ -90,6 +94,19 @@ components:
     include_placeholder: false
   name: drop_down_3
   layout_properties: {grid_position: 'OHPOES,SUMKER'}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_4
+  layout_properties: {grid_position: 'FAYHFO,SWANDH'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Company, font_size: 18, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_2_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: FAYHFO,SDGHZV
 - type: DropDown
   properties:
     role: dropdown-border
@@ -99,7 +116,7 @@ components:
     border: ''
     enabled: true
     foreground: ''
-    items: ['Customer: All']
+    items: [Forty8Creates]
     visible: true
     font_size: null
     font: ''
@@ -121,7 +138,7 @@ components:
     border: ''
     enabled: true
     foreground: ''
-    items: ['Agent: All', '']
+    items: [Managing Director]
     visible: true
     font_size: null
     font: ''
@@ -134,23 +151,114 @@ components:
     include_placeholder: false
   name: drop_down_5
   layout_properties: {grid_position: 'GDFSYH,KFKMPR'}
-- type: DatePicker
-  properties: {role: dropdown-border, align: left, max_date: '', pick_time: false,
-    tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-    font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
-    date: '', min_date: '', background: '', bold: false, underline: false, format: ''}
-  name: date_picker_1
-  layout_properties: {grid_position: 'RULIPG,YWXGKX'}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_3
+  layout_properties: {grid_position: 'MJHLGN,KCQTGL'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Contact, font_size: 18, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_2_copy_2
+  layout_properties:
+    col_widths: {}
+    grid_position: MJHLGN,QGRACK
+- type: DropDown
+  properties:
+    role: dropdown-border
+    align: full
+    tooltip: ''
+    placeholder: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: ['+44781234567']
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+    include_placeholder: false
+  name: drop_down_5_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: KKXMNR,QUNOQM
+- type: DropDown
+  properties:
+    role: dropdown-border
+    align: full
+    tooltip: ''
+    placeholder: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: ['+44781234567']
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+    include_placeholder: false
+  name: drop_down_5_copy_2
+  layout_properties:
+    col_widths: {}
+    grid_position: BYJVUF,KNLWSD
+- type: DropDown
+  properties:
+    role: dropdown-border
+    align: full
+    tooltip: ''
+    placeholder: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: [daniel@forty8creates.com]
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+    include_placeholder: false
+  name: drop_down_5_copy_3
+  layout_properties:
+    col_widths: {}
+    grid_position: UKLSSL,BJMNPQ
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_5
+  layout_properties: {grid_position: 'YQAYSS,JXHSMM'}
 - type: Link
-  properties: {role: grey-link, url: '', align: right, tooltip: '', border: '', foreground: '',
-    visible: true, text: Clear filters, font_size: null, wrap_on: mobile, font: '',
-    col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: 'theme:Gray
+      800', visible: true, text: Save, font_size: 22, wrap_on: mobile, font: '', col_spacing: medium,
+    spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
   name: link_1
-  layout_properties: {grid_position: 'FRNSKB,HFTAWK'}
+  layout_properties: {grid_position: 'IQCJPJ,ZRRLRC'}
+- type: Link
+  properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: 'theme:Gray
+      800', visible: true, text: Delete, font_size: 22, wrap_on: mobile, font: '',
+    col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: link_1_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: IQCJPJ,QHRJLF
 container:
   type: ColumnPanel
   properties: {role: ticket-filters-form, tooltip: '', border: '', foreground: '',
-    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"AWNMSI":2,"XGAUAD":58}',
+    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"AWNMSI":2,"XGAUAD":58,"GBUXLP":10,"LOJGXT":50,"SDGHZV":131,"KCQTGL":2,"QGRACK":58,"SWANDH":3}',
     spacing_below: none, background: ''}
 is_package: true

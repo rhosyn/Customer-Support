@@ -9,8 +9,8 @@ components:
     role: null
     columns:
     - {width: 72, title: '', id: ASGSHC, data_key: selected, expand: false}
-    - {width: 86, title: '', id: WUGQWN, data_key: avatar, expand: false}
-    - {title: Column 1, id: LKDWLC, data_key: column_1, width: 60, expand: false}
+    - {width: 78, title: '', id: WUGQWN, data_key: avatar, expand: false}
+    - {width: 60, title: Column 1, id: LKDWLC, data_key: column_1, expand: false}
     - {title: Name, id: VOVIZQ, data_key: name}
     - {title: Company, id: IWRLRI, data_key: company}
     - {title: Telephone, id: AQVDYA, data_key: telephone}

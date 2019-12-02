@@ -1,15 +1,15 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: "<div class=\"avatar\">\n    <div class=\"circle\">\n      <i\
-      \ class=\"fa fa-user\" aria-hidden=\"true\"></i>\n    </div>\n    <div class=\"\
-      avatar-name\" anvil-slot=\"avatar-name\">\n        <div class=\"placeholder\
+    role: null, html: "<div class=\"avatar large\">\n    <div class=\"circle\">\n\
+      \      <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\n    </div>\n    <div\
+      \ class=\"avatar-name\" anvil-slot=\"avatar-name\">\n        <div class=\"placeholder\
       \ anvil-designer-only\" anvil-if-slot-empty=\"avatar-name\" anvil-drop-here>Drop\
       \ name label here</div>\n    </div>\n    <div class=\"avatar-status\" anvil-slot=\"\
       avatar-status\">\n        <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"\
       avatar-status\" anvil-drop-here>Drop status label here</div>\n    </div> \n\
-      </div>\n\n<style>\n.avatar {\n  display: flex;\n  flex-direction: column;\n\
-      \  align-items: center;\n  background-color: %color:Primary 500%;\n }\n\n.avatar\
+      </div>\n\n<style>\n.avatar.large {\n  display: flex;\n  flex-direction: column;\n\
+      \  align-items: center;\n  background-color: %color:Primary 500%;\n }\n\n.avatar.large\
       \ i {\n  font-size: 42px;\n  color: white;\n  border: 1px dashed white;\n  padding:\
       \ 10px 15px;\n  border-radius: 50%;\n  }\n.avatar-name {\n  color: white;\n\
       \  font-size: 22px;\n }\n.avatar-status {\n  color: #00FFAE;\n  font-size: 12px;\n\
