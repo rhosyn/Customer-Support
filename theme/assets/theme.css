@@ -123,9 +123,11 @@ body {
 }
 
 .anvil-role-customers-repeating-panel {
-  padding: 10px 36px;
-  border-radius: 10px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
   background-color: white;
+  border-radius: 10px 0 0 10px;
   border-top: 1px solid rgb(242, 242, 242) !important;
   border-left: 1px solid rgb(242, 242, 242) !important;
   border-bottom: 1px solid rgb(242, 242, 242) !important;
@@ -150,6 +152,11 @@ body {
   color: grey;
 }
 
+.anvil-role-customer-letter-label {
+  padding: 2px 22px;
+  color: white;
+  border-radius: 0 10px 10px 0;
+}
 
 /* Remove built-in dropdown arrows */
 select {
@@ -229,6 +236,13 @@ select::-ms-expand {
   border: 4px solid %color:Gray 100%;
   padding: 30px 60px 50px 55px;
   border-radius: 10px;
+}
+
+.anvil-role-datagrid-padded-header .auto-grid-header {
+  padding: 0px 36px 21px 36px;
+  margin-bottom: 10px;
+  border-bottom: none !important;
+  box-shadow: -6px 6px 10px 1px #f4f4f4;
 }
 
 
