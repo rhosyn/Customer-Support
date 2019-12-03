@@ -13,3 +13,4 @@ components:
   - {property: text, code: 'self.item[''letter'']'}
   - {property: foreground, code: '''black'' if self.item[''visible''] else ''red'''}
 item_type: {table_id: null}
+is_package: true

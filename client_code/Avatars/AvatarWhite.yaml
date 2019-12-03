@@ -8,5 +8,5 @@ container:
       \ flex-start;\n  margin-bottom: 0 !important;\n  background-color: transparent;\n\
       \ }\n\n.avatar.white i {\n  font-size: 42px;\n  color: #2F2A52;\n  border: 1px\
       \ dashed #2F2A52;\n  padding: 10px 15px;\n  border-radius: 50%;\n}\n  \n</style>"}
-is_package: true
+is_package: false
 custom_component: true
