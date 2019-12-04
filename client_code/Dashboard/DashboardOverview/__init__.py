@@ -1,8 +1,8 @@
-from ._anvil_designer import DashboardHomeTemplate
+from ._anvil_designer import DashboardOverviewTemplate
 from anvil import *
 import anvil.server
 
-class DashboardHome(DashboardHomeTemplate):
+class DashboardOverview(DashboardOverviewTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

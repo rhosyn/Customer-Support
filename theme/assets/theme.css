@@ -216,6 +216,12 @@ select::-ms-expand {
   background-size: contain;
 }
 
+/* Dropdowns without border */
+.anvil-role-dropdown-no-border select {
+  border: none;
+  box-shadow: none !important;
+}
+
 /* Style the main button */
 .anvil-role-primary-button button {
     background-color: #2D2B52;
@@ -244,6 +250,7 @@ select::-ms-expand {
   margin-bottom: 10px;
   border-bottom: none !important;
   box-shadow: 6px 6px 10px 1px #f4f4f4;
+  font-size: 16px;
 }
 
 

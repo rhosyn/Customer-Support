@@ -28,6 +28,7 @@ roles:
 - {name: customers-repeating-panel}
 - {name: customer-letter-label}
 - {name: datagrid-padded-header}
+- {name: dropdown-no-border}
 color_scheme:
   preset_groups:
   - name: Primary Colour

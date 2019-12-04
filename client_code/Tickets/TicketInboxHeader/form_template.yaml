@@ -40,7 +40,7 @@ components:
       layout_properties: {grid_position: 'MBLGBS,QFWVTC'}
     - type: DropDown
       properties:
-        role: null
+        role: dropdown-no-border
         align: full
         tooltip: ''
         placeholder: ''

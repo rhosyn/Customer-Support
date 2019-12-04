@@ -1,0 +1,64 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "\n<svg width=\"960\" height=\"500\"></svg>\n\n<script>\n\n\
+      var tau = 2 * Math.PI; // http://tauday.com/tau-manifesto\n\n// An arc function\
+      \ with all values bound except the endAngle. So, to compute an\n// SVG path\
+      \ string for a given angle, we pass an object with an endAngle\n// property\
+      \ to the `arc` function, and it will return the corresponding string.\nvar arc\
+      \ = d3.arc()\n    .innerRadius(180)\n    .outerRadius(240)\n    .startAngle(0);\n\
+      \n// Get the SVG container, and apply a transform such that the origin is the\n\
+      // center of the canvas. This way, we don\u2019t need to position arcs individually.\n\
+      var svg = d3.select(\"svg\"),\n    width = +svg.attr(\"width\"),\n    height\
+      \ = +svg.attr(\"height\"),\n    g = svg.append(\"g\").attr(\"transform\", \"\
+      translate(\" + width / 2 + \",\" + height / 2 + \")\");\n\n// Add the background\
+      \ arc, from 0 to 100% (tau).\nvar background = g.append(\"path\")\n    .datum({endAngle:\
+      \ tau})\n    .style(\"fill\", \"#ddd\")\n    .attr(\"d\", arc);\n\n// Add the\
+      \ foreground arc in orange, currently showing 12.7%.\nvar foreground = g.append(\"\
+      path\")\n    .datum({endAngle: 0.127 * tau})\n    .style(\"fill\", \"orange\"\
+      )\n    .attr(\"d\", arc);\n\n// Every so often, start a transition to a new\
+      \ random angle. The attrTween\n// definition is encapsulated in a separate function\
+      \ (a closure) below.\n//d3.interval(function() {\n//  foreground.transition()\n\
+      //      .duration(750)\n//      .attrTween(\"d\", arcTween(Math.random() * tau));\n\
+      //}, 1500);\n\n// Returns a tween for a transition\u2019s \"d\" attribute, transitioning\
+      \ any selected\n// arcs from their current angle to the specified new angle.\n\
+      function arcTween(newAngle) {\n\n  // The function passed to attrTween is invoked\
+      \ for each selected element when\n  // the transition starts, and for each element\
+      \ returns the interpolator to use\n  // over the course of transition. This\
+      \ function is thus responsible for\n  // determining the starting angle of the\
+      \ transition (which is pulled from the\n  // element\u2019s bound datum, d.endAngle),\
+      \ and the ending angle (simply the\n  // newAngle argument to the enclosing\
+      \ function).\n  return function(d) {\n\n    // To interpolate between the two\
+      \ angles, we use the default d3.interpolate.\n    // (Internally, this maps\
+      \ to d3.interpolateNumber, since both of the\n    // arguments to d3.interpolate\
+      \ are numbers.) The returned function takes a\n    // single argument t and\
+      \ returns a number between the starting angle and the\n    // ending angle.\
+      \ When t = 0, it returns d.endAngle; when t = 1, it returns\n    // newAngle;\
+      \ and for 0 < t < 1 it returns an angle in-between.\n    var interpolate = d3.interpolate(d.endAngle,\
+      \ newAngle);\n\n    // The return value of the attrTween is also a function:\
+      \ the function that\n    // we want to run for each tick of the transition.\
+      \ Because we used\n    // attrTween(\"d\"), the return value of this last function\
+      \ will be set to the\n    // \"d\" attribute at every tick. (It\u2019s also\
+      \ possible to use transition.tween\n    // to run arbitrary code for every tick,\
+      \ say if you want to set multiple\n    // attributes from a single function.)\
+      \ The argument t ranges from 0, at the\n    // start of the transition, to 1,\
+      \ at the end.\n    return function(t) {\n\n      // Calculate the current arc\
+      \ angle based on the transition time, t. Since\n      // the t for the transition\
+      \ and the t for the interpolate both range from\n      // 0 to 1, we can pass\
+      \ t directly to the interpolator.\n      //\n      // Note that the interpolated\
+      \ angle is written into the element\u2019s bound\n      // data object! This\
+      \ is important: it means that if the transition were\n      // interrupted,\
+      \ the data bound to the element would still be consistent\n      // with its\
+      \ appearance. Whenever we start a new arc transition, the\n      // correct\
+      \ starting angle can be inferred from the data.\n      d.endAngle = interpolate(t);\n\
+      \n      // Lastly, compute the arc path given the updated data! In effect, this\n\
+      \      // transition uses data-space interpolation: the data is interpolated\n\
+      \      // (that is, the end angle) rather than the path string itself.\n   \
+      \   // Interpolating the angles in polar coordinates, rather than the raw path\n\
+      \      // string, produces valid intermediate arcs during the transition.\n\
+      \      return arc(d);\n    };\n  };\n}\n\nfunction updateValue(newValue) {\n\
+      \  var foreground = g.append(\"path\")\n    .datum({endAngle: newValue * tau})\n\
+      \    .style(\"fill\", \"orange\")\n    .attr(\"d\", arc);\n};\n\n</script>"}
+  event_bindings: {show: form_show}
+components: []
+is_package: true

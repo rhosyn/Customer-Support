@@ -74,3 +74,20 @@ class DashGraphs(DashGraphsTemplate):
                               col=1
                           )
                         )
+    
+    
+    labels = ['Unresolved','Resolved',]
+    values = [0.25, 0.75]
+    self.plot_2.data = go.Pie(values=values, labels=labels, hole=.8,marker=dict(colors=['gray', '#8478DA']))
+    self.plot_3.data = go.Pie(values=values, labels=labels)
+    layout_pie = go.Layout(margin=dict(
+                              l=90, #left margin
+                              r=50, #right margin
+                              b=50, #bottom margin
+                              t=50, #top margin
+                          ),showlegend=False)
+    self.plot_3.layout = layout_pie
+    self.plot_2.layout = layout_pie
+    
+    
+    
