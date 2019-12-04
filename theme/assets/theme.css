@@ -243,7 +243,7 @@ select::-ms-expand {
   padding: 0px 36px 21px 36px;
   margin-bottom: 10px;
   border-bottom: none !important;
-  box-shadow: -6px 6px 10px 1px #f4f4f4;
+  box-shadow: 6px 6px 10px 1px #f4f4f4;
 }
 
 
