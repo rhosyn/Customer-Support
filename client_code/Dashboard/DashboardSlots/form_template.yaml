@@ -1,14 +1,14 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: '@theme:three_slots.html'}
+    role: dashboard-form, html: '@theme:three_slots.html'}
 components:
-- type: form:Dashboard.DashboardHeader
-  properties: {}
-  name: custom_1
-  layout_properties: {slot: slot-1}
 - type: form:Dashboard.DashboardFilters
   properties: {}
   name: custom_2
   layout_properties: {slot: slot-2}
+- type: form:Dashboard.Form1
+  properties: {}
+  name: custom_1
+  layout_properties: {slot: slot-1}
 is_package: true

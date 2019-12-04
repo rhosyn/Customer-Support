@@ -35,6 +35,8 @@ class DashGraphs(DashGraphsTemplate):
                        ]
     
     self.plot_1.layout = go.Layout(
+                          title="Resolution Overview",
+
                           # expand the graphs
                           margin=dict(
                               l=90, #left margin
@@ -76,16 +78,19 @@ class DashGraphs(DashGraphsTemplate):
                         )
     
     
-    labels = ['Unresolved','Resolved',]
-    values = [0.25, 0.75]
-    self.plot_2.data = go.Pie(values=values, labels=labels, hole=.8,marker=dict(colors=['gray', '#8478DA']))
-    self.plot_3.data = go.Pie(values=values, labels=labels)
+    labels1 = ['Unresolved','Resolved',]
+    labels2 = ['New','Returning']
+    values1 = [0.25, 0.75]
+    values2 = [0.55,0.35]
+    self.plot_2.data = go.Pie(values=values1, labels=labels1, hole=.85,marker=dict(colors=['gray', '#8478DA']),textinfo='none')
+    self.plot_3.data = go.Pie(values=values2, labels=labels2, hole=.85,marker=dict(colors=['#2e2951', '#8478DA']),textinfo='none')
     layout_pie = go.Layout(margin=dict(
                               l=90, #left margin
                               r=50, #right margin
                               b=50, #bottom margin
                               t=50, #top margin
-                          ),showlegend=False)
+                          ),showlegend=False,
+                          )
     self.plot_3.layout = layout_pie
     self.plot_2.layout = layout_pie
     

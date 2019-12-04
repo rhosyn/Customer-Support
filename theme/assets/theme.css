@@ -237,6 +237,16 @@ select::-ms-expand {
     margin-right: 10px;
  }
 
+/* Style the clear button */
+.anvil-role-clear-button button {
+    background-color: white;
+    color: gray;
+    border: 1px solid lightgrey;
+    font-size: 12px;
+    padding: 9px 16px;
+    border-radius: 5px;
+}
+
 /* Style the TicketDetail RepeatingPanel */
 
 .anvil-role-thick-grey-border {

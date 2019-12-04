@@ -1,36 +1,123 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"UEOLUD":20,"VKPMKY":40}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"VKPMKY":40}',
+    spacing_below: small, background: ''}
 components:
-- type: Plot
-  properties: {height: 289}
-  name: plot_2
-  layout_properties: {grid_position: 'IQNYWY,UEOLUD'}
 - type: ColumnPanel
-  properties: {col_widths: '{"XDUAXT":15,"ROSDWI":15,"JLBESV":15}'}
+  properties: {col_widths: '{}'}
   name: column_panel_1
   layout_properties: {grid_position: 'IQNYWY,VKPMKY'}
+  components: []
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_1
+  layout_properties: {grid_position: 'ZFCSFS,GGBRUN', full_width_row: true}
+  components:
+  - type: Plot
+    properties: {spacing_above: small, spacing_below: small, height: 243, visible: true,
+      tooltip: '', interactive: true}
+    name: plot_2
+    layout_properties: {grid_position: 'IQNYWY,UEOLUD', width: 300}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_3
+    layout_properties: {width: 274}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: First reply resolved, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'OWPMNS,PUFIUV'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 75% of tickets were resolved with the first reply., font_size: 16,
+        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'DZFQHJ,CDDNSO'}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {width: 31}
+  - type: Plot
+    properties: {spacing_above: small, spacing_below: small, height: 244, visible: true,
+      tooltip: '', interactive: true}
+    name: plot_3
+    layout_properties: {grid_position: 'SULFGK,ROSDWI', width: 300}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_4
+    layout_properties: {width: 197}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: New vs. Returning, font_size: 18, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      name: label_2
+      layout_properties: {grid_position: 'SJKERU,HKITLB'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '100 new customers
+
+          70 returning customers', font_size: 16, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_4
+      layout_properties: {grid_position: 'OAWGBK,PPRKKH'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_2
+  layout_properties: {grid_position: 'SPJMLO,OCQCWH', full_width_row: false}
   components:
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: First reply resolved, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      visible: true, text: Resolution Overview, font_size: 18, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
-    name: label_1
-    layout_properties: {grid_position: 'SULFGK,XDUAXT'}
+    name: label_5
+    layout_properties: {}
+  - type: FlowPanel
+    properties: {}
+    name: flow_panel_3
+    layout_properties: {}
+    components:
+    - type: Button
+      properties: {role: clear-button, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: button_1, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_1
+      layout_properties: {}
+    - type: Button
+      properties: {role: clear-button, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: button_2, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_2
+      layout_properties: {}
+    - type: Button
+      properties: {role: clear-button, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: button_3, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_3
+      layout_properties: {}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: column_panel_2
+  layout_properties: {grid_position: 'LQLWGS,RNWMWK', full_width_row: true}
+  components:
   - type: Plot
-    properties: {height: 194}
-    name: plot_3
-    layout_properties: {grid_position: 'SULFGK,ROSDWI'}
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: New vs. Returning, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-      underline: false, icon: ''}
-    name: label_2
-    layout_properties: {grid_position: 'SULFGK,JLBESV'}
-- type: Plot
-  properties: {}
-  name: plot_1
-  layout_properties: {grid_position: 'CKHKRH,YHUISN'}
+    properties: {spacing_above: small, spacing_below: small, height: 450, visible: true,
+      tooltip: '', interactive: true}
+    name: plot_1
+    layout_properties: {grid_position: 'BUKBQJ,IWWLKD', full_width_row: true}
 is_package: true

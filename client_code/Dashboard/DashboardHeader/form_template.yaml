@@ -1,6 +1,6 @@
 container:
   type: FlowPanel
-  properties: {role: dashboard-form, spacing: medium, align: left, tooltip: '', border: '',
+  properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
     foreground: '', visible: true, spacing_above: large, spacing_below: large, background: ''}
 components:
 - type: form:Dashboard.DashStats
