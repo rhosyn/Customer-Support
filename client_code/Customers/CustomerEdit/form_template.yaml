@@ -50,50 +50,22 @@ components:
   properties: {height: 32}
   name: spacer_2
   layout_properties: {grid_position: 'OSNJJA,LOJGXT'}
-- type: DropDown
-  properties:
-    role: dropdown-border
-    align: full
-    tooltip: ''
-    placeholder: ''
-    border: ''
-    enabled: true
-    foreground: ''
-    items: [Daniel, '']
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: ''
-    bold: false
-    underline: false
-    include_placeholder: false
-  name: drop_down_2
-  layout_properties: {grid_position: 'AEDFFQ,JFHZOB'}
-- type: DropDown
-  properties:
-    role: dropdown-border
-    align: full
-    tooltip: ''
-    placeholder: ''
-    border: ''
-    enabled: true
-    foreground: ''
-    items: [Barnes]
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: ''
-    bold: false
-    underline: false
-    include_placeholder: false
-  name: drop_down_3
-  layout_properties: {grid_position: 'OHPOES,SUMKER'}
+- type: TextBox
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: Daniel, font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_1
+  layout_properties: {grid_position: 'NGNFMP,IIFMFM'}
+- type: TextBox
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: Barnes, font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_1_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: EBMUCZ,GRZIUE
 - type: Spacer
   properties: {height: 32}
   name: spacer_4
@@ -107,50 +79,24 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: FAYHFO,SDGHZV
-- type: DropDown
-  properties:
-    role: dropdown-border
-    align: full
-    tooltip: ''
-    placeholder: ''
-    border: ''
-    enabled: true
-    foreground: ''
-    items: [Forty8Creates]
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: ''
-    bold: false
-    underline: false
-    include_placeholder: false
-  name: drop_down_4
-  layout_properties: {grid_position: 'VJEXUK,CSFZBC'}
-- type: DropDown
-  properties:
-    role: dropdown-border
-    align: full
-    tooltip: ''
-    placeholder: ''
-    border: ''
-    enabled: true
-    foreground: ''
-    items: [Managing Director]
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: ''
-    bold: false
-    underline: false
-    include_placeholder: false
-  name: drop_down_5
-  layout_properties: {grid_position: 'GDFSYH,KFKMPR'}
+- type: TextBox
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: Forty8Creates,
+    font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false}
+  name: text_box_1_copy_2
+  layout_properties:
+    col_widths: {}
+    grid_position: RGHRBZ,UICOFX
+- type: TextBox
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: Managing Director,
+    font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false}
+  name: text_box_1_copy_3
+  layout_properties:
+    col_widths: {}
+    grid_position: UEAYHD,QUBIEC
 - type: Spacer
   properties: {height: 32}
   name: spacer_3
@@ -164,78 +110,24 @@ components:
   layout_properties:
     col_widths: {}
     grid_position: MJHLGN,QGRACK
-- type: DropDown
-  properties:
-    role: dropdown-border
-    align: full
-    tooltip: ''
-    placeholder: ''
-    border: ''
-    enabled: true
-    foreground: ''
-    items: ['+44781234567']
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: ''
-    bold: false
-    underline: false
-    include_placeholder: false
-  name: drop_down_5_copy
+- type: TextBox
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '+44781234567',
+    font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false}
+  name: text_box_1_copy_4
   layout_properties:
     col_widths: {}
-    grid_position: KKXMNR,QUNOQM
-- type: DropDown
-  properties:
-    role: dropdown-border
-    align: full
-    tooltip: ''
-    placeholder: ''
-    border: ''
-    enabled: true
-    foreground: ''
-    items: ['+44781234567']
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: ''
-    bold: false
-    underline: false
-    include_placeholder: false
-  name: drop_down_5_copy_2
+    grid_position: BGURKK,QYMAHX
+- type: TextBox
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: daniel@forty8creates.com,
+    font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false}
+  name: text_box_1_copy_5
   layout_properties:
     col_widths: {}
-    grid_position: BYJVUF,KNLWSD
-- type: DropDown
-  properties:
-    role: dropdown-border
-    align: full
-    tooltip: ''
-    placeholder: ''
-    border: ''
-    enabled: true
-    foreground: ''
-    items: [daniel@forty8creates.com]
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: ''
-    bold: false
-    underline: false
-    include_placeholder: false
-  name: drop_down_5_copy_3
-  layout_properties:
-    col_widths: {}
-    grid_position: UKLSSL,BJMNPQ
+    grid_position: DRWNJN,XEMJYY
 - type: Spacer
   properties: {height: 32}
   name: spacer_5

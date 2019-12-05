@@ -60,10 +60,11 @@ container:
       \ center right;\n  background-repeat: no-repeat;\n  background-size: contain;\n\
       \  font-size: 18px;\n  }\n\n.anvil-role-primary-color i {\n  padding-right:\
       \ 35px;\n  font-size: 24px;\n  }\n  \n  \n.placeholder {\n    border: 1px dotted\
-      \ grey;\n    padding: 10px 10px;\n    text-align: center;\n  }\n\n.form-control:focus\
-      \ {\n  border-color: #2f2a52;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),\
-      \ 0 0 8px rgba(102, 175, 233, .6);\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),\
-      \ 0 0 8px rgb(47, 42, 82);\n}\n\n\n</style>\n"}
+      \ grey;\n    padding: 10px 10px;\n    text-align: center;\n  }\n\n.search-box\
+      \ .form-control:focus {\n  border-color: #2f2a52 !important;\n  -webkit-box-shadow:\
+      \ inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6) !important;\n\
+      \  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(47, 42, 82) !important;\n\
+      }\n\n\n</style>\n"}
 components:
 - type: form:Avatars.Avatar
   properties: {}
@@ -88,13 +89,6 @@ components:
       italic: false, background: '', bold: false, underline: false, icon: 'fa:sign-out'}
     name: link_1
     layout_properties: {}
-- type: TextBox
-  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Search for something...,
-    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
-    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
-    background: '', bold: false, underline: false}
-  name: text_box_1
-  layout_properties: {slot: search-box}
 - type: LinearPanel
   properties: {}
   name: linear_panel_2
@@ -107,6 +101,7 @@ components:
       underline: false, icon: 'fa:plus-circle'}
     name: button_1
     layout_properties: {}
+    event_bindings: {click: button_1_click}
 - type: LinearPanel
   properties: {}
   name: links_panel
@@ -146,4 +141,11 @@ components:
       italic: false, background: '', bold: false, underline: false, icon: 'fa:cog'}
     name: link_5
     layout_properties: {}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Search for something...,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_1
+  layout_properties: {slot: search-box}
 is_package: true

@@ -6,6 +6,7 @@ from ..Tickets.TicketInboxSlots import TicketInboxSlots
 from ..Dashboard.DashboardSlots import DashboardSlots
 from ..Tickets.TicketDetailSlots import TicketDetailSlots
 from ..Customers.CustomerOverviewSlots import CustomerOverviewSlots
+from ..Tickets.TicketNewSlots import TicketNewSlots
 
 class Homepage(HomepageTemplate):
   def __init__(self, **properties):
@@ -41,6 +42,14 @@ class Homepage(HomepageTemplate):
     self.add_component(self.current_form, slot="default")
     self.clear_links()
     self.customer_link.role = 'active'
+
+  def button_1_click(self, **event_args):
+    self.current_form.remove_from_parent()
+    self.current_form = TicketNewSlots()
+    self.add_component(self.current_form, slot="default")
+    self.clear_links()
+    self.ticket_link.role = 'active'
+
 
 
 

@@ -43,6 +43,16 @@ body {
   height: 100%;
 }
 
+/* Role to make a form full height as well as applying padding */
+.anvil-role-full-height-padding {
+  padding: 36px 90px;
+  height: 100%;
+}
+
+.anvil-role-horizontal-padding {
+  padding: 0 80px;
+}
+
 .anvil-role-dashboard-form {
   height: 100%;
   width: 100%;
@@ -59,6 +69,18 @@ body {
   width: 100%;
   padding: 36px 0 0 100px;
   margin-right: 10px;
+}
+
+.anvil-role-background-image-narrow {
+  background: url(/_/theme/grey-squiggles.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 100% 75%;
+  height: 100%;
+  width: 100%;
+  padding: 36px 0 0 30px;
+  margin-right: 10px;
+  box-shadow: 6px 0px 18px 0px rgba(125, 125, 125, 0.14);
 }
 
 .anvil-role-background-colour {
@@ -91,6 +113,13 @@ body {
   margin-right: 30px;
 }
 
+.anvil-role-grey-border-top {
+  border-top: 5px solid #F2F2F2;
+  padding: 0 30px 30px 30px;
+  background-color: white;
+  margin-right: 30px;
+}
+
 .anvil-role-card-no-border {
   padding: 0 30px 30px 30px;
   margin-right: 32px;
@@ -118,6 +147,21 @@ body {
 
 .anvil-role-tickets-repeating-panel:first-child {
     margin-top: 30px;
+}
+
+.anvil-role-select-customer-repeating-panel {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px 0 0 10px;
+  border-top: 1px solid rgb(242, 242, 242) !important;
+  border-left: 1px solid rgb(242, 242, 242) !important;
+  border-bottom: 1px solid rgb(242, 242, 242) !important;
+}
+
+.anvil-role-select-customer-repeating-panel:first-child {
+    margin-top: 60px;
 }
 
 .anvil-role-details-repeating-panel {
@@ -195,6 +239,7 @@ select::-ms-expand {
 /* Dropdowns with border */
 .anvil-role-dropdown-border {
   font-size: 18px;
+  
 }
 
 .anvil-role-dropdown-border input {
@@ -204,6 +249,7 @@ select::-ms-expand {
   background-position: center right;
   background-repeat: no-repeat;
   background-size: contain;
+  
 }
 
 .anvil-role-dropdown-border i {
@@ -217,9 +263,11 @@ select::-ms-expand {
   background-position: center right;
   background-repeat: no-repeat;
   background-size: contain;
+  padding-right: 40px;
 }
 
 /* Dropdowns without border */
+
 .anvil-role-dropdown-no-border select {
   border: none;
   box-shadow: none !important;
@@ -239,6 +287,19 @@ select::-ms-expand {
 .anvil-role-primary-button button i {
     margin-right: 10px;
  }
+
+/* Style input TextBoxes */
+.anvil-role-textbox-input {
+  height: 50px !important;
+  border: 0.5px solid #EEEEEE;
+  font-size: 18px;
+}
+
+.anvil-role-textarea-input {
+  min-height: 50px !important;
+  border: 0.5px solid #EEEEEE;
+  font-size: 18px;
+}
 
 /* Style the clear button */
 .anvil-role-clear-button button {
@@ -293,4 +354,25 @@ select::-ms-expand {
   font-size: 18px;
 }
 
+/* Secondary search box */
+.anvil-role-search-box-secondary {
+  color: grey;
+  background-color: #EBEBEB;
+  padding: 10px 200px 20px 20px;
+  border-radius: 30px;
+  border: none;
+  background-image: url("/_/theme/grey-box.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 18px;
+}
 
+/* Focus on inputs */
+
+.form-control:focus {
+  border-color: #e6e6e6 !important;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px rgba(102, 175, 233, .6) !important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px rgb(217, 217, 217) !important;
+}
+  

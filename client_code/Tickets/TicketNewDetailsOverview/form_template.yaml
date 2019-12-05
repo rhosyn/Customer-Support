@@ -1,0 +1,18 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: full-height-padding, html: '@theme:new_file.html'}
+components:
+- type: form:Tickets.TicketNewDetailsContent
+  properties: {}
+  name: custom_1
+  layout_properties: {slot: slot-content}
+- type: form:Tickets.TicketNewDetailsHeader
+  properties: {}
+  name: custom_2
+  layout_properties: {slot: slot-header}
+- type: form:Tickets.TicketNewDetailsFooter
+  properties: {}
+  name: custom_3
+  layout_properties: {slot: slot-header-2}
+is_package: true

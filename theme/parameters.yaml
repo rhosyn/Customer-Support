@@ -30,6 +30,17 @@ roles:
 - {name: datagrid-padded-header}
 - {name: dropdown-no-border}
 - {name: clear-button}
+- name: search-box-secondary
+  components: [TextBox]
+- name: textbox-input
+  components: [TextBox]
+- name: textarea-input
+  components: [TextArea]
+- {name: grey-border-top}
+- {name: full-height-padding}
+- {name: background-image-narrow}
+- {name: horizontal-padding}
+- {name: select-customer-repeating-panel}
 color_scheme:
   preset_groups:
   - name: Primary Colour
