@@ -88,10 +88,12 @@ class DashGraphs(DashGraphsTemplate):
                               r=0, #right margin
                               b=0, #bottom margin
                               t=0, #top margin
-                          ),showlegend=False,
+                              ),
+                           showlegend=False,
                           )
     self.plot_3.layout = layout_pie
     self.plot_2.layout = layout_pie
+    
     
     
     
