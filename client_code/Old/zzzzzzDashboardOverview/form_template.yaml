@@ -1,12 +1,8 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: dashboard-form, html: '@theme:content_noscroll.html'}
+    role: null, html: '@theme:content_noscroll.html'}
 components:
-- type: form:Dashboard.DashGraphs
-  properties: {}
-  name: custom_2
-  layout_properties: {slot: slot-content}
 - type: form:Dashboard.DashboardHeader
   properties: {}
   name: custom_1
@@ -14,8 +10,12 @@ components:
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
     text: Ticket Overview, font_size: 26, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    spacing_below: none, italic: false, background: '', bold: false, underline: false,
     icon: ''}
   name: label_1
   layout_properties: {slot: slot-header}
+- type: form:Dashboard.DashGraphs
+  properties: {}
+  name: custom_2
+  layout_properties: {slot: slot-content}
 is_package: true

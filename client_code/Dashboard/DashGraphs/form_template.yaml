@@ -3,6 +3,7 @@ container:
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
     spacing_below: small, background: ''}
+  event_bindings: {show: form_show}
 components:
 - type: FlowPanel
   properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
@@ -10,11 +11,10 @@ components:
   name: flow_panel_1
   layout_properties: {grid_position: 'ZFCSFS,GGBRUN', full_width_row: true}
   components:
-  - type: Plot
-    properties: {spacing_above: small, spacing_below: small, height: 166, visible: true,
-      tooltip: '', interactive: true}
-    name: plot_2
-    layout_properties: {grid_position: 'IQNYWY,UEOLUD', width: 200}
+  - type: form:Dashboard.ProgressGraphPercentage
+    properties: {}
+    name: custom_2
+    layout_properties: {}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_3
@@ -38,11 +38,10 @@ components:
     properties: {height: 32}
     name: spacer_1
     layout_properties: {width: 31}
-  - type: Plot
-    properties: {spacing_above: small, spacing_below: small, height: 165, visible: true,
-      tooltip: '', interactive: true}
-    name: plot_3
-    layout_properties: {grid_position: 'SULFGK,ROSDWI', width: 200}
+  - type: form:Dashboard.ProgressGraphStats
+    properties: {}
+    name: custom_1
+    layout_properties: {}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_4
@@ -64,45 +63,10 @@ components:
         underline: false, icon: ''}
       name: label_4
       layout_properties: {grid_position: 'OAWGBK,PPRKKH'}
-- type: FlowPanel
-  properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
-    foreground: '', visible: true, spacing_above: none, spacing_below: none, background: ''}
-  name: flow_panel_2
-  layout_properties: {grid_position: 'SPJMLO,OCQCWH', full_width_row: true}
-  components:
-  - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Resolution Overview, font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-      underline: false, icon: ''}
-    name: label_5
-    layout_properties: {}
-  - type: FlowPanel
-    properties: {}
-    name: flow_panel_3
-    layout_properties: {}
-    components:
-    - type: Button
-      properties: {role: clear-button, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: button_1, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: button_1
-      layout_properties: {}
-    - type: Button
-      properties: {role: clear-button, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: button_2, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: button_2
-      layout_properties: {}
-    - type: Button
-      properties: {role: clear-button, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: button_3, font_size: null, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: button_3
-      layout_properties: {}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_2
+  layout_properties: {grid_position: 'JNADPC,BIGOUY'}
 - type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',

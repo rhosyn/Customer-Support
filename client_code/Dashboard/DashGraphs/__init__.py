@@ -2,6 +2,7 @@ from ._anvil_designer import DashGraphsTemplate
 from anvil import *
 import plotly.graph_objs as go
 import anvil.server
+import anvil.js
 
 class DashGraphs(DashGraphsTemplate):
   def __init__(self, **properties):
@@ -76,24 +77,8 @@ class DashGraphs(DashGraphsTemplate):
                           )
                         )
     
-    
-    labels1 = ['Unresolved','Resolved',]
-    labels2 = ['New','Returning']
-    values1 = [0.25, 0.75]
-    values2 = [0.55,0.35]
-    self.plot_2.data = go.Pie(values=values1, labels=labels1, hole=.85,marker=dict(colors=['gray', '#8478DA']),textinfo='none')
-    self.plot_3.data = go.Pie(values=values2, labels=labels2, hole=.85,marker=dict(colors=['#2e2951', '#8478DA']),textinfo='none')
-    layout_pie = go.Layout(margin=dict(
-                              l=0, #left margin
-                              r=0, #right margin
-                              b=0, #bottom margin
-                              t=0, #top margin
-                              ),
-                           showlegend=False,
-                          )
-    self.plot_3.layout = layout_pie
-    self.plot_2.layout = layout_pie
-    
-    
-    
-    
+
+  def form_show(self, **event_args):
+    self.custom_1.call_js('drawChart1', 0.75)
+    self.custom_2.call_js('drawChart2', 0.6, 100)
+
