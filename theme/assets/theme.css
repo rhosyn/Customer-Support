@@ -44,7 +44,10 @@ body {
 }
 
 .anvil-role-dashboard-form {
-  padding-left: 50px;
+  height: 100%;
+  width: 100%;
+  padding: 36px 0 0 100px;
+  margin-right: 10px;
 }
 
 .anvil-role-background-image {

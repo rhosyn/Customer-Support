@@ -1,7 +1,7 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: dashboard-form, html: '@theme:scroll_pane.html'}
+    role: null, html: '@theme:scroll_pane.html'}
 components:
 - type: form:Dashboard.DashboardHeader
   properties: {}

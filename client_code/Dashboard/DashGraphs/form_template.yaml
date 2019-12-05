@@ -1,25 +1,20 @@
 container:
   type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"VKPMKY":40}',
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
     spacing_below: small, background: ''}
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_1
-  layout_properties: {grid_position: 'IQNYWY,VKPMKY'}
-  components: []
 - type: FlowPanel
   properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
-    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    foreground: '', visible: true, spacing_above: small, spacing_below: none, background: ''}
   name: flow_panel_1
   layout_properties: {grid_position: 'ZFCSFS,GGBRUN', full_width_row: true}
   components:
   - type: Plot
-    properties: {spacing_above: small, spacing_below: small, height: 243, visible: true,
+    properties: {spacing_above: small, spacing_below: small, height: 166, visible: true,
       tooltip: '', interactive: true}
     name: plot_2
-    layout_properties: {grid_position: 'IQNYWY,UEOLUD', width: 300}
+    layout_properties: {grid_position: 'IQNYWY,UEOLUD', width: 200}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_3
@@ -44,10 +39,10 @@ components:
     name: spacer_1
     layout_properties: {width: 31}
   - type: Plot
-    properties: {spacing_above: small, spacing_below: small, height: 244, visible: true,
+    properties: {spacing_above: small, spacing_below: small, height: 165, visible: true,
       tooltip: '', interactive: true}
     name: plot_3
-    layout_properties: {grid_position: 'SULFGK,ROSDWI', width: 300}
+    layout_properties: {grid_position: 'SULFGK,ROSDWI', width: 200}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
     name: column_panel_4
@@ -70,8 +65,8 @@ components:
       name: label_4
       layout_properties: {grid_position: 'OAWGBK,PPRKKH'}
 - type: FlowPanel
-  properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
-    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: none, spacing_below: none, background: ''}
   name: flow_panel_2
   layout_properties: {grid_position: 'SPJMLO,OCQCWH', full_width_row: false}
   components:
