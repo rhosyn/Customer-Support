@@ -1,8 +1,8 @@
-from ._anvil_designer import TicketNewDetailsHeaderTemplate
+from ._anvil_designer import zzzTicketNewDetailsHeaderTemplate
 from anvil import *
 import anvil.server
 
-class TicketNewDetailsHeader(TicketNewDetailsHeaderTemplate):
+class zzzTicketNewDetailsHeader(zzzTicketNewDetailsHeaderTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
