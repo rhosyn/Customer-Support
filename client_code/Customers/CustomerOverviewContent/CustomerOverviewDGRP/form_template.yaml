@@ -17,3 +17,4 @@ components:
   properties: {spacing_above: none, spacing_below: none, item_template: Customers.CustomerOverviewContent.CustomerOverviewRP}
   name: repeating_panel_1
   layout_properties: {column: null}
+is_package: true

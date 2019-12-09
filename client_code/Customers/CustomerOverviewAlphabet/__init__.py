@@ -1,8 +1,9 @@
-from ._anvil_designer import CustomerOverviewContentTemplate
+from ._anvil_designer import CustomerOverviewAlphabetTemplate
 from anvil import *
 import anvil.server
+import string
 
-class CustomerOverviewContent(CustomerOverviewContentTemplate):
+class CustomerOverviewAlphabet(CustomerOverviewAlphabetTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -27,5 +28,13 @@ class CustomerOverviewContent(CustomerOverviewContentTemplate):
     
     data = [{'letter':'B', 'people': people},{'letter':'C', 'people': people_c}]
     
+    visible_letters = [x['letter'] for x in data]
+    
     self.repeating_panel_1.items = data
     
+    letters = [{
+        'letter': x,
+        'visible': x in visible_letters
+      } for x in string.ascii_uppercase]
+
+    self.repeating_panel_1.items = letters
