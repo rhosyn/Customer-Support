@@ -12,5 +12,5 @@ class CustomerOverviewRP(CustomerOverviewRPTemplate):
 
   def check_box_1_change(self, **event_args):
     homepage = get_open_form()
-    homepage.add_component(CustomerOverlay(), slot="default")
+    homepage.add_component(CustomerOverlay(), slot="overlay")
 
