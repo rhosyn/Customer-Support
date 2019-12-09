@@ -17,6 +17,7 @@ class Homepage(HomepageTemplate):
     self.current_form = CustomerOverviewSlots()
     self.add_component(self.current_form, slot="default")
     self.customer_link.role = 'active'
+    
 
   def dash_link_click(self, **event_args):
     self.current_form.remove_from_parent()
