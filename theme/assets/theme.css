@@ -78,7 +78,7 @@ body {
   background-size: 100% 75%;
   height: 100%;
   width: 100%;
-  padding: 36px 0 0 30px;
+  padding: 36px 0 0 0;
   margin-right: 10px;
 }
 
@@ -112,11 +112,18 @@ body {
   margin-right: 30px;
 }
 
+.anvil-role-grey-bottom-border-narrow {
+  border-bottom: 5px solid #F2F2F2;
+  padding: 0 30px 30px 30px;
+  background-color: white;
+  margin: 0 20px;
+}
+
 .anvil-role-grey-border-top {
   border-top: 5px solid #F2F2F2;
   padding: 0 30px 30px 30px;
   background-color: white;
-  margin-right: 30px;
+  margin: 30px;
 }
 
 .anvil-role-card-no-border {
@@ -177,6 +184,7 @@ body {
   border-top: 1px solid rgb(242, 242, 242) !important;
   border-left: 1px solid rgb(242, 242, 242) !important;
   border-bottom: 1px solid rgb(242, 242, 242) !important;
+  margin-left: 20px;
 }
 
 .anvil-role-scrollable {

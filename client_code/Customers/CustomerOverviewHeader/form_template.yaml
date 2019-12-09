@@ -1,6 +1,6 @@
 components:
 - type: FlowPanel
-  properties: {role: grey-bottom-border, spacing: medium, align: justify, tooltip: '',
+  properties: {role: grey-bottom-border-narrow, spacing: none, align: justify, tooltip: '',
     border: '', foreground: '', visible: true, spacing_above: none, spacing_below: small,
     background: ''}
   name: flow_panel_2
@@ -45,5 +45,5 @@ components:
       layout_properties: {}
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"VTBILJ":58}'}
 is_package: true

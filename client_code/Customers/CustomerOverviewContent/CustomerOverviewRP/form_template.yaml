@@ -46,6 +46,7 @@ components:
     italic: false, background: '', bold: false, checked: false, underline: false}
   name: check_box_1
   layout_properties: {column: QBAWOM}
+  event_bindings: {change: check_box_1_change}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:Gray
       600', visible: true, text: '', font_size: null, font: '', spacing_above: small,

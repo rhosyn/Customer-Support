@@ -1,9 +1,9 @@
-<div class="flex-me row full-height no-margin">
-    <div class="slot small" anvil-slot-repeat="slot-2"></div>
-    <div class="placeholder anvil-designer-only" anvil-if-slot-empty="slot-2" anvil-drop-slot="slot-2">Drop your Narrow Form here</div>
-    <div class="slot large" anvil-slot="slot-1">
+<div class="flex-me row full-height no-margin absolute">
+    <div class="slot large grey-background" anvil-slot="slot-1">
        <div class="placeholder anvil-designer-only" anvil-if-slot-empty="slot-1" anvil-drop-here>Drop your Main Form here</div>
     </div>
+    <div class="slot" anvil-slot-repeat="slot-2"></div>
+    <div class="placeholder anvil-designer-only" anvil-if-slot-empty="slot-2" anvil-drop-slot="slot-2">Drop your Secondary Form here</div>
     <div class="slot" anvil-slot-repeat="slot-3"></div>
     <div class="placeholder anvil-designer-only" anvil-if-slot-empty="slot-3" anvil-drop-slot="slot-3">Drop your Third Form here</div>
 </div>
@@ -20,12 +20,6 @@
     text-align: center;
   }
   
-  .slot.small {
-    width: 7em;
-	min-width: 5em !important;
-	padding: 10em 2em 10em 0em;
-  }
-  
   .slot {
     height: 100%;
     min-width: 22vw;
@@ -33,10 +27,21 @@
   
   .slot.large {
     flex: 1 0 auto;
-    
+  }
+  
+  .grey-background {
+    background-color: #171717b8;
+    border-radius: 100px 0 0 0;
+  }
+  
+  .absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
   
 
-  
 
 </style>
