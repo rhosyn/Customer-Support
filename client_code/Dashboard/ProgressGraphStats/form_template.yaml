@@ -25,3 +25,4 @@ container:
       \   .attr('dy', '.35em')\n      .text(text);\n  }\n  \n  drawChart2(0.5, 50);\n\
       \n</script>"}
 is_package: true
+custom_component: true

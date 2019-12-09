@@ -25,3 +25,4 @@ container:
       \  }\n  \n  drawChart1(0.9);\n\n</script>"}
 components: []
 is_package: true
+custom_component: true

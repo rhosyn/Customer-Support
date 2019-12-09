@@ -80,3 +80,4 @@ components:
     name: plot_1
     layout_properties: {grid_position: 'BUKBQJ,IWWLKD', full_width_row: true}
 is_package: true
+custom_component: true

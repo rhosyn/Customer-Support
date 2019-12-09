@@ -1,12 +1,14 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{"EPCMJW":55}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"EPCMJW":55}',
+    spacing_below: none, background: ''}
 components:
 - type: Link
   properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: 'theme:Gray
       900', visible: true, text: '', font_size: 16, wrap_on: mobile, font: '', col_spacing: medium,
-    spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
-    italic: false, background: '', bold: true, underline: false, icon: ''}
+    spacing_above: none, icon_align: left, col_widths: '', spacing_below: none, italic: false,
+    background: '', bold: true, underline: false, icon: ''}
   name: link_1
   layout_properties: {grid_position: 'IZWCYI,EPCMJW'}
   data_bindings:
