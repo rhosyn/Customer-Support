@@ -2,6 +2,7 @@ from ._anvil_designer import CustomerOverviewRPTemplate
 from anvil import *
 import anvil.server
 from ...CustomerOverlay import CustomerOverlay
+from ...CustomerDetailsOverlay import CustomerDetailsOverlay
 
 class CustomerOverviewRP(CustomerOverviewRPTemplate):
   def __init__(self, **properties):
@@ -12,5 +13,6 @@ class CustomerOverviewRP(CustomerOverviewRPTemplate):
 
   def check_box_1_change(self, **event_args):
     homepage = get_open_form()
-    homepage.add_component(CustomerOverlay(), slot="overlay")
+    homepage.clear(slot="overlay")
+    homepage.add_component(CustomerDetailsOverlay(), slot="overlay")
 

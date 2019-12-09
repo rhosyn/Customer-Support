@@ -1,0 +1,10 @@
+components:
+- type: form:Customers.CustomerDetails
+  properties: {}
+  name: custom_1
+  layout_properties: {slot: slot-2}
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: '@theme:two_slot_overlay.html'}
+is_package: true

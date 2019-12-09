@@ -22,51 +22,51 @@ container:
       \      \n      <div class=\"search-box\" anvil-slot=\"search-box\">\n      \
       \   <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"search-box\"\
       \ anvil-drop-here>Drop TextBox here</div>\n      </div>\n    </div>\n    <div\
-      \ class=\"content\">\n      \n      <div class=\"absolute-div\">\n        <div\
-      \ anvil-slot-repeat=\"default\" class=\"anvil-measure-this full-height full-height-child\"\
-      ></div>\n        <div class=\"placeholder drop-here\" anvil-if-slot-empty=\"\
-      default\" anvil-drop-slot=\"default\">Drop a ColumnPanel here.</div>\n     \
-      \ </div>\n      <div class=\"overlay\" anvil-slot=\"overlay\">\n        <div\
-      \ class=\"anvil-designer-only\" anvil-if-slot-empty=\"overlay\" anvil-drop-here></div>\n\
+      \ class=\"content\">\n      <div class=\"absolute-div\">\n        <div anvil-slot-repeat=\"\
+      default\" class=\"anvil-measure-this full-height full-height-child\"></div>\n\
+      \        <div class=\"placeholder drop-here\" anvil-if-slot-empty=\"default\"\
+      \ anvil-drop-slot=\"default\">Drop a ColumnPanel here.</div>\n      </div>\n\
+      \      <div class=\"overlay\" anvil-slot=\"overlay\">\n        <div class=\"\
+      anvil-designer-only\" anvil-if-slot-empty=\"overlay\" anvil-drop-here></div>\n\
       \      </div>\n    </div>\n  </div> \n</div>\n<div anvil-drop-default anvil-drop-redirect=\"\
       .placeholder\" anvil-drop-container=\".anvil-container\"></div>\n\n<style>\n\
-      \  \n.content {\n  flex: 1 0 0;\n  position: relative;\n  }\n  \n /* Remove\
-      \ margin from main ContentPanel */\n.anvil-panel-section-container {\n  margin:\
-      \ 0 !important;\n  }\n  \n.main {\n  background-color:#3C3569; \n  height: 100vh;\n\
-      \  padding-top: 50px;\n  display: flex;\n  flex-direction: row;\n  /*overflow-y:\
-      \ hidden;*/\n }\n  \n.tab {\n  height: 200px;\n  background-color: #2F2A52;\
-      \  \n  font-size: 34px;\n  color: white;\n  border-radius: 0 80px 0 0;\n  padding:\
-      \ 20px 80px;\n  margin-top: auto;\n}\n\n.title {\n    padding-top: 6px;\n  }\n\
-      \  \n.left-sidebar {\n  background-color: #2F2A52;\n  display: flex;\n  flex-direction:\
-      \ column;\n  flex: 0 0 auto;\n  align-items: center;\n  min-width: 250px;\n\
-      \  max-width: 25vw;\n  color: white;\n  padding-top: 50px;\n }\n  \n.left-sidebar\
-      \ button {\n    background-color: #00FFAF;\n    color: #2F2A53;\n    font-size:\
-      \ 24px;\n    padding: 12px 14px;\n    border-radius: 30px;\n    border: none;\n\
-      \    margin-bottom: 10px;\n  }\n  \n.left-sidebar button i {\n    margin-right:\
-      \ 10px;\n }\n  \n.left-sidebar a {\n    color: #8F8F99;\n    font-size: 20px;\n\
-      \  }\n  \n.left-sidebar a i {\n    color: #8F8F99;\n    font-size: 22px;\n \
-      \   padding-bottom: 8px;\n  }\n  \n.left-sidebar a.anvil-role-active {\n   \
-      \ color: white;\n  }\n  \n.left-sidebar a.anvil-role-active i {\n    color:\
-      \ #00FFAF;\n  }\n\n.sidebar-centre {\n  flex: 1 0 0;\n }\n\n.avatar {\n  margin-bottom:\
-      \ 50px;\n  }\n  \n.sidebar-items {\n    margin-bottom: 50px;\n    min-width:\
-      \ 150px;\n  }\n\n.sidebar-items:last-child {\n  margin-bottom: 30px;\n  }\n\n\
-      .right-content {\n  display: flex;\n  flex-direction: column;\n  flex: 1 0 0;\n\
-      \  }\n  \n.right-nav {\n  display: flex;\n  justify-content: space-between;\n\
-      \  height: 105px;\n  align-items: center;\n  /*background-color: pink;*/\n \
-      \ }\n\n.content {\n  background-color: white;\n  border-radius: 100px 0 0 0;\n\
-      \  flex: 1 0 0;\n  padding: 0px 30px;\n  }\n  \n.content .placeholder {\n  padding:\
-      \ 30px;\n}\n  \n.search-box {\n  color: white;\n  padding-right: 30px;\n  padding-top:\
-      \ 20px;\n}\n  \n.search-box input {\n  color: grey;\n  background-color: #302954;\n\
-      \  padding: 17px 280px 19px 20px;\n  border-radius: 30px;\n  border: none;\n\
-      \  background-image: url(\"/_/theme/purple-arrow.png\");\n  background-position:\
-      \ center right;\n  background-repeat: no-repeat;\n  background-size: contain;\n\
-      \  font-size: 18px;\n  }\n\n.anvil-role-primary-color i {\n  padding-right:\
-      \ 35px;\n  font-size: 24px;\n  }\n  \n  \n.placeholder {\n    border: 1px dotted\
-      \ grey;\n    padding: 10px 10px;\n    text-align: center;\n  }\n\n.search-box\
-      \ .form-control:focus {\n  border-color: #2f2a52 !important;\n  -webkit-box-shadow:\
-      \ inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6) !important;\n\
-      \  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(47, 42, 82) !important;\n\
-      }\n\n\n</style>\n"}
+      \  \n.content {\n  flex: 1 0 0;\n  position: relative;\n  background-color:\
+      \ white;\n  border-radius: 100px 0 0 0;\n  flex: 1 0 0;\n  padding: 0px 30px;\n\
+      \  overflow: hidden;\n  }\n  \n /* Remove margin from main ContentPanel */\n\
+      .anvil-panel-section-container {\n  margin: 0 !important;\n  }\n  \n.main {\n\
+      \  background-color:#3C3569; \n  height: 100vh;\n  padding-top: 50px;\n  display:\
+      \ flex;\n  flex-direction: row;\n  /*overflow-y: hidden;*/\n }\n  \n.tab {\n\
+      \  height: 200px;\n  background-color: #2F2A52;  \n  font-size: 34px;\n  color:\
+      \ white;\n  border-radius: 0 80px 0 0;\n  padding: 20px 80px;\n  margin-top:\
+      \ auto;\n}\n\n.title {\n    padding-top: 6px;\n  }\n  \n.left-sidebar {\n  background-color:\
+      \ #2F2A52;\n  display: flex;\n  flex-direction: column;\n  flex: 0 0 auto;\n\
+      \  align-items: center;\n  min-width: 250px;\n  max-width: 25vw;\n  color: white;\n\
+      \  padding-top: 50px;\n }\n  \n.left-sidebar button {\n    background-color:\
+      \ #00FFAF;\n    color: #2F2A53;\n    font-size: 24px;\n    padding: 12px 14px;\n\
+      \    border-radius: 30px;\n    border: none;\n    margin-bottom: 10px;\n  }\n\
+      \  \n.left-sidebar button i {\n    margin-right: 10px;\n }\n  \n.left-sidebar\
+      \ a {\n    color: #8F8F99;\n    font-size: 20px;\n  }\n  \n.left-sidebar a i\
+      \ {\n    color: #8F8F99;\n    font-size: 22px;\n    padding-bottom: 8px;\n \
+      \ }\n  \n.left-sidebar a.anvil-role-active {\n    color: white;\n  }\n  \n.left-sidebar\
+      \ a.anvil-role-active i {\n    color: #00FFAF;\n  }\n\n.sidebar-centre {\n \
+      \ flex: 1 0 0;\n }\n\n.avatar {\n  margin-bottom: 50px;\n  }\n  \n.sidebar-items\
+      \ {\n    margin-bottom: 50px;\n    min-width: 150px;\n  }\n\n.sidebar-items:last-child\
+      \ {\n  margin-bottom: 30px;\n  }\n\n.right-content {\n  display: flex;\n  flex-direction:\
+      \ column;\n  flex: 1 0 0;\n  }\n  \n.right-nav {\n  display: flex;\n  justify-content:\
+      \ space-between;\n  height: 105px;\n  align-items: center;\n  /*background-color:\
+      \ pink;*/\n  }\n\n\n  \n.content .placeholder {\n  padding: 30px;\n}\n  \n.search-box\
+      \ {\n  color: white;\n  padding-right: 30px;\n  padding-top: 20px;\n}\n  \n\
+      .search-box input {\n  color: grey;\n  background-color: #302954;\n  padding:\
+      \ 17px 280px 19px 20px;\n  border-radius: 30px;\n  border: none;\n  background-image:\
+      \ url(\"/_/theme/purple-arrow.png\");\n  background-position: center right;\n\
+      \  background-repeat: no-repeat;\n  background-size: contain;\n  font-size:\
+      \ 18px;\n  }\n\n.anvil-role-primary-color i {\n  padding-right: 35px;\n  font-size:\
+      \ 24px;\n  }\n  \n  \n.placeholder {\n    border: 1px dotted grey;\n    padding:\
+      \ 10px 10px;\n    text-align: center;\n  }\n\n.search-box .form-control:focus\
+      \ {\n  border-color: #2f2a52 !important;\n  -webkit-box-shadow: inset 0 1px\
+      \ 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6) !important;\n  box-shadow:\
+      \ inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(47, 42, 82) !important;\n}\n\
+      \n\n</style>\n"}
 components:
 - type: form:Avatars.Avatar
   properties: {}
