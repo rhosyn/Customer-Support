@@ -5,7 +5,7 @@ allow_embedding: false
 name: Ticketing App design
 runtime_options: {version: 2, server_version: python3-full}
 metadata: {}
-startup_form: Avatars.Avatar
+startup_form: Homepage
 native_deps: {head_html: '<script src="//d3js.org/d3.v4.min.js"></script>
 
     '}

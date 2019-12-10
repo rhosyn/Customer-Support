@@ -1,8 +1,8 @@
-from ._anvil_designer import AvatarWhiteTemplate
+from ._anvil_designer import AvatarTransparentTemplate
 from anvil import *
 import anvil.server
 
-class AvatarWhite(AvatarWhiteTemplate):
+class AvatarTransparent(AvatarTransparentTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

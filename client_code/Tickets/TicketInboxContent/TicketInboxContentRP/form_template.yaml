@@ -13,13 +13,6 @@ components:
   name: check_box_1
   layout_properties: {column: FEORLK}
 - type: Label
-  properties: {role: avatar, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: 'fa:user'}
-  name: label_1
-  layout_properties: {column: SVDJFK}
-- type: Label
   properties: {role: null, align: left, tooltip: '', border: Npne, foreground: '#332F5B',
     visible: true, text: '', font_size: 16, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: false, underline: false,
@@ -109,4 +102,8 @@ components:
     italic: false, background: '', bold: false, underline: false, icon: 'fa:unlock-alt'}
   name: link_1
   layout_properties: {column: HCOREJ}
+- type: form:Avatars.AvatarTransparent
+  properties: {}
+  name: avatar_transparent_1
+  layout_properties: {column: SVDJFK}
 is_package: true
