@@ -2,7 +2,7 @@ container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: "\n<div class=\"avatar large\">\n    <object type=\"image/svg+xml\"\
-      \ data=\"/_/theme/user.svg\" color=\"white\" width=\"50px\"></object>\n    <div\
+      \ data=\"/_/theme/user.svg\" fill=\"white\" width=\"50px\"></object>\n    <div\
       \ class=\"avatar-name\" anvil-slot=\"avatar-name\">\n        <div class=\"placeholder\
       \ anvil-designer-only\" anvil-if-slot-empty=\"avatar-name\" anvil-drop-here>Drop\
       \ name label here</div>\n    </div>\n    <div class=\"avatar-status\" anvil-slot=\"\
