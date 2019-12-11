@@ -5,11 +5,11 @@ body {
   font-size: 1.5vh;
 }
 
-@media(max-width: 1090px) {
+/* @media(max-width: 1090px) {
   body {
     font-size: 16px;
   }
-}
+} */
 
 .flex-me {
   display: flex;
@@ -57,8 +57,9 @@ a:focus {
 
 /* Role to make a form full height as well as applying padding */
 .anvil-role-full-height-padding {
-  padding: 36px 90px;
+  padding: 4vh 7vh;
   height: 100%;
+  background-color: #f2f2f2;
 }
 
 .anvil-role-horizontal-padding {
@@ -93,10 +94,10 @@ a:focus {
   background: url(/_/theme/grey-squiggles.png);
   background-position: bottom left;
   background-repeat: no-repeat;
-  background-size: 100% 75%;
+  background-size: 100% 65%;
   height: 100%;
   width: 100%;
-  padding: 2vh 0 0 0;
+  padding: 4vh 0 0 0;
   margin-right: 10px;
 }
 
@@ -210,11 +211,13 @@ a:focus {
   border-top: 1px solid rgb(242, 242, 242) !important;
   border-left: 1px solid rgb(242, 242, 242) !important;
   border-bottom: 1px solid rgb(242, 242, 242) !important;
+  margin-left: 2vh;
 }
 
 .anvil-role-select-customer-repeating-panel:first-child {
-    margin-top: 60px;
+    margin-top: 4vh;
 }
+
 
 .anvil-role-details-repeating-panel {
   padding: 1vh 2vh;
@@ -276,8 +279,8 @@ select::-ms-expand {
   background-position: center right;
   background-repeat: no-repeat;
   background-size: contain;
-  
 }
+
 
 .anvil-role-dropdown-border i {
   display: none;
@@ -291,6 +294,7 @@ select::-ms-expand {
   background-repeat: no-repeat;
   background-size: contain;
   padding-right: 40px;
+  background-color: white;
 }
 
 /* Dropdowns without border */
@@ -330,13 +334,11 @@ select::-ms-expand {
 .anvil-role-textbox-input {
   height: 50px !important;
   border: 0.5px solid #EEEEEE;
-  font-size: 18px;
 }
 
 .anvil-role-textarea-input {
   min-height: 50px !important;
   border: 0.5px solid #EEEEEE;
-  font-size: 18px;
 }
 
 /*Fix width of ticket inbox RP  */
@@ -345,14 +347,13 @@ select::-ms-expand {
 }
 
 /* Style the clear button */
-.anvil-role-clear-button button {
+/* .anvil-role-clear-button button {
     background-color: white;
     color: gray;
     border: 1px solid lightgrey;
-    font-size: 12px;
     padding: 9px 16px;
     border-radius: 5px;
-}
+} */
 
 
 
@@ -415,7 +416,6 @@ select::-ms-expand {
   background-position: center right;
   background-repeat: no-repeat;
   background-size: contain;
-  font-size: 18px;
 }
 
 /* Focus on inputs */

@@ -1,7 +1,7 @@
 <div class="flex-me row full-height no-margin">
     <div class="slot" anvil-slot-repeat="slot-2"></div>
     <div class="placeholder anvil-designer-only" anvil-if-slot-empty="slot-2" anvil-drop-slot="slot-2">Drop your Secondary Form here</div>
-    <div class="slot large" anvil-slot="slot-1">
+    <div class="slot large scrollable" anvil-slot="slot-1">
        <div class="placeholder anvil-designer-only" anvil-if-slot-empty="slot-1" anvil-drop-here>Drop your Main Form here</div>
     </div>
 </div>
@@ -26,6 +26,10 @@
   .slot.large {
     flex: 1 0 auto;
     
+  }
+  
+  .slot.large.scrollable {
+    overflow-y: scroll;
   }
   
 
