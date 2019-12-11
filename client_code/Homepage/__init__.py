@@ -15,7 +15,7 @@ class Homepage(HomepageTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.current_form = DashboardSlots2()
+    self.current_form = TicketInboxSlots()
     self.add_component(self.current_form, slot="default")
 #     self.customer_link.role = 'active'
     
