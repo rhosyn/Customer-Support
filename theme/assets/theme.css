@@ -83,7 +83,7 @@ a:focus {
   background-size: 100% 70%;
   height: 100%;
   width: 100%;
-  padding: 36px 0 0 100px;
+  padding: 2vh 0 0 8vh;
   margin-right: 10px;
 }
 
@@ -123,7 +123,7 @@ a:focus {
 
 .anvil-role-grey-bottom-border {
   border-bottom: 5px solid #F2F2F2;
-  padding: 0 30px 30px 30px;
+  padding: 0 1vh 1vh 1vh;
   background-color: white;
   margin-right: 30px;
 }
@@ -167,7 +167,7 @@ a:focus {
 }
 
 .anvil-role-tickets-repeating-panel {
-  padding: 20px 10px;
+  padding: 1vh 10px;
   display: flex;
   align-items: center;
   background-color: white;
@@ -308,8 +308,7 @@ select::-ms-expand {
 .anvil-role-primary-button button {
     background-color: #2D2B52;
     color: white;
-    font-size: 18px;
-    padding: 9px 20px;
+    padding: 0 12px;
     border-radius: 30px;
     border: none;
     margin-bottom: 10px;
@@ -332,6 +331,11 @@ select::-ms-expand {
   font-size: 18px;
 }
 
+/*Fix width of ticket inbox RP  */
+.anvil-role-responsive-width-inbox {
+  width: 12vw !important!;
+}
+
 /* Style the clear button */
 .anvil-role-clear-button button {
     background-color: white;
@@ -342,11 +346,17 @@ select::-ms-expand {
     border-radius: 5px;
 }
 
-/* Style the TicketDetail RepeatingPanel */
 
+
+/*Fix width of ticket inbox RP  */
+.anvil-role-responsive-width-inbox {
+  width: 12vw !important;
+}
+
+/* Style the TicketDetail RepeatingPanel */
 .anvil-role-thick-grey-border {
   border: 4px solid %color:Gray 100%;
-  padding: 30px 60px 50px 55px;
+  padding: 4vh;
   border-radius: 10px;
 }
 
@@ -361,9 +371,10 @@ select::-ms-expand {
 
 /* Style the expanded datepicker */
 .daterangepicker {
-  font-size: 16px;
   color: #515151;
-  padding: 24px;
+  padding: 1vh;
+  box-shadow: 0 6px 12px rgba(136, 136, 136, 0.18) !important;
+  border: none !important;
 }
 .calendar-table td.active {
   background-color: #00FFAF;
@@ -378,11 +389,11 @@ select::-ms-expand {
 }
 .daterangepicker select.monthselect {
   border: none;
-  font-size: 18px;
+  font-size: 1em;
 }
 .daterangepicker select.yearselect {
   border: none;
-  font-size: 18px;
+  font-size: 1em;
 }
 
 /* Secondary search box */

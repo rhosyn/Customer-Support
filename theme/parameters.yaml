@@ -46,6 +46,7 @@ roles:
   components: [Label]
 - name: header-text
   components: [Label]
+- {name: responsive-width-inbox}
 color_scheme:
   preset_groups:
   - name: Primary Colour

@@ -1,19 +1,22 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
 components:
-- type: FlowPanel
-  properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
-    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
-  name: flow_panel_1
-  layout_properties: {grid_position: 'ZGUJFK,ACKDOA', full_width_row: true}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: tiny, spacing_above: small, col_widths: '{"ZWFEYX":50,"FBZRMI":10}',
+    spacing_below: small, background: ''}
+  name: column_panel_3
+  layout_properties: {grid_position: 'LNPNXW,IXFDFD', full_width_row: true}
   components:
   - type: ColumnPanel
     properties: {role: thick-grey-border, tooltip: '', border: '', foreground: '',
       visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"WRPKKR":10,"ZISSXB":50}',
       spacing_below: small, background: white}
     name: column_panel_1
-    layout_properties: {width: 547}
+    layout_properties: {width: 913, grid_position: 'GCMCJG,ZWFEYX'}
     components:
     - type: form:Avatars.AvatarTransparent
       properties: {}
@@ -26,14 +29,14 @@ components:
       components:
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: Daniel B, font_size: 18, font: '', spacing_above: small,
+          visible: true, text: Daniel B, font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_1
         layout_properties: {grid_position: 'EYMRJF,SWPMWG'}
       - type: Label
-        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '22 Oct 19 at 18:37', font_size: 18, font: '', spacing_above: small,
+        properties: {role: muted-text, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: '22 Oct 19 at 18:37', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         name: label_2
@@ -43,23 +46,18 @@ components:
         visible: true, text: "Hi Bridget, \n\nHere's the problem:\n\nLorem ipsum dolor\
           \ sit amet, consectetur adipisicing elit. Cupiditate eius, sint quos veniam\
           \ illum, quae dolor suscipit est quia quo maxime nobis delectus alias, atque\
-          \ aliquid odio incidunt, voluptatem corporis!\n\nThanks!", font_size: 18,
+          \ aliquid odio incidunt, voluptatem corporis!\n\nThanks!", font_size: null,
         font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
         background: '', bold: false, underline: false, icon: ''}
       name: label_3
       layout_properties: {grid_position: 'EYWLSS,OPCWXX'}
-  - type: ColumnPanel
-    properties: {col_widths: '{}'}
-    name: column_panel_3
-    layout_properties: {width: 292}
-    components:
-    - type: Spacer
-      properties: {height: 387}
-      name: spacer_1
-      layout_properties: {grid_position: 'PQTHSD,SCQKNH'}
-    - type: form:Avatars.AvatarSmall
-      properties: {}
-      name: avatar_small_1
-      layout_properties: {grid_position: 'HDZZXN,MPSQGN'}
+  - type: Spacer
+    properties: {height: 323}
+    name: spacer_1
+    layout_properties: {grid_position: 'GCMCJG,FBZRMI LGXTLC,HFPBYH'}
+  - type: form:Avatars.AvatarSmall
+    properties: {}
+    name: avatar_small_1
+    layout_properties: {grid_position: 'GCMCJG,FBZRMI LLZVON,PWKMVF'}
 item_type: {table_id: null}
 is_package: true
