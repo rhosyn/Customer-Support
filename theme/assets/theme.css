@@ -108,9 +108,10 @@ a:focus {
   padding: 0 20px;
 }
 
+/* Don't think we need this
 .anvil-role-tickets-form *:last-child {
   height: 100%;
-}
+} */
 
 .anvil-role-tickets-form select {
   border: none !important;
@@ -254,6 +255,7 @@ select::-ms-expand {
   box-shadow: -6px 6px 10px 1px #f4f4f4;
   height: 100%;
 }
+
 
 .anvil-role-customer-edit-form {
   padding: 32px 36px 24px 40px;

@@ -13,7 +13,7 @@ components:
   components:
   - type: ColumnPanel
     properties: {role: thick-grey-border, tooltip: '', border: '', foreground: '',
-      visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"WRPKKR":10,"ZISSXB":50}',
+      visible: true, wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{"WRPKKR":10,"ZISSXB":50}',
       spacing_below: small, background: white}
     name: column_panel_1
     layout_properties: {width: 913, grid_position: 'GCMCJG,ZWFEYX'}
