@@ -82,7 +82,7 @@ a:focus {
   background: url(/_/theme/grey-squiggles.png);
   background-position: bottom left;
   background-repeat: no-repeat;
-  background-size: 100% 75%;
+  background-size: 100% 70%;
   height: 100%;
   width: 100%;
   padding: 2vh 0 0 8vh;
@@ -96,7 +96,7 @@ a:focus {
   background-size: 100% 75%;
   height: 100%;
   width: 100%;
-  padding: 36px 0 0 0;
+  padding: 2vh 0 0 0;
   margin-right: 10px;
 }
 
@@ -149,19 +149,19 @@ a:focus {
   border-bottom: 5px solid #F2F2F2;
   padding: 0 1vh 1vh 1vh;
   background-color: white;
-  margin-right: 30px;
+  margin: 0 20px;
 }
 
 .anvil-role-grey-bottom-border-narrow {
   border-bottom: 5px solid #F2F2F2;
-  padding: 0 30px 30px 30px;
+  padding: 0 1vh 1vh 1vh;
   background-color: white;
   margin: 0 20px;
 }
 
 .anvil-role-grey-border-top {
   border-top: 5px solid #F2F2F2;
-  padding: 0 30px 30px 30px;
+  padding: 0 1vh 1vh 1vh;
   background-color: white;
   margin: 30px;
 }
@@ -361,7 +361,7 @@ select::-ms-expand {
   margin-bottom: 10px;
   border-bottom: none !important;
   box-shadow: 6px 6px 10px 1px #f4f4f4;
-  font-size: 16px;
+  margin-left: 20px;
 }
 
 

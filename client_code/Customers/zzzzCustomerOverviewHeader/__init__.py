@@ -1,8 +1,8 @@
-from ._anvil_designer import CustomerOverviewHeaderTemplate
+from ._anvil_designer import zzzzCustomerOverviewHeaderTemplate
 from anvil import *
 import anvil.server
 
-class CustomerOverviewHeader(CustomerOverviewHeaderTemplate):
+class zzzzCustomerOverviewHeader(zzzzCustomerOverviewHeaderTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

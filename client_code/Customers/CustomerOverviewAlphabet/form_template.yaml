@@ -1,8 +1,8 @@
 container: {type: ColumnPanel}
 components:
 - type: RepeatingPanel
-  properties: {role: scrollable, tooltip: '', border: '', foreground: '', items: null,
-    visible: true, spacing_above: small, spacing_below: small, item_template: Customers.CustomerOverviewAlphabet.CustomerAlphabet,
+  properties: {role: null, tooltip: '', border: '', foreground: '', items: null, visible: true,
+    spacing_above: small, spacing_below: small, item_template: Customers.CustomerOverviewAlphabet.CustomerAlphabet,
     background: white}
   name: repeating_panel_1
   layout_properties:
