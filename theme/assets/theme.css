@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Barlow', sans-serif;
-  font-size: 18px;
+  font-size: 1.5vh;
 }
 
 @media(max-width: 1090px) {
@@ -30,6 +30,11 @@ body {
 .anvil-label > .label-text {
   padding: 0;
  }
+
+/* Remove dotted outline from visited links */
+a:focus {
+  outline: none !important;
+}
 
 /* This is needed to ensure items inside the .content div of the Homepage are sized appropriately */
 .absolute-div {
@@ -63,8 +68,12 @@ body {
 .anvil-role-dashboard-form {
   height: 100%;
   width: 100%;
-  padding: 36px 0 0 100px;
+  padding: 4vh 0 0 8vh;
   margin-right: 10px;
+}
+
+.anvil-role-dashboard-form .label-text {
+  font-size: 1.5vh;
 }
 
 .anvil-role-background-image {
@@ -145,6 +154,16 @@ body {
 /* The only thing to make the top row of the Tickets form line its items up */
 .flow-panel-gutter {
   align-items: center;
+}
+
+/* Larger, headline text */
+.anvil-role-header-text .label-text {
+  font-size: 1.5em;
+}
+
+/* Smaller, muted text */
+.anvil-role-muted-text .label-text {
+  font-size: 0.8em;
 }
 
 .anvil-role-tickets-repeating-panel {
@@ -257,11 +276,6 @@ select::-ms-expand {
 }
 
 /* Dropdowns with border */
-.anvil-role-dropdown-border {
-  font-size: 18px;
-  
-}
-
 .anvil-role-dropdown-border input {
   height: 50px !important;
   border: 0.5px solid #EEEEEE;

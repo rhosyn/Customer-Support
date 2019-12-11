@@ -11,8 +11,8 @@ components:
     name: spacer_1
     layout_properties: {grid_position: 'JFBEHH,ZTPEUH'}
   - type: Label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-      visible: true, text: Filter by, font_size: 24, font: '', spacing_above: small,
+    properties: {role: header-text, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Filter by, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: ''}
     name: label_1

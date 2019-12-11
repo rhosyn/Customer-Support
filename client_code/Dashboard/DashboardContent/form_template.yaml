@@ -13,7 +13,7 @@ components:
   layout_properties: {slot: slot-header-2}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Ticket Overview, font_size: 26, font: '', spacing_above: small, icon_align: left,
+    text: Ticket Overview, font_size: 22, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: false, underline: false,
     icon: ''}
   name: label_1

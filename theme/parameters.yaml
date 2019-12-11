@@ -43,6 +43,10 @@ roles:
 - {name: select-customer-repeating-panel}
 - {name: grey-bottom-border-narrow}
 - {name: customer-edit-form}
+- name: muted-text
+  components: [Label]
+- name: header-text
+  components: [Label]
 color_scheme:
   preset_groups:
   - name: Primary Colour

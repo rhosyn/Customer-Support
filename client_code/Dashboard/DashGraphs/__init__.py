@@ -45,7 +45,7 @@ class DashGraphs(DashGraphsTemplate):
                               t=50, #top margin
                           ),
                           font=dict(family='Barlow', size=10),
-                          legend=dict(x=0, y=1.2, font=dict(size=18), orientation="h"),
+                          legend=dict(x=0, y=1.2, font=dict(size=12), orientation="h"),
                           # Format x-axis
                           xaxis=dict(
                             showgrid=False,

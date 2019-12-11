@@ -1,0 +1,14 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: dashboard-form, html: '@theme:scroll_pane.html'}
+components:
+- type: form:Dashboard.DashboardHeader
+  properties: {}
+  name: custom_1
+  layout_properties: {slot: slot-header}
+- type: form:Dashboard.DashGraphs
+  properties: {}
+  name: custom_2
+  layout_properties: {slot: slot-content}
+is_package: true

@@ -3,11 +3,11 @@ container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: "<div id=\"chart2\"></div>\n\n<style>\n.pie2 {\n  margin: 20px;\n\
-      }\n\n.pie2 text{\n  font-size: 4em;\n  font-family: \"Barlow\";\n  fill: #3a3367;\n\
+      }\n\n.pie2 text{\n  font-size: 3vh;\n  font-family: \"Barlow\";\n  fill: #3a3367;\n\
       }\n</style>\n\n<script>\n  \n  function drawChart2(percent, text) {\n    document.getElementById('chart2').innerHTML\
       \ = \"\";\n    \n    var percent = percent; // 0.0 to 1.0\n    var text = text;\n\
-      \n    var width = 200;\n    var height = 200;\n    var thickness = 10;\n   \
-      \ var duration = 750;\n    var foregroundColor = \"#7d71d7\";\n    var backgroundColor\
+      \n    var width = 100;\n    var height = 100;\n    var thickness = 8;\n    var\
+      \ duration = 750;\n    var foregroundColor = \"#7d71d7\";\n    var backgroundColor\
       \ = \"#cccccc\";\n\n    var radius = Math.min(width, height) / 2;\n    var color\
       \ = d3.scaleOrdinal([foregroundColor, backgroundColor]);\n    \n    var svg\
       \ = d3.select(\"#chart2\")\n    .append('svg')\n    .attr('class', 'pie2')\n\
