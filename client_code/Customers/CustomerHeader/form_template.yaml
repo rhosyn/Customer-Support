@@ -4,12 +4,9 @@ container:
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
     spacing_below: small, background: '#2f2853'}
 components:
-- type: Spacer
-  properties: {height: 32}
-  name: spacer_3
-  layout_properties: {grid_position: 'UQAWPT,YULJTX'}
 - type: FlowPanel
-  properties: {}
+  properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: medium, background: ''}
   name: flow_panel_1
   layout_properties: {grid_position: 'ZTUMAQ,LQFZQL'}
   components:
@@ -20,10 +17,6 @@ components:
       underline: false, icon: ''}
     name: label_1
     layout_properties: {grid_position: 'NPWDLT,IKNOZY'}
-  - type: Spacer
-    properties: {height: 32}
-    name: spacer_2
-    layout_properties: {width: 24}
   - type: Link
     properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: white,
       visible: true, text: Edit, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
@@ -32,10 +25,6 @@ components:
     name: link_1
     layout_properties: {grid_position: 'NPWDLT,JUEDJD'}
     event_bindings: {click: link_1_click}
-- type: Spacer
-  properties: {height: 44}
-  name: spacer_1
-  layout_properties: {grid_position: 'NHJKCL,ZDDEGK'}
 - type: form:Avatars.AvatarBlank
   properties: {}
   name: avatar_blank_1
@@ -48,14 +37,14 @@ components:
   name: label_2
   layout_properties: {grid_position: 'BMRFRC,TKUTBA'}
 - type: Label
-  properties: {role: muted-text, align: left, tooltip: '', border: '', foreground: '#9395A1',
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#9395A1',
     visible: true, text: +44(0)20 710 13348, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: ''}
   name: label_3
   layout_properties: {grid_position: 'UFUMPN,CHOTDK'}
 - type: Label
-  properties: {role: muted-text, align: left, tooltip: '', border: '', foreground: '#9395A1',
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#9395A1',
     visible: true, text: daniel@forty8creates.com, font_size: null, font: '', spacing_above: small,
     icon_align: left, spacing_below: large, italic: false, background: '', bold: false,
     underline: false, icon: ''}
@@ -63,7 +52,7 @@ components:
   layout_properties: {grid_position: 'RPECNJ,MPUZNR'}
 - type: Label
   properties: {role: header-text, align: left, tooltip: '', border: '', foreground: '#00FFB0',
-    visible: true, text: Recent Tickets, font_size: null, font: '', spacing_above: large,
+    visible: true, text: Recent Tickets, font_size: null, font: '', spacing_above: medium,
     icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
     underline: false, icon: ''}
   name: label_1_copy

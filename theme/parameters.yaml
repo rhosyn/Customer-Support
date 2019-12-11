@@ -18,8 +18,6 @@ roles:
 - {name: details-repeating-panel}
 - {name: customer-details-form}
 - {name: primary-button}
-- {name: card-no-border}
-- {name: card-with-border}
 - {name: background-image}
 - {name: background-colour}
 - {name: thick-grey-border}
@@ -47,6 +45,7 @@ roles:
 - name: header-text
   components: [Label]
 - {name: responsive-width-inbox}
+- {name: sides-bottom-padding}
 color_scheme:
   preset_groups:
   - name: Primary Colour

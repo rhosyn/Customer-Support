@@ -47,9 +47,9 @@ components:
       name: button_2
       layout_properties: {}
 - type: ColumnPanel
-  properties: {role: card-no-border, tooltip: '', border: '', foreground: '', visible: true,
-    wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}', spacing_below: small,
-    background: white}
+  properties: {role: sides-bottom-padding, tooltip: '', border: '', foreground: '',
+    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}',
+    spacing_below: small, background: white}
   name: column_panel_1
   layout_properties:
     col_widths: {}
