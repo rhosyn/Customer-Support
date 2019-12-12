@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
 
-body {
-  font-family: 'Barlow', sans-serif;
-  font-size: 1.5vh;
+/* Structural App Layout */
+
+/* This is needed to ensure items inside the .content div of the Homepage are sized appropriately */
+.absolute-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-/* @media(max-width: 1090px) {
-  body {
-    font-size: 16px;
-  }
-} */
-
+/* FlexBox */
 .flex-me {
   display: flex;
   }
@@ -27,6 +28,22 @@ body {
   height: 100%;
 }
 
+/* Styling for Drop Slot placeholders */
+.placeholder {
+    border: 1px dotted grey;
+    padding: 10px 10px;
+    text-align: center;
+  }
+
+
+/* Typography */
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.5vh;
+}
+
+/* Remove built-in padding from Labels */
 .anvil-label > .label-text {
   padding: 0;
  }
@@ -36,21 +53,10 @@ a:focus {
   outline: none !important;
 }
 
-/* This is needed to ensure items inside the .content div of the Homepage are sized appropriately */
-.absolute-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-  
-.placeholder {
-    border: 1px dotted grey;
-    padding: 10px 10px;
-    text-align: center;
-  }
+/* ROLES */
 
+
+/* Role to make a form full height */
 .anvil-role-full-height {
   height: 100%;
 }
@@ -61,12 +67,12 @@ a:focus {
   height: 100%;
 }
 
+/* Role to add horizontal padding */
 .anvil-role-horizontal-padding {
   padding: 0 80px;
 }
 
 /* Styling to be applied to Forms */
-
 .anvil-role-dashboard-form {
   height: 100%;
   width: 100%;
@@ -156,8 +162,8 @@ a:focus {
 } */
 
 
-/* Styling to add borders */
-.anvil-role-grey-bottom-border {
+/* Add bottom border and padding */
+.anvil-role-bottom-border {
   border-bottom: 5px solid #F2F2F2;
   padding: 0 1vh 1vh 1vh;
   background-color: white;
@@ -198,6 +204,8 @@ a:focus {
   font-size: 0.8em;
 }
 
+/* RepeatingPanel Styling */
+
 .anvil-role-tickets-repeating-panel {
   padding: 1vh 10px;
   display: flex;
@@ -211,28 +219,6 @@ a:focus {
 
 .anvil-role-tickets-repeating-panel:first-child {
     margin-top: 30px;
-}
-
-.anvil-role-select-customer-repeating-panel {
-  padding: 10px 10px;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  border-radius: 10px 0 0 10px;
-  border-top: 1px solid rgb(242, 242, 242) !important;
-  border-left: 1px solid rgb(242, 242, 242) !important;
-  border-bottom: 1px solid rgb(242, 242, 242) !important;
-  margin-left: 2vh;
-}
-
-.anvil-role-select-customer-repeating-panel:first-child {
-    margin-top: 4vh;
-}
-
-
-.anvil-role-details-repeating-panel {
-  padding: 1vh 2vh;
-  border-radius: 10px;
 }
 
 .anvil-role-customers-repeating-panel {
@@ -257,6 +243,29 @@ a:focus {
   border-left: 10px solid #7E71DA !important;
   margin-left: 20px;
 }
+
+.anvil-role-select-customer-repeating-panel {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px 0 0 10px;
+  border-top: 1px solid rgb(242, 242, 242) !important;
+  border-left: 1px solid rgb(242, 242, 242) !important;
+  border-bottom: 1px solid rgb(242, 242, 242) !important;
+  margin-left: 2vh;
+}
+
+.anvil-role-select-customer-repeating-panel:first-child {
+    margin-top: 4vh;
+}
+
+.anvil-role-details-repeating-panel {
+  padding: 1vh 2vh;
+  border-radius: 10px;
+}
+
+
 
 .anvil-role-scrollable {
   overflow-y: scroll;

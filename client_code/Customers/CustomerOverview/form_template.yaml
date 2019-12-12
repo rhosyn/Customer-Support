@@ -8,7 +8,7 @@ components:
   name: custom_2
   layout_properties: {slot: slot-content}
 - type: FlowPanel
-  properties: {role: grey-bottom-border, spacing: medium, align: justify, tooltip: '',
+  properties: {role: bottom-border, spacing: medium, align: justify, tooltip: '',
     border: '', foreground: '', visible: true, spacing_above: none, spacing_below: small,
     background: ''}
   name: flow_panel_2

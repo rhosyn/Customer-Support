@@ -1,7 +1,7 @@
 from ._anvil_designer import TicketInboxContentRPTemplate
 from anvil import *
 import anvil.server
-from ...TicketDetailSlots import TicketDetailSlots
+from .....TicketDetailSlots import TicketDetailSlots
 
 class TicketInboxContentRP(TicketInboxContentRPTemplate):
   def __init__(self, **properties):

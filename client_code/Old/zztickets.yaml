@@ -116,7 +116,7 @@ components:
   components:
   - type: RepeatingPanel
     properties: {role: full-height, tooltip: '', border: '', foreground: '', items: null,
-      visible: true, spacing_above: none, spacing_below: none, item_template: Tickets.TicketInboxContent.TicketInboxContentRP,
+      visible: true, spacing_above: none, spacing_below: none, item_template: Tickets.TicketInboxSlots.TicketInbox.TicketInboxContent.TicketInboxContentRP,
       background: ''}
     name: repeating_panel_1
     layout_properties: {}

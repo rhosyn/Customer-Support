@@ -3,11 +3,11 @@ container:
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: '@theme:three_slots.html'}
 components:
-- type: form:Tickets.TicketFilters
+- type: form:Tickets.TicketInboxSlots.TicketFilters
   properties: {}
   name: custom_1
   layout_properties: {slot: slot-2}
-- type: form:Tickets.TicketDetail
+- type: form:Tickets.TicketDetailSlots.TicketDetail
   properties: {}
   name: custom_2
   layout_properties: {slot: slot-1}

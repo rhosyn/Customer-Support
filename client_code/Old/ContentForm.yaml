@@ -1,9 +1,9 @@
 components:
-- type: form:Tickets.TicketFilters
+- type: form:Tickets.TicketInboxSlots.TicketFilters
   properties: {}
   name: ticket_filters_1
   layout_properties: {slot: slot-2}
-- type: form:Tickets.TicketInbox
+- type: form:Tickets.TicketInboxSlots.TicketInbox
   properties: {}
   name: form_scroll_1
   layout_properties: {slot: slot-1}

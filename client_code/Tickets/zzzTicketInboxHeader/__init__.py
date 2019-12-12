@@ -1,8 +1,8 @@
-from ._anvil_designer import TicketInboxHeaderTemplate
+from ._anvil_designer import zzzTicketInboxHeaderTemplate
 from anvil import *
 import anvil.server
 
-class TicketInboxHeader(TicketInboxHeaderTemplate):
+class zzzTicketInboxHeader(zzzTicketInboxHeaderTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

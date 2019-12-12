@@ -17,7 +17,7 @@ components:
   properties: {}
   name: custom_1
   layout_properties: {slot: ticket-form}
-- type: form:Tickets.TicketFilters
+- type: form:Tickets.TicketInboxSlots.TicketFilters
   properties: {}
   name: ticket_filters_1
   layout_properties: {slot: ticket-filters-form}

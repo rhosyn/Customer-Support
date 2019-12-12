@@ -3,13 +3,12 @@ container:
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: background-image, html: '@theme:scroll_pane.html'}
 components:
-- type: form:Tickets.TicketInboxContent
+- type: form:Tickets.TicketDetailSlots.TicketDetail.TicketDetailHeader
   properties: {}
-  name: tickets_grid_1
-  layout_properties: {slot: slot-content}
-- type: form:Tickets.TicketInboxHeader
-  properties: {}
-  name: ticket_inbox_header_1
+  name: custom_1
   layout_properties: {slot: slot-header}
-custom_component: true
+- type: form:Tickets.TicketDetailSlots.TicketDetail.TicketDetailContent
+  properties: {}
+  name: custom_2
+  layout_properties: {slot: slot-content}
 is_package: true
