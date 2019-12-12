@@ -12,6 +12,7 @@ class CustomerOverviewRP(CustomerOverviewRPTemplate):
     # Any code you write here will run when the form opens.
 
   def check_box_1_change(self, **event_args):
+    self.role = "customers-repeating-panel-selected"
     homepage = get_open_form()
     homepage.clear(slot="overlay")
     homepage.add_component(CustomerDetailsOverlay(), slot="overlay")

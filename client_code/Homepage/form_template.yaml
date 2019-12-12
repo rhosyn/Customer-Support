@@ -44,12 +44,13 @@ container:
       \ 40px;\n }\n  \n.left-sidebar button {\n    background-color: #00FFAF;\n  \
       \  color: #2F2A53;\n    font-size: 2vh;\n    padding: 1vh 1vw;\n    border-radius:\
       \ 30px;\n    border: none;\n    margin-bottom: 10px;\n  }\n  \n.left-sidebar\
-      \ button i {\n    margin-right: 10px;\n }\n  \n.left-sidebar a {\n    color:\
-      \ #8F8F99;\n    font-size: 1.8vh;\n    margin-left: 15px;\n  }\n  \n.left-sidebar\
-      \ a i {\n    color: #8F8F99;\n    font-size: 16px;\n    padding-bottom: 8px;\n\
-      \  }\n  \n.left-sidebar a.anvil-role-active {\n    color: white;\n  }\n  \n\
-      .left-sidebar a.anvil-role-active i {\n    color: #00FFAF;\n  }\n\n.sidebar-centre\
-      \ {\n  flex: 1 0 0;\n }\n\n.avatar {\n  margin-bottom: 3vh;\n  }\n  \n.sidebar-items\
+      \ button i {\n    margin-right: 10px;\n }\n  \n.left-sidebar button:hover {\n\
+      \  background-color: #00DF99;\n}\n  \n.left-sidebar a {\n    color: #8F8F99;\n\
+      \    font-size: 1.8vh;\n    margin-left: 15px;\n  }\n  \n.left-sidebar a i {\n\
+      \    color: #8F8F99;\n    font-size: 16px;\n    padding-bottom: 8px;\n  }\n\
+      \  \n.left-sidebar a.anvil-role-active {\n    color: white;\n  }\n  \n.left-sidebar\
+      \ a.anvil-role-active i {\n    color: #00FFAF;\n  }\n\n.sidebar-centre {\n \
+      \ flex: 1 0 0;\n }\n\n.avatar {\n  margin-bottom: 3vh;\n  }\n  \n.sidebar-items\
       \ {\n    margin-bottom: 50px;\n    min-width: 150px;\n  }\n\n.sidebar-items:last-child\
       \ {\n  margin-bottom: 30px;\n  }\n\n.right-content {\n  display: flex;\n  flex-direction:\
       \ column;\n  flex: 1 0 0;\n  }\n  \n.right-nav {\n  display: flex;\n  justify-content:\
@@ -101,9 +102,9 @@ components:
       foreground: '', visible: true, text: New, font_size: null, font: '', spacing_above: small,
       icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
       underline: false, icon: 'fa:plus-circle'}
-    name: button_1
+    name: new_ticket_button
     layout_properties: {}
-    event_bindings: {click: button_1_click}
+    event_bindings: {click: new_ticket_button_click}
 - type: LinearPanel
   properties: {}
   name: links_panel

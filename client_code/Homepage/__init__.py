@@ -21,6 +21,7 @@ class Homepage(HomepageTemplate):
     
 
   def dash_link_click(self, **event_args):
+    self.clear(slot="overlay")
     self.current_form.remove_from_parent()
     self.current_form = DashboardSlots()
     self.add_component(self.current_form, slot="default")
@@ -28,6 +29,7 @@ class Homepage(HomepageTemplate):
     self.dash_link.role = 'active'
     
   def ticket_link_click(self, **event_args):
+    self.clear(slot="overlay")
     self.current_form.remove_from_parent()
     self.current_form = TicketInboxSlots()
     self.add_component(self.current_form, slot="default")
@@ -39,13 +41,15 @@ class Homepage(HomepageTemplate):
       link.role = ""
 
   def customer_link_click(self, **event_args):
+    self.clear(slot="overlay")
     self.current_form.remove_from_parent()
     self.current_form = CustomerOverviewSlots()
     self.add_component(self.current_form, slot="default")
     self.clear_links()
     self.customer_link.role = 'active'
 
-  def button_1_click(self, **event_args):
+  def new_ticket_button_click(self, **event_args):
+    self.clear(slot="overlay")
     self.current_form.remove_from_parent()
     self.current_form = TicketNewSlots()
     self.add_component(self.current_form, slot="default")

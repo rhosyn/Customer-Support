@@ -1,7 +1,7 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: background-image-narrow, html: '@theme:scroll_pane.html'}
+    role: bg-image-narrow-colour, html: '@theme:scroll_pane.html'}
 components:
 - type: form:Tickets.TicketNewHeader
   properties: {}

@@ -59,7 +59,6 @@ a:focus {
 .anvil-role-full-height-padding {
   padding: 4vh 7vh;
   height: 100%;
-  background-color: #f2f2f2;
 }
 
 .anvil-role-horizontal-padding {
@@ -95,6 +94,18 @@ a:focus {
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 100% 65%;
+  height: 100%;
+  width: 100%;
+  padding: 4vh 0 0 0;
+  margin-right: 10px;
+}
+
+.anvil-role-bg-image-narrow-colour {
+  background: url(/_/theme/grey-squiggles.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 100% 65%;
+  background-color: #f4f4f4;
   height: 100%;
   width: 100%;
   padding: 4vh 0 0 0;
@@ -162,7 +173,7 @@ a:focus {
 
 .anvil-role-grey-border-top {
   border-top: 5px solid #F2F2F2;
-  padding: 0 1vh 1vh 1vh;
+  padding: 1vh;
   background-color: white;
   margin: 30px;
 }
@@ -233,6 +244,17 @@ a:focus {
   border-top: 1px solid rgb(242, 242, 242) !important;
   border-left: 1px solid rgb(242, 242, 242) !important;
   border-bottom: 1px solid rgb(242, 242, 242) !important;
+  margin-left: 20px;
+}
+
+.anvil-role-customers-repeating-panel-selected {
+  padding: 21px 36px 21px 26px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px 0 0 10px;
+  border-top: 1px solid rgb(242, 242, 242) !important;
+  border-left: 10px solid purple !important;
   margin-left: 20px;
 }
 
@@ -318,6 +340,18 @@ select::-ms-expand {
     margin-right: 10px;
  }
 
+.anvil-role-primary-button button:hover {
+	background-color: #615bac;
+}
+
+.anvil-role-primary-button button:hover i {
+	color: white;
+}
+
+.anvil-role-primary-button button:hover span {
+	color: white;
+}
+
 .anvil-role-secondary-button button {
     background-color: transparent;
     border: 3px solid #2D2B52;
@@ -328,6 +362,14 @@ select::-ms-expand {
 
 .anvil-role-secondary-button i {
     color: #2D2B52;
+}
+
+.anvil-role-secondary-button button:hover {
+	border: 3px solid #615bac;
+}
+
+.anvil-role-secondary-button button:hover i {
+    color: #615bac;
 }
 
 /* Style input TextBoxes */
@@ -408,14 +450,14 @@ select::-ms-expand {
 /* Secondary search box */
 .anvil-role-search-box-secondary {
   color: grey;
-  background-color: #EBEBEB;
+  background-color: white;
   padding: 10px 200px 20px 20px;
   border-radius: 30px;
   border: none;
-  background-image: url("/_/theme/grey-box.png");
+/*   background-image: url("/_/theme/grey-box.png");
   background-position: center right;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain; */
 }
 
 /* Focus on inputs */
