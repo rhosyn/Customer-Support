@@ -4,7 +4,6 @@ import anvil.server
 import plotly.graph_objs as go
 from ..Tickets.TicketInboxSlots import TicketInboxSlots
 from ..Dashboard.DashboardSlots import DashboardSlots
-from ..Dashboard.DashboardSlots2 import DashboardSlots2
 from ..Tickets.TicketDetailSlots import TicketDetailSlots
 from ..Customers.CustomerOverviewSlots import CustomerOverviewSlots
 from ..Tickets.TicketNewSlots import TicketNewSlots

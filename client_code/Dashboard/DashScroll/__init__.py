@@ -1,8 +1,8 @@
-from ._anvil_designer import DashboardContent2Template
+from ._anvil_designer import DashScrollTemplate
 from anvil import *
 import anvil.server
 
-class DashboardContent2(DashboardContent2Template):
+class DashScroll(DashScrollTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

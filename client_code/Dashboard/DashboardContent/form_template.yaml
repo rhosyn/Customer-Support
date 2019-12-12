@@ -1,7 +1,7 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: dashboard-form, html: '@theme:content_noscroll.html'}
+    role: dashboard-form, html: '@theme:scroll_pane_dual_header.html'}
 components:
 - type: form:Dashboard.DashGraphs
   properties: {}

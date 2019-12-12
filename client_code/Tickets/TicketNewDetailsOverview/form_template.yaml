@@ -1,7 +1,7 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: full-height-padding, html: '@theme:new_file.html'}
+    role: full-height-padding, html: '@theme:flex_col_three_slots.html'}
 components:
 - type: ColumnPanel
   properties: {role: grey-bottom-border, tooltip: '', border: '', foreground: '',
