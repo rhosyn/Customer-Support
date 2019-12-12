@@ -1,7 +1,5 @@
-<div class="flex-me row full-height no-margin absolute">
-    <div class="slot large no-background" anvil-slot="slot-1">
-       <div class="placeholder anvil-designer-only" anvil-if-slot-empty="slot-1" anvil-drop-here>Drop your Main Form here</div>
-    </div>
+<div class="flex-me row full-height no-margin absolute-right">
+
     <div class="slot" anvil-slot-repeat="slot-2"></div>
     <div class="placeholder anvil-designer-only" anvil-if-slot-empty="slot-2" anvil-drop-slot="slot-2">Drop your Secondary Form here</div>
     
@@ -12,6 +10,7 @@
   .no-margin {
     margin: 0;
   }
+  
   
   .placeholder {
     border: 1px dotted grey;
@@ -32,12 +31,11 @@
     border-radius: 100px 0 0 0;
   }
   
-  .absolute {
+  .absolute-right {
+    width: 22vw;
     position: absolute;
-    top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
   }
   
 
