@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {role: ticket-filters-form, tooltip: '', border: '', foreground: '',
+  properties: {role: filter-form-shadow, tooltip: '', border: '', foreground: '',
     visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"GBUXLP":10}',
     spacing_below: none, background: ''}
 components:

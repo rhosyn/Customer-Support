@@ -7,15 +7,12 @@ roles:
   components: [ColumnPanel]
 - {name: tickets-form}
 - {name: tickets-repeating-panel}
-- {name: avatar}
-- {name: ticket-filters-form}
 - {name: scrollable}
 - {name: dashboard-form}
 - name: dropdown-border
   components: [DropDown, DatePicker]
 - {name: full-height}
 - {name: details-repeating-panel}
-- {name: customer-details-form}
 - {name: primary-button}
 - {name: background-image}
 - {name: background-colour}
@@ -37,8 +34,6 @@ roles:
 - {name: background-image-narrow}
 - {name: horizontal-padding}
 - {name: select-customer-repeating-panel}
-- {name: grey-bottom-border-narrow}
-- {name: customer-edit-form}
 - name: muted-text
   components: [Label]
 - name: header-text
@@ -50,6 +45,8 @@ roles:
 - {name: bg-image-narrow-colour}
 - {name: customers-repeating-panel-selected}
 - {name: bottom-border}
+- {name: filter-form-shadow}
+- {name: filter-form-no-shadow}
 color_scheme:
   preset_groups:
   - name: Primary Colour

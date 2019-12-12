@@ -3,11 +3,11 @@ container:
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: '@theme:three_slots_customers.html'}
 components:
-- type: form:Customers.CustomerOverviewAlphabet
+- type: form:Customers.CustomerOverviewSlots.CustomerAlphabet
   properties: {}
   name: custom_1
   layout_properties: {slot: slot-2}
-- type: form:Customers.CustomerOverview
+- type: form:Customers.CustomerOverviewSlots.CustomerOverview
   properties: {}
   name: custom_2
   layout_properties: {slot: slot-1}

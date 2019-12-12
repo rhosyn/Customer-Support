@@ -7,7 +7,7 @@ components:
   properties: {}
   name: form_scroll_1
   layout_properties: {slot: slot-1}
-- type: form:Customers.CustomerDetails
+- type: form:Customers.CustomerOverlay.CustomerDetails
   properties: {}
   name: customer_details_1
   layout_properties: {slot: slot-3}

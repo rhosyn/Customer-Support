@@ -1,0 +1,11 @@
+container: {type: ColumnPanel}
+components:
+- type: RepeatingPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', items: null, visible: true,
+    spacing_above: small, spacing_below: small, item_template: Customers.CustomerOverviewSlots.CustomerAlphabet.CustomerAlphabetRP,
+    background: white}
+  name: repeating_panel_1
+  layout_properties:
+    col_widths: {}
+    grid_position: CMIJCT,XVKISG
+is_package: true

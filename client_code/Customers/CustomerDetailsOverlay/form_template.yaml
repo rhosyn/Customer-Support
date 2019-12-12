@@ -1,5 +1,5 @@
 components:
-- type: form:Customers.CustomerDetails
+- type: form:Customers.CustomerOverlay.CustomerDetails
   properties: {}
   name: custom_1
   layout_properties: {slot: slot-2}

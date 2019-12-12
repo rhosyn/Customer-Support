@@ -11,7 +11,7 @@ components:
   properties: {}
   name: custom_2
   layout_properties: {slot: slot-1}
-- type: form:Customers.CustomerDetails
+- type: form:Customers.CustomerOverlay.CustomerDetails
   properties: {}
   name: custom_3
   layout_properties: {slot: slot-3}

@@ -12,12 +12,6 @@
     margin: 0;
   }
   
-  .placeholder {
-    border: 1px dotted grey;
-    padding: 10px 10px;
-    text-align: center;
-  }
-  
   .slot {
     height: 100%;
     min-width: 22vw;
@@ -46,8 +40,7 @@
 <script>
   $(".overlay-form").click(function() {
     var overlayForm = this;
-    anvil.call(overlayForm, "clear_overlay").then(function (r) {
-    });
+    anvil.call(overlayForm, "clear_overlay");
   });
   
   

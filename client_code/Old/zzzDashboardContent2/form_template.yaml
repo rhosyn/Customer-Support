@@ -3,11 +3,11 @@ container:
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: dashboard-form, html: '@theme:scroll_pane.html'}
 components:
-- type: form:Dashboard.DashboardHeader
+- type: form:Dashboard.DashboardSlots.DashboardContent.DashboardHeader
   properties: {}
   name: custom_1
   layout_properties: {slot: slot-header}
-- type: form:Dashboard.DashGraphs
+- type: form:Dashboard.DashboardSlots.DashboardContent.DashGraphs
   properties: {}
   name: custom_2
   layout_properties: {slot: slot-content}

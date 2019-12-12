@@ -3,7 +3,7 @@ container:
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: '@theme:two_slots.html'}
 components:
-- type: form:Tickets.TicketNewDetailsOverview
+- type: form:Tickets.TicketNewSlots.TicketNewDetailsOverview
   properties: {}
   name: custom_1
   layout_properties: {slot: slot-1}

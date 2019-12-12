@@ -1,0 +1,15 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: background-colour, html: '@theme:scroll_pane.html'}
+components:
+- type: form:Customers.CustomerOverlay.CustomerDetails.CustomerHeader
+  properties: {}
+  name: customer_header_1
+  layout_properties: {slot: slot-header}
+- type: form:Customers.CustomerOverlay.CustomerDetails.CustomerGrid
+  properties: {}
+  name: customer_grid_1
+  layout_properties: {slot: slot-content}
+custom_component: true
+is_package: true
