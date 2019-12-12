@@ -4,8 +4,8 @@ container:
     role: full-height-padding, html: '@theme:flex_col_three_slots.html'}
 components:
 - type: ColumnPanel
-  properties: {role: grey-bottom-border, tooltip: '', border: '', foreground: '',
-    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+  properties: {role: bottom-border, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
     spacing_below: small, background: ''}
   name: column_panel_1
   layout_properties:
@@ -92,9 +92,8 @@ components:
       name: drop_down_2
       layout_properties: {}
 - type: FlowPanel
-  properties: {role: grey-border-top, spacing: medium, align: justify, tooltip: '',
-    border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
-    background: ''}
+  properties: {role: top-border, spacing: medium, align: justify, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
   name: flow_panel_1
   layout_properties:
     col_widths: {}

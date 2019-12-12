@@ -29,7 +29,6 @@ roles:
   components: [TextBox]
 - name: textarea-input
   components: [TextArea]
-- {name: grey-border-top}
 - {name: full-height-padding}
 - {name: background-image-narrow}
 - {name: horizontal-padding}
@@ -47,6 +46,7 @@ roles:
 - {name: bottom-border}
 - {name: filter-form-shadow}
 - {name: filter-form-no-shadow}
+- {name: top-border}
 color_scheme:
   preset_groups:
   - name: Primary Colour
