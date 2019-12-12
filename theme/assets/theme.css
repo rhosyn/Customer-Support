@@ -254,7 +254,7 @@ a:focus {
   background-color: white;
   border-radius: 10px 0 0 10px;
   border-top: 1px solid rgb(242, 242, 242) !important;
-  border-left: 10px solid purple !important;
+  border-left: 10px solid #7E71DA !important;
   margin-left: 20px;
 }
 

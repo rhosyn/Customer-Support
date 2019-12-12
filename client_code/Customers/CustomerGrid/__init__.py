@@ -14,3 +14,5 @@ class CustomerGrid(CustomerGridTemplate):
     for i in range(20):
       items.append(row)
     self.repeating_panel_1.items = items
+
+  
