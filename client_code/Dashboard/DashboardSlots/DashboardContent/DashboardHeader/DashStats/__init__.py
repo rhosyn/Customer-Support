@@ -2,6 +2,7 @@ from ._anvil_designer import DashStatsTemplate
 from anvil import *
 import anvil.server
 
+
 class DashStats(DashStatsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
