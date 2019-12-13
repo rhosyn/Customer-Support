@@ -1,5 +1,15 @@
 dependencies: []
-services: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {auto_create_missing_columns: false}
+- source: /runtime/services/anvil/users.yml
+  client_config: {allow_signup: true, enable_automatically: true, use_email: true,
+    confirm_email: false, use_google: true}
+  server_config: {user_table: 38236}
+- source: /runtime/services/google.yml
+  client_config: {}
+  server_config: {}
 package_name: TicketingAppdesign
 allow_embedding: false
 name: Ticketing App design
