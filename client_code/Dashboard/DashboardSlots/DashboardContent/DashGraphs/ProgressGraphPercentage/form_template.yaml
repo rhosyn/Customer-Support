@@ -5,7 +5,7 @@ container:
       }\n\n.pie text{\n  font-size: 3vh;\n  font-family: \"Barlow\";\n  fill: #3a3367;\n\
       }\n</style>\n\n<script>\n  \n  function drawChart1(percent) {\n    document.getElementById('chart').innerHTML\
       \ = \"\";\n    \n    var percent = percent; // 0.0 to 1.0\n    var text = (percent\
-      \ * 100) + \"%\";\n\n    var width = 100;\n    var height = 100;\n    var thickness\
+      \ * 100) + \"%\";\n\n    var width = 120;\n    var height = 120;\n    var thickness\
       \ = 8;\n    var duration = 750;\n    var foregroundColor = \"#7d71d7\";\n  \
       \  var backgroundColor = \"#cccccc\";\n\n    var radius = Math.min(width, height)\
       \ / 2;\n    var color = d3.scaleOrdinal([foregroundColor, backgroundColor]);\n\

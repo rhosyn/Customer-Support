@@ -1,7 +1,7 @@
 container:
   type: FlowPanel
-  properties: {role: null, spacing: small, align: left, tooltip: '', border: '', foreground: '',
-    visible: true, spacing_above: none, spacing_below: none, background: ''}
+  properties: {role: null, spacing: small, align: center, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: none, spacing_below: none, background: ''}
 components:
 - type: form:Dashboard.DashboardSlots.DashboardContent.DashboardHeader.DashStats
   properties: {title: Unresolved, delta: -3, value: 15, time_period: month}

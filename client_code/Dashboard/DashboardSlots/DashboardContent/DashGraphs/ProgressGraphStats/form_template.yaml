@@ -6,7 +6,7 @@ container:
       }\n\n.pie2 text{\n  font-size: 3vh;\n  font-family: \"Barlow\";\n  fill: #3a3367;\n\
       }\n</style>\n\n<script>\n  \n  function drawChart2(percent, text) {\n    document.getElementById('chart2').innerHTML\
       \ = \"\";\n    \n    var percent = percent; // 0.0 to 1.0\n    var text = text;\n\
-      \n    var width = 100;\n    var height = 100;\n    var thickness = 8;\n    var\
+      \n    var width = 120;\n    var height = 120;\n    var thickness = 8;\n    var\
       \ duration = 750;\n    var foregroundColor = \"#7d71d7\";\n    var backgroundColor\
       \ = \"#cccccc\";\n\n    var radius = Math.min(width, height) / 2;\n    var color\
       \ = d3.scaleOrdinal([foregroundColor, backgroundColor]);\n    \n    var svg\

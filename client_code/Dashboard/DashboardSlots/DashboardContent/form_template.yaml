@@ -12,10 +12,10 @@ components:
   name: custom_1
   layout_properties: {slot: slot-header-2}
 - type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: Ticket Overview, font_size: 22, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
+  properties: {role: header-text, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: Ticket Overview, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
   name: label_1
   layout_properties: {slot: slot-header}
 is_package: true

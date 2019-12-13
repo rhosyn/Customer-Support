@@ -2,7 +2,7 @@ container:
   type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
-    spacing_below: small, background: ''}
+    spacing_below: none, background: ''}
   event_bindings: {show: form_show}
 components:
 - type: FlowPanel
@@ -21,8 +21,8 @@ components:
     layout_properties: {width: 274}
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: First reply resolved, font_size: 18, font: '', spacing_above: small,
+      properties: {role: header-text, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: First reply resolved, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       name: label_1
@@ -44,8 +44,8 @@ components:
     layout_properties: {width: 197}
     components:
     - type: Label
-      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: New vs. Returning, font_size: 18, font: '', spacing_above: small,
+      properties: {role: header-text, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: New vs. Returning, font_size: null, font: '', spacing_above: small,
         icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
         underline: false, icon: ''}
       name: label_2
@@ -59,15 +59,25 @@ components:
         underline: false, icon: ''}
       name: label_4
       layout_properties: {grid_position: 'OAWGBK,PPRKKH'}
+- type: Label
+  properties: {role: header-text, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: Resolution Overview, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: none, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_5
+  layout_properties: {grid_position: 'MIUXRF,ZHRYFT'}
 - type: FlowPanel
-  properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
-    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
-  name: flow_panel_2
-  layout_properties: {grid_position: 'DMVLYU,RGSGBK'}
+  properties: {role: null, spacing: tiny, align: center, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: medium, background: ''}
+  name: flow_panel_1_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: DRVPPJ,HIZGYW
+    full_width_row: true
   components:
   - type: form:Dashboard.DashboardSlots.DashboardContent.DashGraphs.ResolutionGraph
     properties: {}
     name: custom_3
-    layout_properties: {grid_position: 'VTWBUB,ZABKGJ', width: 940}
+    layout_properties: {grid_position: 'WBFFBQ,RPAFET', width: 2064}
 is_package: true
 custom_component: true
