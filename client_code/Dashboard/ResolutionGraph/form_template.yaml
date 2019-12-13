@@ -1,0 +1,16 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<canvas id=\"myChart\" width=\"400\" height=\"200\"></canvas>\n\
+      <script>\nvar ctx = document.getElementById('myChart').getContext('2d');\nvar\
+      \ chart = new Chart(ctx, {\n    // The type of chart we want to create\n   \
+      \ type: 'line',\n\n    // The data for our dataset\n    data: {\n        labels:\
+      \ ['January', 'February', 'March', 'April', 'May', 'June', 'July'],\n      \
+      \  datasets: [{\n            label: 'Resolved',\n            backgroundColor:\
+      \ '#7E71DA',\n            borderColor: '#7E71DA',\n            data: [0, 10,\
+      \ 5, 2, 9, 11, 6]\n        },{\n            label: 'My First dataset',\n   \
+      \         backgroundColor: '#00FFAF',\n            borderColor: '#00FFAF',\n\
+      \            data: [5, 3, 11, 12, 5, 6, 6]\n        }]\n    },\n\n    // Configuration\
+      \ options go here\n    options: {}\n});\n\n</script>"}
+components: []
+is_package: true
