@@ -18,7 +18,7 @@ components:
     name: column_panel_1
     layout_properties: {width: 913, grid_position: 'GCMCJG,ZWFEYX'}
     components:
-    - type: form:Avatars.AvatarTransparent
+    - type: form:Icons.AvatarTransparent
       properties: {}
       name: avatar_white_1
       layout_properties: {grid_position: 'OYAUZP,WRPKKR'}
@@ -55,7 +55,7 @@ components:
     properties: {height: 323}
     name: spacer_1
     layout_properties: {grid_position: 'GCMCJG,FBZRMI LGXTLC,HFPBYH'}
-  - type: form:Avatars.AvatarSmall
+  - type: form:Icons.AvatarSmall
     properties: {}
     name: avatar_small_1
     layout_properties: {grid_position: 'GCMCJG,FBZRMI LLZVON,PWKMVF'}

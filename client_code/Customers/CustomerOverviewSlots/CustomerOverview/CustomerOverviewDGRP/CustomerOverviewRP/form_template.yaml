@@ -46,7 +46,7 @@ components:
     underline: false, icon: 'fa:ellipsis-v'}
   name: label_1
   layout_properties: {column: YNRWXO}
-- type: form:Avatars.AvatarTransparent
+- type: form:Icons.AvatarTransparent
   properties: {}
   name: avatar_transparent_1
   layout_properties: {column: IDOAON}

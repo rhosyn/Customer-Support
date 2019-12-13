@@ -10,7 +10,7 @@ components:
     name: column_panel_1
     layout_properties: {column: null, width: 319.85}
     components:
-    - type: form:Avatars.AvatarTransparent
+    - type: form:Icons.AvatarTransparent
       properties: {}
       name: avatar_transparent_1
       layout_properties: {grid_position: 'NLDLDO,JNIVOA'}

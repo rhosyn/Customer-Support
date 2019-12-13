@@ -102,7 +102,7 @@ components:
     italic: false, background: '', bold: false, underline: false, icon: 'fa:unlock-alt'}
   name: link_1
   layout_properties: {column: HCOREJ}
-- type: form:Avatars.AvatarTransparent
+- type: form:Icons.AvatarTransparent
   properties: {}
   name: avatar_transparent_1
   layout_properties: {column: SVDJFK}

@@ -40,7 +40,7 @@ components:
       layout_properties: {grid_position: 'BMRFRC,DFBTYZ'}
       components: []
       event_bindings: {click: close_pane_link_click}
-- type: form:Avatars.AvatarBlank
+- type: form:Icons.AvatarBlank
   properties: {}
   name: avatar_blank_1
   layout_properties: {grid_position: 'GMMKPV,QLHZBG'}

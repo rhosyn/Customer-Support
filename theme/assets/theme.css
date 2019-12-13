@@ -139,7 +139,7 @@ a:focus {
 
 /* Remove borders from DropDowns (used in TicketFilters Form) */
 .anvil-role-filter-form-shadow select {
-  border: none !important;
+/*   border: none !important; */
   box-shadow: none !important;
 }
 
@@ -182,8 +182,8 @@ a:focus {
   font-size: 0.8em;
 }
 
-/* RepeatingPanel Styling */
 
+/* RepeatingPanel Styling */
 .anvil-role-tickets-repeating-panel {
   padding: 1vh 10px;
   display: flex;
@@ -243,9 +243,24 @@ a:focus {
   border-radius: 10px;
 }
 
-.anvil-role-scrollable {
-  overflow-y: scroll;
+
+/* Dashboard link and SVG styling */
+.anvil-role-dash-link svg {
+  fill:#8F8F99;
+	width: 2vh;
+	padding-top: 7px;
 }
+
+.anvil-role-dash-link-selected .link-text {
+    color: white;
+}
+
+.anvil-role-dash-link-selected svg {
+    fill:#00FFAF;
+	width: 2vh;
+	padding-top: 7px;
+}
+
 
 
 

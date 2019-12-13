@@ -1,13 +1,10 @@
 roles:
-- name: active
-  components: [Link]
 - {name: dash-up}
 - {name: dash-down}
 - name: no-margin
   components: [ColumnPanel]
 - {name: tickets-form}
 - {name: tickets-repeating-panel}
-- {name: scrollable}
 - {name: dashboard-form}
 - name: dropdown-border
   components: [DropDown, DatePicker]
@@ -47,6 +44,7 @@ roles:
 - {name: filter-form-shadow}
 - {name: filter-form-no-shadow}
 - {name: top-border}
+- {name: dash-link}
 color_scheme:
   preset_groups:
   - name: Primary Colour

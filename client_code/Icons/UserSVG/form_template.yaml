@@ -1,11 +1,10 @@
 container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
-    role: null, html: "\n<div class=\"avatar large\">\n    <svg version=\"1.1\" id=\"\
-      Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"\
-      \ x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 481.6 481.6\" fill=\"white\" width=\"\
-      50px\" xml:space=\"preserve\">\n    <g>\n        <g>\n            <path d=\"\
-      M12.3,253.3c6.6,0,12-5.4,12-12c0-0.1,0-0.2,0-0.2c0-0.1,0-0.2,0-0.3c0-6.6-5.4-12-12-12s-12,5.4-12,12c0,0.1,0,0.2,0,0.3\n\
+    role: null, html: "<svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\"\
+      \ xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"\
+      0 0 481.6 481.6\" xml:space=\"preserve\" width=\"100px\">\n    <g>\n       \
+      \ <g>\n            <path d=\"M12.3,253.3c6.6,0,12-5.4,12-12c0-0.1,0-0.2,0-0.2c0-0.1,0-0.2,0-0.3c0-6.6-5.4-12-12-12s-12,5.4-12,12c0,0.1,0,0.2,0,0.3\n\
       \                s0,0.2,0,0.3C0.3,248,5.6,253.3,12.3,253.3L12.3,253.3z\"/>\n\
       \            <path d=\"M467.9,205.4c-6.6,0.7-11.4,6.6-10.7,13.2c0.6,6.2,5.8,10.8,11.9,10.8c0.4,0,0.8,0,1.2-0.1c6.6-0.7,11.4-6.6,10.7-13.1\n\
       \                C480.4,209.6,474.6,204.8,467.9,205.4z\"/>\n            <path\
@@ -74,30 +73,7 @@ container:
       \            s-0.2,0-0.3,0c-15-0.1-26.5-5-35.1-14.6C182.7,229.5,187.4,183.6,187.4,183.2z\
       \ M240.9,352.9c-33.7,0-65.2-11.9-90.2-33.8\n            c42.3-13.7,56.8-30.2,61.8-40.8c7.7,3.4,16.4,5.1,26.1,5.3c0.3,0,0.6,0,1,0c0.1,0,0.3,0,0.4,0c0.2,0,0.4,0,0.6,0\n\
       \            c10.9-0.2,20.5-2.4,29-6.7c5.5,10.4,21,30.1,61.1,42.5C305.8,341,274.4,352.9,240.9,352.9z\"\
-      />\n        </g>\n\t</svg>\n    <div class=\"avatar-name\" anvil-slot=\"avatar-name\"\
-      >\n        <div class=\"placeholder anvil-designer-only\" anvil-if-slot-empty=\"\
-      avatar-name\" anvil-drop-here>Drop name label here</div>\n    </div>\n    <div\
-      \ class=\"avatar-status\" anvil-slot=\"avatar-status\">\n        <div class=\"\
-      placeholder anvil-designer-only\" anvil-if-slot-empty=\"avatar-status\" anvil-drop-here>Drop\
-      \ status label here</div>\n    </div> \n</div>\n\n<style>\n.avatar.large {\n\
-      \  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-color:\
-      \ #2D2B52;\n  color: white;\n }\n\n.avatar-name {\n  color: white;\n  font-size:\
-      \ 22px;\n }\n.avatar-status {\n  color: #00FFAE;\n  font-size: 12px;\n }\n \
-      \ \n</style>"}
-components:
-- type: Label
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
-    visible: true, text: Bridget G, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
-  name: name_label
-  layout_properties: {slot: avatar-name}
-- type: Label
-  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
-    text: ONLINE, font_size: null, font: '', spacing_above: small, icon_align: left,
-    spacing_below: small, italic: false, background: '', bold: false, underline: false,
-    icon: ''}
-  name: status_label
-  layout_properties: {slot: avatar-status}
-custom_component: true
+      />\n        </g>\n\t</svg>"}
+components: []
 is_package: true
+custom_component: false

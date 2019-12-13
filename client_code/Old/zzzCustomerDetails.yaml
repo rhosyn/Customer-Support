@@ -25,7 +25,7 @@ components:
     properties: {height: 16}
     name: spacer_2
     layout_properties: {grid_position: 'JFBEHH,MUSPMU KYMEKO,KFXKPS'}
-  - type: form:Avatars.AvatarBlank
+  - type: form:Icons.AvatarBlank
     properties: {}
     name: avatar_blank_1
     layout_properties: {grid_position: 'JFBEHH,MUSPMU VHPWJF,TJVXPH'}
