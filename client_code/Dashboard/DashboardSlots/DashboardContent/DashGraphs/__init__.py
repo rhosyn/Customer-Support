@@ -20,4 +20,17 @@ class DashGraphs(DashGraphsTemplate):
   def form_show(self, **event_args):
     self.custom_1.call_js('drawChart1', 0.75)
     self.custom_2.call_js('drawChart2', 0.6, 100)
+    labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+    datasets = [{
+            'label': 'Resolved',
+            'backgroundColor': '#9389DF',
+            'borderColor': '#7D71D8',
+            'data': [8, 10, 5, 2, 9, 11, 6]
+        },{
+            'label': 'Unresolved',
+            'backgroundColor': '#00FFAF',
+            'borderColor': '#00FFAF',
+            'data': [4, 3, 11, 12, 5, 6, 6]
+        }]
+    self.custom_3.call_js('buildChart', datasets, labels)
 
