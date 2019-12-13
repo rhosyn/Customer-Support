@@ -59,14 +59,15 @@ components:
         underline: false, icon: ''}
       name: label_4
       layout_properties: {grid_position: 'OAWGBK,PPRKKH'}
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_1
-  layout_properties: {grid_position: 'FQIPPD,JLQIYT'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: center, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_2
+  layout_properties: {grid_position: 'DMVLYU,RGSGBK'}
   components:
-  - type: form:Dashboard.ResolutionGraph
+  - type: form:Dashboard.DashboardSlots.DashboardContent.DashGraphs.ResolutionGraph
     properties: {}
     name: custom_3
-    layout_properties: {grid_position: 'VTWBUB,ZABKGJ'}
+    layout_properties: {grid_position: 'VTWBUB,ZABKGJ', width: 940}
 is_package: true
 custom_component: true
