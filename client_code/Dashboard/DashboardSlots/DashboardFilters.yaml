@@ -61,28 +61,35 @@ components:
     include_placeholder: false
   name: drop_down_3
   layout_properties: {grid_position: 'OHPOES,SUMKER'}
-- type: DropDown
-  properties:
-    role: dropdown-border
-    align: full
-    tooltip: ''
-    placeholder: ''
-    border: ''
-    enabled: true
-    foreground: ''
-    items: ['Date: Last week']
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: ''
-    bold: false
-    underline: false
-    include_placeholder: false
-  name: drop_down_4
-  layout_properties: {grid_position: 'VJEXUK,CSFZBC'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Date range:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: none, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_2
+  layout_properties: {grid_position: 'SCDWVQ,TJXXQO'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: none, background: ''}
+  name: flow_panel_2
+  layout_properties: {grid_position: 'YGMFXM,IRMDDI'}
+  components:
+  - type: DatePicker
+    properties: {role: dropdown-border, align: left, max_date: '', pick_time: false,
+      tooltip: '', placeholder: start date, border: '', enabled: true, foreground: '',
+      visible: true, font_size: null, font: '', spacing_above: small, spacing_below: small,
+      italic: false, date: '', min_date: '', background: '', bold: false, underline: false,
+      format: '%d/%m/%Y'}
+    name: start_date_picker
+    layout_properties: {grid_position: 'KVEOCQ,WYSPAY', width: 172.433}
+  - type: DatePicker
+    properties: {role: dropdown-border, align: left, max_date: '', pick_time: false,
+      tooltip: '', placeholder: end date, border: '', enabled: true, foreground: '',
+      visible: true, font_size: null, font: '', spacing_above: small, spacing_below: small,
+      italic: false, date: '', min_date: '', background: '', bold: false, underline: false,
+      format: '%d/%m/%Y'}
+    name: end_date_picker
+    layout_properties: {grid_position: 'KVEOCQ,NSSWIH', width: 166.433}
 - type: Link
   properties: {role: grey-link, url: '', align: right, tooltip: '', border: '', foreground: 'theme:Gray
       600', visible: true, text: Clear filters, font_size: null, wrap_on: mobile,
@@ -96,4 +103,4 @@ container:
   properties: {role: filter-form-shadow, tooltip: '', border: '', foreground: '',
     visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"GBUXLP":10}',
     spacing_below: none, background: ''}
-is_package: true
+is_package: false

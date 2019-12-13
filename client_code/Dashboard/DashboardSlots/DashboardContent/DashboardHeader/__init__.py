@@ -14,3 +14,7 @@ class DashboardHeader(DashboardHeaderTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+#     self.dash_stats_1.delta = 
+#     time period
+#     value
+    

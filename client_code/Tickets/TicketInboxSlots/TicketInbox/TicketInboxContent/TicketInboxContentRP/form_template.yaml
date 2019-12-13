@@ -20,7 +20,7 @@ components:
   name: cust_name_label
   layout_properties: {column: DZHAXL}
   data_bindings:
-  - {property: text, code: 'self.item[''name'']'}
+  - {property: text, code: 'self.item[''customer''][''name'']'}
 - type: Link
   properties: {role: grey-link, url: '', align: left, tooltip: '', border: '', foreground: 'theme:Gray
       600', visible: true, text: '', font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
@@ -54,7 +54,7 @@ components:
     name: agent_name_label
     layout_properties: {}
     data_bindings:
-    - {property: text, code: 'self.item[''agent'']'}
+    - {property: text, code: 'self.item[''agent''][''email'']'}
 - type: Label
   properties: {role: muted-text, align: left, tooltip: '', border: '', foreground: '#A9A9A9',
     visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,

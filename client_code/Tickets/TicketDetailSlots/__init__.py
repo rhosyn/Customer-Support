@@ -14,3 +14,4 @@ class TicketDetailSlots(TicketDetailSlotsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    print(self.item)

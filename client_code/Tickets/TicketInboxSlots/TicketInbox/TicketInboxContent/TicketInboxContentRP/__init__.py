@@ -16,10 +16,11 @@ class TicketInboxContentRP(TicketInboxContentRPTemplate):
 
     # Any code you write here will run when the form opens.
 
+
   def ticket_title_link_click(self, **event_args):
     homepage = get_open_form()
     homepage.current_form.remove_from_parent()
-    homepage.current_form = TicketDetailSlots()
+    homepage.current_form = TicketDetailSlots(item=self.item)
     homepage.add_component(homepage.current_form, slot="default")
     homepage.ticket_link.role = 'active'
     

@@ -23,7 +23,7 @@ class Homepage(HomepageTemplate):
     anvil.users.login_with_form()
     self.current_form = DashboardSlots()
     self.add_component(self.current_form, slot="default")
-#     self.customer_link.role = 'active'
+    self.dash_panel.role = 'dash-link-selected'
     
 
   def dash_link_click(self, **event_args):
