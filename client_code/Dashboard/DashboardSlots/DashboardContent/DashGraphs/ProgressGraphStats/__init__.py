@@ -1,6 +1,7 @@
 from ._anvil_designer import ProgressGraphStatsTemplate
 from anvil import *
 import anvil.server
+from ...... import Dashboard
 
 class ProgressGraphStats(ProgressGraphStatsTemplate):
   def __init__(self, **properties):
