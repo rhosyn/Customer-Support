@@ -21,7 +21,5 @@ class DashboardFilters(DashboardFiltersTemplate):
     self.start_date_picker.date = self.start_date.date()
     self.end_date_picker.date = self.end_date.date()
     
-#     DashGraphs.set_data(data=5)
-
-#   def end_date_picker_change(self, **event_args):
-#     print(self.parent.)
+  def end_date_picker_change(self, **event_args):
+    print(self.parent.dash_graphs)

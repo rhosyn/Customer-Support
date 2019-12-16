@@ -5,11 +5,11 @@ container:
 components:
 - type: form:Dashboard.DashboardSlots.DashboardContent.DashGraphs
   properties: {}
-  name: custom_2
+  name: dash_graphs
   layout_properties: {slot: slot-content}
 - type: form:Dashboard.DashboardSlots.DashboardContent.DashboardHeader
   properties: {}
-  name: custom_1
+  name: dashboard_header
   layout_properties: {slot: slot-header-2}
 - type: Label
   properties: {role: header-text, align: left, tooltip: '', border: '', foreground: '',

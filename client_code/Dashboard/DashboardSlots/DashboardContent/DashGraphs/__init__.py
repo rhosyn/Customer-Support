@@ -19,8 +19,6 @@ class DashGraphs(DashGraphsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-#     print(self.parent)
-#     anvil.server.call('get_plots', DashboardFilters().start_date, DashboardFilters.start_date)
 
   def set_data(self, data):
     print(data)
