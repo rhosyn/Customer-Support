@@ -8,6 +8,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime, timedelta
+from ..DashboardContent import DashGraphs
 
 class DashboardFilters(DashboardFiltersTemplate):
   def __init__(self, **properties):
@@ -19,3 +20,8 @@ class DashboardFilters(DashboardFiltersTemplate):
     self.end_date = datetime.today()
     self.start_date_picker.date = self.start_date.date()
     self.end_date_picker.date = self.end_date.date()
+    
+#     DashGraphs.set_data(data=5)
+
+#   def end_date_picker_change(self, **event_args):
+#     print(self.parent.)

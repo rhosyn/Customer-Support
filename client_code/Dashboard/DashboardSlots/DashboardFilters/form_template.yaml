@@ -90,6 +90,7 @@ components:
       format: '%d/%m/%Y'}
     name: end_date_picker
     layout_properties: {grid_position: 'KVEOCQ,NSSWIH', width: 166.433}
+    event_bindings: {change: end_date_picker_change}
 - type: Link
   properties: {role: grey-link, url: '', align: right, tooltip: '', border: '', foreground: 'theme:Gray
       600', visible: true, text: Clear filters, font_size: null, wrap_on: mobile,
@@ -103,4 +104,5 @@ container:
   properties: {role: filter-form-shadow, tooltip: '', border: '', foreground: '',
     visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"GBUXLP":10}',
     spacing_below: none, background: ''}
-is_package: false
+is_package: true
+custom_component: false

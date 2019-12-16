@@ -9,8 +9,9 @@ from anvil.tables import app_tables
 import plotly.graph_objs as go
 import anvil.server
 import anvil.js
-from ...DashboardFilters import DashboardFilters
 
+def set_data(data):
+  print(data)
 
 class DashGraphs(DashGraphsTemplate):
   def __init__(self, **properties):
@@ -20,6 +21,9 @@ class DashGraphs(DashGraphsTemplate):
     # Any code you write here will run when the form opens.
 #     print(self.parent)
 #     anvil.server.call('get_plots', DashboardFilters().start_date, DashboardFilters.start_date)
+
+  def set_data(self, data):
+    print(data)
 
   def form_show(self, **event_args):
     self.custom_1.call_js('drawChart1', 0.75)
