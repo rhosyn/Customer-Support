@@ -14,3 +14,15 @@ class ProgressGraphPercentage(ProgressGraphPercentageTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+  @property
+  def percentage(self):
+    return self.value
+
+  @percentage.setter
+  def percentage(self, percentage):
+    self.value = percentage
+    
+  def form_show(self, **event_args):
+    self.call_js('drawChart1', self.value)
+    
+

@@ -17,7 +17,12 @@ def get_tickets(sort, filters={}, date_filter={}):
   return app_tables.tickets.search(tables.order_by(sort, ascending=ascending), **filters)
 
 
-
+@anvil.server.callable
+def get_dashboard_data(start_date, end_date):
+  unassigned = len(app_tables.tickets.search(agent=None, date=q.between(start_date, end_date)))
+  unresolved = len(app_tables.tickets.search(closed=None, date=q.between(start_date, end_date)))
+  urgent = len(app_tables.tickets.search(priority="urgent", date=q.between(start_date, end_date)))
+  return unassigned, unresolved, urgent
 
 
 
@@ -82,22 +87,7 @@ def get_stats(days):
   resolved = len(resolved_tickets)
   return received, resolved, unresolved, urgent
 
-@anvil.server.callable
-def headline_stats():
-  open_tix = len(app_tables.tickets.search(
-    status='open'
-  ))
-  overdue = len(app_tables.tickets.search(
-    status='open',
-    due=q.less_than(datetime.today())
-  ))
-  unassigned = len(app_tables.tickets.search(
-    agent=None
-  ))
-  duetoday = len(app_tables.tickets.search(
-    due=datetime.today().date()
-  ))
-  return open_tix, overdue, duetoday, unassigned
+
   
 
 @anvil.server.callable

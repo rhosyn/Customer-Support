@@ -24,5 +24,9 @@ container:
       \    });\n\n    g.append('text')\n      .attr('text-anchor', 'middle')\n   \
       \   .attr('dy', '.35em')\n      .text(text);\n  }\n  \n  drawChart2(0.5, 50);\n\
       \n</script>"}
+  event_bindings: {show: form_show}
 is_package: true
 custom_component: true
+properties:
+- {name: percentage, type: number, default_value: 0, default_binding_prop: true}
+- {name: display_value, type: string, default_value: '0'}

@@ -104,5 +104,6 @@ container:
   properties: {role: filter-form-shadow, tooltip: '', border: '', foreground: '',
     visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"GBUXLP":10}',
     spacing_below: none, background: ''}
+  event_bindings: {show: form_show}
 is_package: true
 custom_component: false

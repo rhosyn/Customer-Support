@@ -12,8 +12,8 @@ components:
   layout_properties: {grid_position: 'ZFCSFS,GGBRUN', full_width_row: true}
   components:
   - type: form:Dashboard.DashboardSlots.DashboardContent.DashGraphs.ProgressGraphPercentage
-    properties: {}
-    name: custom_2
+    properties: {percentage: 0}
+    name: progress_percentage
     layout_properties: {}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
@@ -29,14 +29,16 @@ components:
       layout_properties: {grid_position: 'OWPMNS,PUFIUV'}
     - type: Label
       properties: {role: muted-text, align: left, tooltip: '', border: '', foreground: 'theme:Gray
-          600', visible: true, text: 75% of tickets were resolved with the first reply.,
-        font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small,
-        italic: false, background: '', bold: false, underline: false, icon: ''}
+          600', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
       name: label_3
       layout_properties: {grid_position: 'DZFQHJ,CDDNSO'}
+      data_bindings:
+      - {property: text, code: '"{}% of tickets were resolved with the first reply.".format(self)'}
   - type: form:Dashboard.DashboardSlots.DashboardContent.DashGraphs.ProgressGraphStats
     properties: {}
-    name: custom_1
+    name: progress_stats
     layout_properties: {}
   - type: ColumnPanel
     properties: {col_widths: '{}'}
@@ -77,7 +79,7 @@ components:
   components:
   - type: form:Dashboard.DashboardSlots.DashboardContent.DashGraphs.ResolutionGraph
     properties: {}
-    name: custom_3
+    name: resolution_graph
     layout_properties: {grid_position: 'WBFFBQ,RPAFET', width: 2064}
 is_package: true
 custom_component: true

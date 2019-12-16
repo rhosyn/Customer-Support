@@ -23,6 +23,9 @@ container:
       \       return arc(interpolate(t));\n      }\n    });\n\n    g.append('text')\n\
       \      .attr('text-anchor', 'middle')\n      .attr('dy', '.35em')\n      .text(text);\n\
       \  }\n  \n  drawChart1(0.9);\n\n</script>"}
+  event_bindings: {show: form_show}
 components: []
 is_package: true
 custom_component: true
+properties:
+- {name: percentage, type: number, default_value: 0, default_binding_prop: true}

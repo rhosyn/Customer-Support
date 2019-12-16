@@ -13,5 +13,10 @@ container:
       \     position: 'top',\n      },\n      scales : {\n        xAxes : [ {\n  \
       \          gridLines : {\n                display : false\n            }\n \
       \       } ]\n    }\n    }\n});\n};\n\n</script>"}
+  event_bindings: {show: form_show}
 components: []
 is_package: true
+custom_component: true
+properties:
+- {name: labels, type: 'text[]', default_value: null, default_binding_prop: true}
+- {name: datasets, type: object, default_value: null}

@@ -14,3 +14,23 @@ class ResolutionGraph(ResolutionGraphTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+  @property
+  def labels(self):
+    return self.display_labels
+
+  @labels.setter
+  def labels(self, labels):
+    self.display_labels = labels
+    
+  @property
+  def datasets(self):
+    return self.display_datasets
+
+  @datasets.setter
+  def datasets(self, datasets):
+    self.display_datasets = datasets
+
+  def form_show(self, **event_args):
+    if self.display_datasets and self.display_labels:
+      self.call_js('buildChart', self.display_datasets, self.display_labels)
+

@@ -22,4 +22,13 @@ class DashboardFilters(DashboardFiltersTemplate):
     self.end_date_picker.date = self.end_date.date()
     
   def end_date_picker_change(self, **event_args):
-    print(self.parent.dash_graphs)
+    self.get_dashboard_data()
+    
+  def get_dashboard_data(self):
+    print('getting data')
+    unassigned, unresolved, urgent = anvil.server.call('get_dashboard_data', self.start_date, self.end_date)
+    self.parent.dash_content.dashboard_header.display_dashboard_data(unassigned, unresolved, urgent)
+
+  def form_show(self, **event_args):
+    self.get_dashboard_data()
+

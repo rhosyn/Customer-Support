@@ -9,6 +9,6 @@ components:
   layout_properties: {slot: slot-2}
 - type: form:Dashboard.DashboardSlots.DashboardContent
   properties: {}
-  name: custom_1
+  name: dash_content
   layout_properties: {slot: slot-1}
 is_package: true
