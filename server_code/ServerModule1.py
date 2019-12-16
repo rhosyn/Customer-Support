@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 
 @anvil.server.callable
@@ -47,22 +47,25 @@ def get_dashboard_data(start_date, end_date):
 #         }]
 
 
-# @anvil.server.callable
-# def get_plots(start, end):
-#   resolved_tickets, new_tickets = get_ticket_data(start, end)
-#   dates = []
-#   res = []
-#   unres = []
-#   for i in range((start-end), 1):
-#     day = (datetime.today().date() + timedelta(days=i))
-#     dates.append(day.strftime('%A, %d'))
-#     r = len([x for x in resolved_tickets if x['closed'].date() == day])
-#     res.append(r)
-#     u = len([x for x in new_tickets if not x['closed'] and x['date'].date() == day])
-#     unres.append(u)
-#   resolved = go.Bar(name="Resolved tickets", y=res, x=dates)
-#   unresolved = go.Bar(name="Unresolved tickets", y=unres, x=dates)
-#   return [resolved, unresolved]
+@anvil.server.callable
+def get_plots(start, end, time_period):
+  print(end)
+  print(time_period)
+  resolved_tickets, new_tickets = get_ticket_data(start, end)
+  dates = []
+  res = []
+  unres = []
+  for day in (start + timedelta(n) for n in range(time_period)):
+    print(day)
+    dates.append(day.strftime('%A, %d'))
+    r = len([x for x in resolved_tickets if x['closed'].date() == day])
+    res.append(r)
+    u = len([x for x in new_tickets if not x['closed'] and x['date'].date() == day])
+    unres.append(u)
+  print(dates)
+  print(res)
+  print(unres)
+  return [resolved, unresolved]
 
 
 
@@ -77,38 +80,38 @@ def get_ticket_data(start, end):
   )
   return resolved_tickets, new_tickets
 
-@anvil.server.callable
-def get_stats(days):
-  start_date = datetime.today() - timedelta(days=days)
-  resolved_tickets, new_tickets = get_ticket_data(days)
-  unresolved = (len(new_tickets) - len(resolved_tickets)) if len(new_tickets) > len(resolved_tickets) else 0
-  urgent = len(app_tables.tickets.search(
-    priority='urgent',
-    date=q.between(start_date, datetime.today(),
-    )
-  ))
-  received = len(new_tickets)
+# @anvil.server.callable
+# def get_stats(days):
+#   start_date = datetime.today() - timedelta(days=days)
+#   resolved_tickets, new_tickets = get_ticket_data(days)
+#   unresolved = (len(new_tickets) - len(resolved_tickets)) if len(new_tickets) > len(resolved_tickets) else 0
+#   urgent = len(app_tables.tickets.search(
+#     priority='urgent',
+#     date=q.between(start_date, datetime.today(),
+#     )
+#   ))
+#   received = len(new_tickets)
   
-  resolved = len(resolved_tickets)
-  return received, resolved, unresolved, urgent
+#   resolved = len(resolved_tickets)
+#   return received, resolved, unresolved, urgent
 
 
   
 
-@anvil.server.callable
-def get_plots(days):
-  resolved_tickets, new_tickets = get_ticket_data(days)
-  dates = []
-  res = []
-  unres = []
-  for i in range(-days+1, 1):
-    day = (datetime.today().date() + timedelta(days=i))
-    dates.append(day)
-    r = len([x for x in resolved_tickets if x['closed'].date() == day])
-    res.append(r)
-    u = len([x for x in new_tickets if not x['closed'] and x['date'].date() == day])
-    unres.append(u)
-  resolved = go.Bar(name="Resolved tickets", y=res, x=dates)
-  unresolved = go.Bar(name="Unresolved tickets", y=unres, x=dates)
-  return [resolved, unresolved]
+# @anvil.server.callable
+# def get_plots(days):
+#   resolved_tickets, new_tickets = get_ticket_data(days)
+#   dates = []
+#   res = []
+#   unres = []
+#   for i in range(-days+1, 1):
+#     day = (datetime.today().date() + timedelta(days=i))
+#     dates.append(day)
+#     r = len([x for x in resolved_tickets if x['closed'].date() == day])
+#     res.append(r)
+#     u = len([x for x in new_tickets if not x['closed'] and x['date'].date() == day])
+#     unres.append(u)
+#   resolved = go.Bar(name="Resolved tickets", y=res, x=dates)
+#   unresolved = go.Bar(name="Unresolved tickets", y=unres, x=dates)
+#   return [resolved, unresolved]
 
