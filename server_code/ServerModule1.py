@@ -5,6 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from datetime import timedelta
 
 
 @anvil.server.callable
@@ -22,7 +23,11 @@ def get_dashboard_data(start_date, end_date):
   unassigned = len(app_tables.tickets.search(agent=None, date=q.between(start_date, end_date)))
   unresolved = len(app_tables.tickets.search(closed=None, date=q.between(start_date, end_date)))
   urgent = len(app_tables.tickets.search(priority="urgent", date=q.between(start_date, end_date)))
-  return unassigned, unresolved, urgent
+  prev_start = start_date - timedelta(days=7)
+  d_unassigned = len(app_tables.tickets.search(agent=None, date=q.between(prev_start, start_date))) - unassigned
+  d_unresolved = len(app_tables.tickets.search(closed=None, date=q.between(prev_start, start_date))) - unresolved
+  d_urgent = len(app_tables.tickets.search(priority="urgent", date=q.between(prev_start, start_date))) - urgent
+  return unassigned, unresolved, urgent, -d_unassigned, -d_unresolved, -d_urgent
 
 
 

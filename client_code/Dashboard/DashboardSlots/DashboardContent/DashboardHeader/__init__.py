@@ -16,6 +16,9 @@ class DashboardHeader(DashboardHeaderTemplate):
 
     # Any code you write here will run when the form opens.
   
-  def display_dashboard_data(self, unassigned, unresolved, urgent):
-    self.add_component(DashStats(title="Unassigned", delta=3, value=unassigned, time_period="month"))
+  def display_dashboard_data(self, unassigned, unresolved, urgent, d_unassigned, d_unresolved, d_urgent, period):
+    self.clear()
+    self.add_component(DashStats(title="Unassigned", delta=d_unassigned, value=unassigned, time_period=period))
+    self.add_component(DashStats(title="Unresolved", delta=d_unresolved, value=unresolved, time_period=period))
+    self.add_component(DashStats(title="Urgent", delta=d_urgent, value=urgent, time_period=period))
     
