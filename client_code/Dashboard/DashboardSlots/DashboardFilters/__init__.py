@@ -39,5 +39,5 @@ class DashboardFilters(DashboardFiltersTemplate):
   
   def form_show(self, **event_args):
     self.get_dashboard_data()
-    self.get_resolution_plots(self)
+    self.get_resolution_plots()
 
