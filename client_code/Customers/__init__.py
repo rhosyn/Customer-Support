@@ -12,6 +12,3 @@ import anvil.server
 #
 #    Package1.say_hello()
 #
-
-def say_hello():
-  print "Hello, world"

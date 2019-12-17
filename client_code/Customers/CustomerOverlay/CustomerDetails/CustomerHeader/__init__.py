@@ -15,8 +15,6 @@ class CustomerHeader(CustomerHeaderTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    
-
 
   def close_pane_link_click(self, **event_args):
     homepage = get_open_form()
@@ -25,7 +23,7 @@ class CustomerHeader(CustomerHeaderTemplate):
   def edit_customer_link_click(self, **event_args):
     homepage = get_open_form()
     homepage.clear(slot="overlay")
-    homepage.add_component(CustomerOverlay(), slot="overlay")
+    homepage.add_component(CustomerOverlay(item=self.item), slot="overlay")
 
 
 

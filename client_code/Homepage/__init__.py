@@ -20,7 +20,7 @@ class Homepage(HomepageTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    anvil.users.login_with_form()
+#     anvil.users.login_with_form()
     self.current_form = CustomerOverviewSlots()
     self.add_component(self.current_form, slot="default")
     self.dash_panel.role = 'dash-link-selected'
