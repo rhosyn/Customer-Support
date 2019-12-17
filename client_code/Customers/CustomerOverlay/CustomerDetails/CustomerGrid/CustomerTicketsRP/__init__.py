@@ -7,6 +7,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from ......Tickets.TicketDetailSlots import TicketDetailSlots
 
 class CustomerTicketsRP(CustomerTicketsRPTemplate):
   def __init__(self, **properties):
@@ -14,3 +15,11 @@ class CustomerTicketsRP(CustomerTicketsRPTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    self.date_label.text = self.item['date'].strftime("%d %b %Y")
+
+  def title_link_click(self, **event_args):
+    homepage = get_open_form()
+    homepage.current_form.remove_from_parent()
+    homepage.current_form = TicketDetailSlots(item=self.item)
+    homepage.add_component(homepage.current_form, slot="default")
+    homepage.ticket_link.role = 'active'

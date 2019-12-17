@@ -14,3 +14,13 @@ class CustomerAlphabetRP(CustomerAlphabetRPTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+
+  
+  def letter_link_click(self, **event_args):
+    selected_letter = self.item['letter']
+    # dgrp_form here is an instance of CustomerOverviewGDRP
+    for dgrp_form in get_open_form().current_form.customer_overview.repeating_panel_1.get_components():
+      if dgrp_form.item['letter'] == selected_letter:
+        dgrp_form.scroll_into_view()
+
+
