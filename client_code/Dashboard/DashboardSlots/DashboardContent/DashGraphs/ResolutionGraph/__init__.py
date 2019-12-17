@@ -11,6 +11,7 @@ import anvil.server
 class ResolutionGraph(ResolutionGraphTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
+    self._shown = False
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
@@ -21,6 +22,7 @@ class ResolutionGraph(ResolutionGraphTemplate):
   @labels.setter
   def labels(self, labels):
     self.display_labels = labels
+    self.maybe_draw_chart()
     
   @property
   def datasets(self):
@@ -29,8 +31,13 @@ class ResolutionGraph(ResolutionGraphTemplate):
   @datasets.setter
   def datasets(self, datasets):
     self.display_datasets = datasets
+    self.maybe_draw_chart()
 
-#   def form_show(self, **event_args):
-#     if self.display_datasets and self.display_labels:
-#       self.call_js('buildChart', self.display_datasets, self.display_labels)
+  def form_show(self, **event_args):
+    self._shown = True
+    self.maybe_draw_chart()
+    
+  def maybe_draw_chart(self):
+    if self.display_datasets and self.display_labels and self._shown:
+      self.call_js('buildChart', self.display_datasets, self.display_labels)
 
