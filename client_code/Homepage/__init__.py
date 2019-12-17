@@ -25,7 +25,6 @@ class Homepage(HomepageTemplate):
     self.add_component(self.current_form, slot="default")
     self.dash_panel.role = 'dash-link-selected'
     
-
   def dash_link_click(self, **event_args):
     self.clear(slot="overlay")
     self.current_form.remove_from_parent()
