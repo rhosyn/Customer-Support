@@ -18,9 +18,9 @@ class CustomerGrid(CustomerGridTemplate):
     # Any code you write here will run when the form opens.
     
 
-#   def form_refreshing_data_bindings(self, **event_args):
-#     if self.customer_tickets is None and self.item:
-#       self.customer_tickets = anvil.server.call('get_tickets', 'date', filters={'customer': self.item})  
+  def form_refreshing_data_bindings(self, **event_args):
+    if self.customer_tickets is None and self.item:
+      self.customer_tickets = anvil.server.call('get_tickets', 'date', filters={'customer': self.item})  
 
 
   
