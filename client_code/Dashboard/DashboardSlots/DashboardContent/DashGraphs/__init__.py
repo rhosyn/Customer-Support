@@ -16,9 +16,9 @@ class DashGraphs(DashGraphsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.progress_percentage.percentage = 0.22
-    self.progress_stats.percentage = 0.7
-    self.progress_stats.display_value = 55
+#     self.progress_percentage.percentage = 0.22
+#     self.progress_stats.percentage = 0.7
+#     self.progress_stats.display_value = 55
     self.resolution_graph.labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
     self.resolution_graph.datasets = [{
             'label': 'Resolved',

@@ -49,14 +49,11 @@ def get_dashboard_data(start_date, end_date):
 
 @anvil.server.callable
 def get_plots(start, end, time_period):
-  print(end)
-  print(time_period)
   resolved_tickets, new_tickets = get_ticket_data(start, end)
   dates = []
   res = []
   unres = []
   for day in (start + timedelta(n) for n in range(time_period)):
-    print(day)
     dates.append(day.strftime('%A, %d'))
     r = len([x for x in resolved_tickets if x['closed'].date() == day])
     res.append(r)
@@ -65,7 +62,7 @@ def get_plots(start, end, time_period):
   print(dates)
   print(res)
   print(unres)
-  return [resolved, unresolved]
+  return res, unres
 
 
 
@@ -73,10 +70,10 @@ def get_plots(start, end, time_period):
 
 def get_ticket_data(start, end):
   resolved_tickets = app_tables.tickets.search(
-    closed=q.between(start, end)
+    closed=q.between(start, end, max_inclusive=True)
   )
   new_tickets = app_tables.tickets.search(
-    date=q.between(start, end)
+    date=q.between(start, end, max_inclusive=True)
   )
   return resolved_tickets, new_tickets
 

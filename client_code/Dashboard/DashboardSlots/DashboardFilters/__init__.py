@@ -16,20 +16,20 @@ class DashboardFilters(DashboardFiltersTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.start_date = datetime.today() - timedelta(days=7)
+    self.start_date = datetime.today() - timedelta(days=6)
     self.end_date = datetime.today()
     self.start_date_picker.date = self.start_date.date()
     self.end_date_picker.date = self.end_date.date()
     self.time_period = (self.end_date - self.start_date).days
     
   def end_date_picker_change(self, **event_args):
-    self.start_date = self.start_date_picker.date
-    self.end_date = self.end_date_picker.date
-    self.period = (self.end_date - self.start_date).days
     self.get_dashboard_data()
     self.get_resolution_plots()
     
   def get_dashboard_data(self):
+    self.start_date = self.start_date_picker.date
+    self.end_date = self.end_date_picker.date + timedelta(days=1)
+    self.time_period = (self.end_date - self.start_date).days
     unassigned, unresolved, urgent, d_unassigned, d_unresolved, d_urgent = anvil.server.call('get_dashboard_data', self.start_date, self.end_date)
     self.parent.dash_content.dashboard_header.display_dashboard_data(unassigned, unresolved, urgent, d_unassigned, d_unresolved, d_urgent, str(self.time_period))
 
