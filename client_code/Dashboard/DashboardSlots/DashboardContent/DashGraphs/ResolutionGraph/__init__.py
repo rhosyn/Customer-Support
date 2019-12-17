@@ -12,6 +12,8 @@ class ResolutionGraph(ResolutionGraphTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self._shown = False
+    self.display_datasets = None
+    self.labels = None
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
@@ -38,6 +40,6 @@ class ResolutionGraph(ResolutionGraphTemplate):
     self.maybe_draw_chart()
     
   def maybe_draw_chart(self):
-    if self.display_datasets and self.display_labels and self._shown:
+    if self.display_datasets is not None and self.display_labels is not None and self._shown:
       self.call_js('buildChart', self.display_datasets, self.display_labels)
 
