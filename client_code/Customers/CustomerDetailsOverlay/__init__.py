@@ -16,10 +16,16 @@ class CustomerDetailsOverlay(CustomerDetailsOverlayTemplate):
 
     # Any code you write here will run when the form opens.
     print("customer details overlay: {}".format(self.item))
-    self.add_component(CustomerDetails(item=self.item), slot="slot-2")
+#     self.add_component(CustomerDetails(item=self.item), slot="slot-2")
     
 
     
+
+  def form_refreshing_data_bindings(self, **event_args):
+    """This method is called when refreshing_data_bindings is called"""
+    print('refreshing dbs')
+    print(self.item)
+
 
 
   

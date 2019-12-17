@@ -16,7 +16,7 @@ class TicketInboxContentRP(TicketInboxContentRPTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    self.date_label.text = self.item['date'].strptime("%d %b %Y")
+    self.date_label.text = self.item['date'].strftime("%d %b %Y")
 
 
   def ticket_title_link_click(self, **event_args):

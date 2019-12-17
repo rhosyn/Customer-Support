@@ -16,8 +16,6 @@ class TicketInboxContent(TicketInboxContentTemplate):
     self.selected_tickets = []
     self.all_tickets = anvil.server.call('get_tickets', 'date')
     self.filtered_tickets = anvil.server.call('get_tickets', 'date', self.filters)
-    print([dict(list(x)) for x in self.filtered_tickets])
-    print([x['priority'] for x in self.filtered_tickets])
     
     self.init_components(**properties)
     self.repeating_panel_1.set_event_handler('x-select-ticket', self.select_ticket)

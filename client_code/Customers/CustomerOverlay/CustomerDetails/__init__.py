@@ -16,10 +16,11 @@ class CustomerDetails(CustomerDetailsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    print("CD: {}".format(self.item))
-    self.add_component(CustomerHeader(item=self.item), slot='slot-header')
-    self.add_component(CustomerGrid(item=self.item), slot='slot-content')
     
     
     
+    
+
+  
+
 
