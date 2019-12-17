@@ -15,6 +15,7 @@ class CustomerHeader(CustomerHeaderTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    
 
 
   def close_pane_link_click(self, **event_args):

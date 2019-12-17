@@ -13,6 +13,6 @@ components:
   layout_properties: {grid_position: 'IZWCYI,EPCMJW'}
   data_bindings:
   - {property: text, code: 'self.item[''letter'']'}
-  - {property: foreground, code: '''black'' if self.item[''visible''] else ''gray'''}
+  - {property: foreground, code: '''black'' if self.item[''visible''] else ''lightgray'''}
 item_type: {table_id: null}
 is_package: true

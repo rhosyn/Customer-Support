@@ -34,8 +34,10 @@ class DashboardFilters(DashboardFiltersTemplate):
     self.parent.dash_content.dashboard_header.display_dashboard_data(unassigned, unresolved, urgent, d_unassigned, d_unresolved, d_urgent, str(self.time_period))
 
   def get_resolution_plots(self):
-    print(anvil.server.call('get_plots', self.start_date, self.end_date, self.time_period))
+    labels, data = anvil.server.call('get_plots', self.start_date, self.end_date, self.time_period)
+    self.parent.dash_content.dash_graphs.build_resolution_chart(labels, data)
   
   def form_show(self, **event_args):
     self.get_dashboard_data()
+    self.get_resolution_plots(self)
 

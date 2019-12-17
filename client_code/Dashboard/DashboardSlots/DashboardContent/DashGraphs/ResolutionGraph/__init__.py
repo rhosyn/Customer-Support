@@ -30,7 +30,7 @@ class ResolutionGraph(ResolutionGraphTemplate):
   def datasets(self, datasets):
     self.display_datasets = datasets
 
-  def form_show(self, **event_args):
-    if self.display_datasets and self.display_labels:
-      self.call_js('buildChart', self.display_datasets, self.display_labels)
+#   def form_show(self, **event_args):
+#     if self.display_datasets and self.display_labels:
+#       self.call_js('buildChart', self.display_datasets, self.display_labels)
 

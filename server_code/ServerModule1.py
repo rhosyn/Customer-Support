@@ -30,23 +30,6 @@ def get_dashboard_data(start_date, end_date):
   return unassigned, unresolved, urgent, -d_unassigned, -d_unresolved, -d_urgent
 
 
-
-
-# labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-
-# datasets = [{
-#             'label': 'Resolved',
-#             'backgroundColor': '#9389DF',
-#             'borderColor': '#7D71D8',
-#             'data': [8, 10, 5, 2, 9, 11, 6]
-#         },{
-#             'label': 'Unresolved',
-#             'backgroundColor': '#00FFAF',
-#             'borderColor': '#00FFAF',
-#             'data': [4, 3, 11, 12, 5, 6, 6]
-#         }]
-
-
 @anvil.server.callable
 def get_plots(start, end, time_period):
   resolved_tickets, new_tickets = get_ticket_data(start, end)
@@ -59,14 +42,8 @@ def get_plots(start, end, time_period):
     res.append(r)
     u = len([x for x in new_tickets if not x['closed'] and x['date'].date() == day])
     unres.append(u)
-  print(dates)
-  print(res)
-  print(unres)
-  return res, unres
-
-
-
-
+  data = {'resolved':res, 'unresolved':unres}
+  return dates, data
 
 def get_ticket_data(start, end):
   resolved_tickets = app_tables.tickets.search(
@@ -76,6 +53,12 @@ def get_ticket_data(start, end):
     date=q.between(start, end, max_inclusive=True)
   )
   return resolved_tickets, new_tickets
+
+@anvil.server.callable
+def get_customers():
+  return app_tables.customers.search()
+
+
 
 # @anvil.server.callable
 # def get_stats(days):

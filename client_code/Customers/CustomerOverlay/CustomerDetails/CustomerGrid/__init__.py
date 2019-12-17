@@ -7,6 +7,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from .CustomerTicketsRP import CustomerTicketsRP
 
 class CustomerGrid(CustomerGridTemplate):
   def __init__(self, **properties):
@@ -14,11 +15,10 @@ class CustomerGrid(CustomerGridTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    row = {'number': '#112', 'date': 'Yesterday', 'title': 'Something went wrong...', 'response':'Hi Bridget, Here us the problem:'}
-
-    items = []
-    for i in range(20):
-      items.append(row)
-    self.repeating_panel_1.items = items
+    customer_tickets = anvil.server.call('get_tickets', 'date', filters={'customer': self.item})
+    print([ dict(list(x)) for x in customer_tickets])
+    
+    self.add_component(RepeatingPanel(item_template=CustomerTicketsRP, items=customer_tickets))
+#     self.repeating_panel_1.items = customer_tickets
 
   

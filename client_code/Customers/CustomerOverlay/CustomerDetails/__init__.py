@@ -7,6 +7,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from .CustomerHeader import CustomerHeader
+from .CustomerGrid import CustomerGrid
 
 class CustomerDetails(CustomerDetailsTemplate):
   def __init__(self, **properties):
@@ -14,3 +16,10 @@ class CustomerDetails(CustomerDetailsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    print("CD: {}".format(self.item))
+    self.add_component(CustomerHeader(item=self.item), slot='slot-header')
+    self.add_component(CustomerGrid(item=self.item), slot='slot-content')
+    
+    
+    
+

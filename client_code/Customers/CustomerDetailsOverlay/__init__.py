@@ -7,6 +7,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from ..CustomerOverlay.CustomerDetails import CustomerDetails
 
 class CustomerDetailsOverlay(CustomerDetailsOverlayTemplate):
   def __init__(self, **properties):
@@ -14,5 +15,11 @@ class CustomerDetailsOverlay(CustomerDetailsOverlayTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    print("customer details overlay: {}".format(self.item))
+    self.add_component(CustomerDetails(item=self.item), slot="slot-2")
+    
+
+    
+
 
   

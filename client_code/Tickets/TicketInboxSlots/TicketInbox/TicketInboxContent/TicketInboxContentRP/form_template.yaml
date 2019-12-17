@@ -12,6 +12,7 @@ components:
     underline: false}
   name: check_box_1
   layout_properties: {column: FEORLK}
+  event_bindings: {change: check_box_1_change}
 - type: Label
   properties: {role: muted-text, align: left, tooltip: '', border: Npne, foreground: '#332F5B',
     visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -60,10 +61,9 @@ components:
     visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
     spacing_below: small, italic: false, background: '', bold: false, underline: false,
     icon: ''}
-  name: label_6
+  name: date_label
   layout_properties: {column: XZFXCS}
-  data_bindings:
-  - {property: text, code: 'self.item[''date'']'}
+  data_bindings: []
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '#A9A9A9',
     visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
@@ -80,7 +80,7 @@ components:
     border: ''
     enabled: true
     foreground: '#332F5B'
-    items: [Urgent, Normal]
+    items: [high, urgent, new, medium, low]
     visible: true
     font_size: null
     font: ''

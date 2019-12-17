@@ -46,25 +46,31 @@ components:
   layout_properties: {grid_position: 'GMMKPV,QLHZBG'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: white,
-    visible: true, text: Daniel Barnes, font_size: null, font: '', spacing_above: medium,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
-  name: label_2
+    visible: true, text: '', font_size: null, font: '', spacing_above: medium, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: name_label
   layout_properties: {grid_position: 'BMRFRC,TKUTBA'}
+  data_bindings:
+  - {property: text, code: '"{} {}".format(self.item[''name''],self.item[''last_name''])'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '#9395A1',
-    visible: true, text: +44(0)20 710 13348, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
-  name: label_3
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: phone_label
   layout_properties: {grid_position: 'UFUMPN,CHOTDK'}
+  data_bindings:
+  - {property: text, code: 'self.item[''phone'']'}
 - type: Label
   properties: {role: null, align: left, tooltip: '', border: '', foreground: '#9395A1',
-    visible: true, text: daniel@forty8creates.com, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: large, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
-  name: label_4
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: large, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: email_label
   layout_properties: {grid_position: 'RPECNJ,MPUZNR'}
+  data_bindings:
+  - {property: text, code: 'self.item[''email'']'}
 - type: Label
   properties: {role: header-text, align: left, tooltip: '', border: '', foreground: '#00FFB0',
     visible: true, text: Recent Tickets, font_size: null, font: '', spacing_above: medium,

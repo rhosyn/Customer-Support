@@ -24,9 +24,11 @@ class CustomerOverviewRP(CustomerOverviewRPTemplate):
     else:
       self.role = "customers-repeating-panel"
 
-  def link_1_click(self, **event_args):
+
+  def customer_link_click(self, **event_args):
     homepage = get_open_form()
     homepage.clear(slot="overlay")
-    homepage.add_component(CustomerDetailsOverlay(),slot="overlay")
+    homepage.add_component(CustomerDetailsOverlay(item=self.item),slot="overlay")
+
 
 
