@@ -7,8 +7,6 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-from .CustomerHeader import CustomerHeader
-from .CustomerGrid import CustomerGrid
 
 class CustomerDetails(CustomerDetailsTemplate):
   def __init__(self, **properties):
