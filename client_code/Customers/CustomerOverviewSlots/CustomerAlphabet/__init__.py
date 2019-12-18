@@ -17,7 +17,6 @@ class CustomerAlphabet(CustomerAlphabetTemplate):
     # Any code you write here will run when the form opens.
     letters = list(string.ascii_uppercase)
     customers = anvil.server.call('get_customers')
-    print([x['name'] for x in customers])
     data = []
     for let in letters:
       people = [x for x in customers if x['last_name'][0].upper() == let]
