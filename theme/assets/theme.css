@@ -209,6 +209,10 @@ a:focus {
   border-left: 10px solid #7E71DA !important;
 }
 
+.anvil-role-tickets-repeating-panel-selected:first-child {
+    margin-top: 30px;
+}
+
 .anvil-role-customers-repeating-panel {
   padding: 21px 36px;
   display: flex;

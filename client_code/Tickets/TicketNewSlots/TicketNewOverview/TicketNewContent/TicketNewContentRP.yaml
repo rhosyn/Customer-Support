@@ -1,6 +1,6 @@
 components:
 - type: FlowPanel
-  properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+  properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
     foreground: '', visible: true, spacing_above: none, spacing_below: none, background: ''}
   name: flow_panel_1
   layout_properties: {grid_position: 'NLDLDO,PGMNFQ', full_width_row: true}
