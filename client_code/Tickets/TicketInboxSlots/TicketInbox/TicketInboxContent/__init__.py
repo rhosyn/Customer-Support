@@ -20,8 +20,6 @@ class TicketInboxContent(TicketInboxContentTemplate):
     self.init_components(**properties)
     self.repeating_panel_1.set_event_handler('x-select-ticket', self.select_ticket)
     self.repeating_panel_1.set_event_handler('x-deselect-ticket', self.deselect_ticket)
-    
-
     # Any code you write here will run when the form opens.
     
   def select_ticket(self, ticket, **event_args):
