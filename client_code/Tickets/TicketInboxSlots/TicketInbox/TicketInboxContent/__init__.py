@@ -1,5 +1,6 @@
 from ._anvil_designer import TicketInboxContentTemplate
 from anvil import *
+import anvil.facebook.auth
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
@@ -13,7 +14,6 @@ class TicketInboxContent(TicketInboxContentTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.filters = {'status':'open'}
-    self.date_filter = {}
     self.selected_tickets = []
     self.all_tickets = anvil.server.call('get_tickets', 'date')
     self.filtered_tickets = anvil.server.call('get_tickets', 'date', self.filters)
@@ -35,4 +35,8 @@ class TicketInboxContent(TicketInboxContentTemplate):
   def deselect_ticket(self, ticket, **event_args):
     self.selected_tickets.remove(ticket)
 
+  def filter_tickets(self, filters, date_filter={}):
+    self.filters = filters
+    self.filtered_tickets = anvil.server.call('get_tickets', 'date', self.filters, date_filter)
+    self.refresh_data_bindings()
 

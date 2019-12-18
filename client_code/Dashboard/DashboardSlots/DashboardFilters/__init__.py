@@ -1,5 +1,6 @@
 from ._anvil_designer import DashboardFiltersTemplate
 from anvil import *
+import anvil.facebook.auth
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
@@ -38,6 +39,7 @@ class DashboardFilters(DashboardFiltersTemplate):
     self.parent.dash_content.dash_graphs.build_resolution_chart(labels, data)
   
   def form_show(self, **event_args):
+    print(self.parent)
     self.get_dashboard_data()
     self.get_resolution_plots()
 

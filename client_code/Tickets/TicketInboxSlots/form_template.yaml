@@ -5,7 +5,7 @@ container:
 components:
 - type: form:Tickets.TicketInboxSlots.TicketInbox
   properties: {}
-  name: custom_1
+  name: ticket_inbox
   layout_properties: {slot: slot-1}
 - type: form:Tickets.TicketInboxSlots.TicketFilters
   properties: {}

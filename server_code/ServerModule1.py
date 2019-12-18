@@ -1,3 +1,4 @@
+import anvil.facebook.auth
 import anvil.google.auth, anvil.google.drive, anvil.google.mail
 from anvil.google.drive import app_files
 import anvil.users
@@ -7,16 +8,13 @@ from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime, timedelta
 
-
 @anvil.server.callable
 def get_tickets(sort, filters={}, date_filter={}):
   ascending = True if sort == 'title' else False
   if date_filter:
-    start_date = datetime.combine(date_filter['date'] , datetime.min.time())
-    end_date = start_date + timedelta(days=1)
-    return app_tables.tickets.search(tables.order_by(sort, ascending=ascending), date=q.between(start_date, end_date), **filters)
+    print(date_filter['end'])
+    return app_tables.tickets.search(tables.order_by(sort, ascending=ascending), date=q.between(date_filter['start'], date_filter['end'], max_inclusive=True), **filters)
   return app_tables.tickets.search(tables.order_by(sort, ascending=ascending), **filters)
-
 
 @anvil.server.callable
 def get_dashboard_data(start_date, end_date):

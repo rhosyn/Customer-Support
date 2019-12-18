@@ -5,7 +5,7 @@ container:
 components:
 - type: form:Tickets.TicketInboxSlots.TicketInbox.TicketInboxContent
   properties: {}
-  name: tickets_grid_1
+  name: ticket_inbox_content
   layout_properties: {slot: slot-content}
 - type: FlowPanel
   properties: {role: bottom-border, spacing: medium, align: justify, tooltip: '',
