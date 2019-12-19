@@ -10,4 +10,5 @@ container:
   properties: {role: tickets-form, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}', spacing_below: small,
     background: ''}
+  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
 is_package: true

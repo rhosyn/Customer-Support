@@ -24,11 +24,11 @@ class Homepage(HomepageTemplate):
     anvil.users.login_with_form()
     self.current_form = TicketInboxSlots()
     self.add_component(self.current_form, slot="default")
-    self.dash_panel.role = 'dash-link-selected'
+    self.ticket_panel.role = 'dash-link-selected'
     
   def dash_link_click(self, **event_args):
     self.clear(slot="overlay")
-    self.current_form.remove_from_parent()
+    self.clear(slot="default")
     self.current_form = DashboardSlots()
     self.add_component(self.current_form, slot="default")
     self.clear_links()
@@ -48,7 +48,7 @@ class Homepage(HomepageTemplate):
 
   def customer_link_click(self, **event_args):
     self.clear(slot="overlay")
-    self.current_form.remove_from_parent()
+    self.clear(slot="default")
     self.current_form = CustomerOverviewSlots()
     self.add_component(self.current_form, slot="default")
     self.clear_links()
@@ -56,7 +56,7 @@ class Homepage(HomepageTemplate):
 
   def new_ticket_button_click(self, **event_args):
     self.clear(slot="overlay")
-    self.current_form.remove_from_parent()
+    self.clear(slot="default")
     self.current_form = TicketNewSlots()
     self.add_component(self.current_form, slot="default")
     self.clear_links()

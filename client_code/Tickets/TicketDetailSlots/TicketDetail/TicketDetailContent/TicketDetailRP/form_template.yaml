@@ -16,7 +16,7 @@ components:
       visible: true, wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{"WRPKKR":10,"ZISSXB":50}',
       spacing_below: small, background: white}
     name: column_panel_1
-    layout_properties: {width: 913, grid_position: 'GCMCJG,ZWFEYX'}
+    layout_properties: {width: 913, grid_position: 'GCMCJG,ZWFEYX XPALVF,BTSHIW'}
     components:
     - type: form:Icons.AvatarTransparent
       properties: {}
@@ -29,35 +29,43 @@ components:
       components:
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: Daniel B, font_size: null, font: '', spacing_above: small,
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_1
         layout_properties: {grid_position: 'EYMRJF,SWPMWG'}
+        data_bindings: []
       - type: Label
-        properties: {role: muted-text, align: left, tooltip: '', border: '', foreground: '',
-          visible: true, text: '22 Oct 19 at 18:37', font_size: null, font: '', spacing_above: small,
+        properties: {role: muted-text, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: '', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
-        name: label_2
+        name: date_label
         layout_properties: {grid_position: 'BJQAPD,UXEVXA'}
+        data_bindings:
+        - {property: text, code: 'self.item[''date''].strftime("%d %b %y, at %m:%H")'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-        visible: true, text: "Hi Bridget, \n\nHere's the problem:\n\nLorem ipsum dolor\
-          \ sit amet, consectetur adipisicing elit. Cupiditate eius, sint quos veniam\
-          \ illum, quae dolor suscipit est quia quo maxime nobis delectus alias, atque\
-          \ aliquid odio incidunt, voluptatem corporis!\n\nThanks!", font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: false, underline: false, icon: ''}
-      name: label_3
+        visible: true, text: '', font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: details_label
       layout_properties: {grid_position: 'EYWLSS,OPCWXX'}
+      data_bindings:
+      - {property: text, code: 'self.item[''details'']'}
+  - type: FlowPanel
+    properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+    name: flow_panel_1
+    layout_properties: {grid_position: 'GCMCJG,ZWFEYX LVVYVO,BGNTBS'}
+    components:
+    - type: form:Icons.AvatarSmall
+      properties: {}
+      name: avatar_small_1
+      layout_properties: {grid_position: 'GCMCJG,ZWFEYX LPXMKY,QQOBTK'}
   - type: Spacer
     properties: {height: 323}
     name: spacer_1
-    layout_properties: {grid_position: 'GCMCJG,FBZRMI LGXTLC,HFPBYH'}
-  - type: form:Icons.AvatarSmall
-    properties: {}
-    name: avatar_small_1
-    layout_properties: {grid_position: 'GCMCJG,FBZRMI LLZVON,PWKMVF'}
+    layout_properties: {grid_position: 'GCMCJG,FBZRMI'}
 item_type: {table_id: null}
 is_package: true

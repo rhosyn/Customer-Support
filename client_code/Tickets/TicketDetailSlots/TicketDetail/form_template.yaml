@@ -8,9 +8,13 @@ components:
   properties: {}
   name: ticket_detail_header
   layout_properties: {slot: slot-header}
+  data_bindings:
+  - {property: item, code: self.item}
 - type: form:Tickets.TicketDetailSlots.TicketDetail.TicketDetailContent
   properties: {}
   name: ticket_detail_content
   layout_properties: {slot: slot-content}
+  data_bindings:
+  - {property: item, code: self.item}
 is_package: true
 custom_component: true
