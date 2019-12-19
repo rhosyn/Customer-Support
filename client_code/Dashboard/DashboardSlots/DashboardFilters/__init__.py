@@ -32,21 +32,21 @@ class DashboardFilters(DashboardFiltersTemplate):
     self.end_date = self.end_date_picker.date + timedelta(days=1)
     self.time_period = (self.end_date - self.start_date).days
     headline_stats, progress_dash_stats, resolution_data = anvil.server.call('get_dashboard_data', self.start_date, self.end_date, self.time_period)
-    print(headline_stats)
+    self.get_headline_cards(headline_stats)
+    self.get_resolution_plots(resolution_data)
+    self.get_progress_plots(progress_dash_stats)
     print(progress_dash_stats)
-    print(resolution_data)
-#     unassigned, unresolved, urgent, d_unassigned, d_unresolved, d_urgent = anvil.server.call('get_dashboard_data', self.start_date, self.end_date, self.time_period)
-#     self.parent.dash_content.dashboard_header.display_dashboard_data(unassigned, unresolved, urgent, d_unassigned, d_unresolved, d_urgent, str(self.time_period))
 
-  def get_resolution_plots(self):
-    labels, data = anvil.server.call('get_plots', self.start_date, self.end_date, self.time_period)
+  def get_headline_cards(self, headline_stats):
+    self.parent.dash_content.dashboard_header.display_dashboard_data(headline_stats, str(self.time_period))
+
+  def get_resolution_plots(self, resolution_data):
+    labels, data = resolution_data
     self.parent.dash_content.dash_graphs.build_resolution_chart(labels, data)
   
-  def get_progress_plots(self):
-    data = anvil.server.call('get_progress_data', self.start_date, self.end_date, self.time_period)
-    self.parent.dash_content.dash_graphs.build_progress_charts(progress_percent, prog2_value, prog2_percent)
+  def get_progress_plots(self, progress_dash_stats):
+    self.parent.dash_content.dash_graphs.build_progress_charts(progress_dash_stats)
   
   def form_show(self, **event_args):
     self.get_dashboard_data()
-    self.get_resolution_plots()
 

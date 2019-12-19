@@ -19,10 +19,17 @@ class DashGraphs(DashGraphsTemplate):
     # Any code you write here will run when the form opens.
 #     self.build_progress_charts()
     
-  def build_progress_charts(self, progress_percent, prog2_value, prog2_percent):
-    self.progress_percentage.percentage = 0.75
-    self.progress_stats.display_value = 500
-    self.progress_stats.percentage = 0.2
+  def build_progress_charts(self, progress_dash_stats):
+    total_resolved = progress_dash_stats['resolved']['total_resolved']
+    closed_on_first = progress_dash_stats['resolved']['closed_on_first']
+    closed_on_first_percent = max((closed_on_first/total_resolved), 0)
+    self.progress_percentage.percentage = closed_on_first_percent
+    self.closed_on_first_label.text = f"{closed_on_first/100}% of tickets were resolved with the first reply"
+    new_customers = progress_dash_stats['customers']['new_customers']
+    returning_customers = progress_dash_stats['customers']['returning_customers']
+    self.progress_stats.display_value = new_customers
+    self.progress_stats.percentage = max((returning_customers / (new_customers + returning_customers)),0)
+    self.new_custs_label.text = f"{new_customers} new customers \n{returning_customers} returning customers"
     
     
   def build_resolution_chart(self, labels, data):

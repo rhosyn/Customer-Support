@@ -45,7 +45,7 @@ def get_headline_dash_stats(start_date, end_date):
   d_unassigned = len(app_tables.tickets.search(agent=None, date=q.between(prev_start, start_date))) - unassigned
   d_unresolved = len(app_tables.tickets.search(closed=None, date=q.between(prev_start, start_date))) - unresolved
   d_urgent = len(app_tables.tickets.search(priority="urgent", date=q.between(prev_start, start_date))) - urgent
-  return unassigned, unresolved, urgent, -d_unassigned, -d_unresolved, -d_urgent
+  return {'unassigned':{'delta':-d_unassigned, 'number':unassigned}, 'unresolved':{'delta':-d_unresolved, 'number':unresolved}, 'urgent':{'delta':-d_urgent, 'number':urgent}}
 
 @anvil.server.callable
 def get_resolution_data(start, end, time_period):
@@ -79,7 +79,7 @@ def get_progess_data(start, end):
     created=q.between(start, end, max_inclusive=True)
   )
   returning_customers = [x for x in new_tickets if x['customer'] not in new_customers]
-  return len(new_customers), len(returning_customers)
+  return {'resolved': {'total_resolved': len(resolved_tickets), 'closed_on_first':len(closed_on_first)}, 'customers':{'new_customers':len(new_customers), 'returning_customers':len(returning_customers)}}
   
   
 @anvil.server.callable

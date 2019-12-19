@@ -18,6 +18,7 @@ components:
   properties: {}
   name: customer_details
   layout_properties: {slot: slot-3}
-  data_bindings: []
+  data_bindings:
+  - {property: item, code: 'self.item[''customer'']'}
 is_package: true
 custom_component: false
