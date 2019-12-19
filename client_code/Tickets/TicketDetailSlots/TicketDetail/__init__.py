@@ -15,7 +15,12 @@ class TicketDetail(TicketDetailTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-
-  def form_show(self, **event_args):
     print(f"Ticketd: {dict(list(self.item))}")
+#     self.populate_replies()
+    
+  def populate_replies(self):
+    replies = anvil.server.call('get_replies', self.item)
+    self.ticket_detail_content.replies_repeating_panel.items = replies
+
+
 

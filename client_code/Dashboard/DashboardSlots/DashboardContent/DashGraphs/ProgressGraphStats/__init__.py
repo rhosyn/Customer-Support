@@ -32,4 +32,9 @@ class ProgressGraphStats(ProgressGraphStatsTemplate):
     self.display = value
     
   def form_show(self, **event_args):
-    self.call_js('drawChart2', self.value, self.display)
+    self._shown = True
+    self.maybe_draw_chart()
+    
+  def maybe_draw_chart(self):
+    if self.percentage is not None and self.display_value is not None and self._shown:
+      self.call_js('drawChart2', self.value, self.display)

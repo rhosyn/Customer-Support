@@ -6,10 +6,11 @@ container:
 components:
 - type: form:Tickets.TicketDetailSlots.TicketDetail.TicketDetailHeader
   properties: {}
-  name: custom_1
+  name: ticket_detail_header
   layout_properties: {slot: slot-header}
 - type: form:Tickets.TicketDetailSlots.TicketDetail.TicketDetailContent
   properties: {}
-  name: custom_2
+  name: ticket_detail_content
   layout_properties: {slot: slot-content}
 is_package: true
+custom_component: true

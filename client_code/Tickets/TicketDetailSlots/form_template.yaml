@@ -2,6 +2,7 @@ container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: '@theme:three_slots.html'}
+  event_bindings: {show: form_show}
 components:
 - type: form:Tickets.TicketInboxSlots.TicketFilters
   properties: {}
@@ -17,6 +18,6 @@ components:
   properties: {}
   name: customer_details
   layout_properties: {slot: slot-3}
-  data_bindings:
-  - {property: item, code: self.item}
+  data_bindings: []
 is_package: true
+custom_component: false

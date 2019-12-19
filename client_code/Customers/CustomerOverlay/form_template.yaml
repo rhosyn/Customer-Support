@@ -3,15 +3,16 @@ container:
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: null, html: '@theme:three_slot_overlay.html'}
 components:
-- type: form:Customers.CustomerOverlay.CustomerDetails
-  properties: {}
-  name: custom_1
-  layout_properties: {slot: slot-3}
-  data_bindings: []
 - type: form:Customers.CustomerOverlay.CustomerEdit
   properties: {}
   name: custom_2
   layout_properties: {slot: slot-2}
+  data_bindings:
+  - {property: item, code: self.item}
+- type: form:Customers.CustomerOverlay.CustomerDetails
+  properties: {}
+  name: customer_details_1
+  layout_properties: {slot: slot-3}
   data_bindings:
   - {property: item, code: self.item}
 is_package: true

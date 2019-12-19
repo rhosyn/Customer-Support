@@ -23,7 +23,6 @@ class TicketInboxContentRP(TicketInboxContentRPTemplate):
   def ticket_title_link_click(self, **event_args):
     homepage = get_open_form()
     homepage.clear(slot="default")
-    print(self.item)
     homepage.ticket_link.role = 'active'
     homepage.add_component(TicketDetailSlots(item=self.item),slot="default")
     

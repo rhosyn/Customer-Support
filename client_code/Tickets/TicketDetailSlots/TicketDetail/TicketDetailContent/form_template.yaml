@@ -3,7 +3,7 @@ components:
   properties: {role: card-with-border, tooltip: '', border: '', foreground: '', items: null,
     visible: true, spacing_above: small, spacing_below: small, item_template: Tickets.TicketDetailSlots.TicketDetail.TicketDetailContent.TicketDetailRP,
     background: ''}
-  name: repeating_panel_1
+  name: replies_repeating_panel
   layout_properties: {grid_position: 'HKEZVI,KBTSXK', full_width_row: true}
 container:
   type: ColumnPanel

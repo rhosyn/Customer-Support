@@ -11,6 +11,7 @@ import anvil.server
 
 class ProgressGraphPercentage(ProgressGraphPercentageTemplate):
   def __init__(self, **properties):
+    self._shown = False
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -24,6 +25,11 @@ class ProgressGraphPercentage(ProgressGraphPercentageTemplate):
     self.value = percentage
     
   def form_show(self, **event_args):
-    self.call_js('drawChart1', self.value)
+    self._shown = True
+    self.maybe_draw_chart()
+    
+  def maybe_draw_chart(self):
+    if self.percentage is not None and self._shown:
+      self.call_js('drawChart1', self.value)
     
 

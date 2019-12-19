@@ -23,9 +23,21 @@ def delete_tickets(tickets):
   for t in tickets:
     if app_tables.tickets.has_row(t):
       t.delete()
+      
+@anvil.server.callable
+def get_replies(ticket):
+  print("getting replies for {}".format(ticket['title']))
+  return app_tables.replies.search(tables.order_by("date", ascending=False), ticket=ticket)
 
 @anvil.server.callable
-def get_dashboard_data(start_date, end_date):
+def get_dashboard_data(start_date, end_date, time_period):
+  headline_stats = get_headline_dash_stats(start_date, end_date)
+  progress_dash_stats = get_progess_data(start_date, end_date)
+  resolution_data = get_resolution_data(start_date, end_date, time_period)
+  return headline_stats, progress_dash_stats, resolution_data
+  
+  
+def get_headline_dash_stats(start_date, end_date):
   unassigned = len(app_tables.tickets.search(agent=None, date=q.between(start_date, end_date)))
   unresolved = len(app_tables.tickets.search(closed=None, date=q.between(start_date, end_date)))
   urgent = len(app_tables.tickets.search(priority="urgent", date=q.between(start_date, end_date)))
@@ -35,9 +47,8 @@ def get_dashboard_data(start_date, end_date):
   d_urgent = len(app_tables.tickets.search(priority="urgent", date=q.between(prev_start, start_date))) - urgent
   return unassigned, unresolved, urgent, -d_unassigned, -d_unresolved, -d_urgent
 
-
 @anvil.server.callable
-def get_plots(start, end, time_period):
+def get_resolution_data(start, end, time_period):
   resolved_tickets, new_tickets = get_ticket_data(start, end)
   dates = []
   res = []
@@ -60,6 +71,17 @@ def get_ticket_data(start, end):
   )
   return resolved_tickets, new_tickets
 
+@anvil.server.callable
+def get_progess_data(start, end):
+  resolved_tickets, new_tickets = get_ticket_data(start, end)
+  closed_on_first = [t for t in resolved_tickets if len(app_tables.replies.search(ticket=t)) == 1]
+  new_customers = app_tables.customers.search(
+    created=q.between(start, end, max_inclusive=True)
+  )
+  returning_customers = [x for x in new_tickets if x['customer'] not in new_customers]
+  return len(new_customers), len(returning_customers)
+  
+  
 @anvil.server.callable
 def get_customers():
   return app_tables.customers.search()
