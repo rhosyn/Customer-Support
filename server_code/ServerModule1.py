@@ -35,7 +35,6 @@ def get_dashboard_data(start_date, end_date, time_period):
   resolution_data = get_resolution_data(start_date, end_date, time_period)
   return headline_stats, progress_dash_stats, resolution_data
   
-  
 def get_headline_dash_stats(start_date, end_date):
   unassigned = len(app_tables.tickets.search(agent=None, date=q.between(start_date, end_date)))
   unresolved = len(app_tables.tickets.search(closed=None, date=q.between(start_date, end_date)))
@@ -83,9 +82,7 @@ def get_progess_data(start, end):
   
 @anvil.server.callable
 def get_customers(filters={}):
-  customers = app_tables.customers.search(tables.order_by('name', ascending=True), **filters)
-  print(len(customers))
-  return customers
+  return app_tables.customers.search(tables.order_by('name', ascending=True), **filters)
 
 
 

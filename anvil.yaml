@@ -39,7 +39,7 @@ dependency_code:
           text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
           italic: false, background: '', bold: false, underline: false}
         name: text_box_search
-        layout_properties: {grid_position: 'HWFDVY,BVWKLS', full_width_row: true}
+        layout_properties: {grid_position: 'HWFDVY,BVWKLS', full_width_row: false}
         event_bindings: {focus: text_box_search_focus, change: text_box_search_change,
           pressed_enter: text_box_search_pressed_enter}
       - type: FlowPanel
@@ -69,7 +69,7 @@ dependency_code:
           visible: true, spacing_above: small, spacing_below: small, item_template: SearchHintsResult,
           background: ''}
         name: repeating_panel_results
-        layout_properties: {grid_position: 'KPHSVL,YKQCOQ', full_width_row: true}
+        layout_properties: {grid_position: 'KPHSVL,YKQCOQ', full_width_row: false}
       custom_component: true
       properties:
       - {name: get_keys_function, type: string, default_value: '', default_binding_prop: true}
@@ -94,11 +94,12 @@ dependency_code:
         \"\"\n    if text == '':\n      self.repeating_panel_results.items = []\n\
         \    else:\n      if not hasattr(self, 'search_keys'):\n        # If we haven't\
         \ got the search keys yet, get them.\n        self.search_keys = self.raise_event('x-get-search-keys')\n\
-        \      #\_Populate the results list\n      self.repeating_panel_results.items\
-        \ = sorted([\n        key for key in self.search_keys\n        if key['name'].lower().startswith(text.lower())\n\
-        \      ])\n\n  def set_result(self, result, **event_args):\n    \"\"\"Set\
-        \ the result in the result box.\"\"\"\n    self.raise_event('x-search-hints-result',\
-        \ result=result)\n    self.repeating_panel_results.items = []\n"
+        \      #\_Populate the results list\n      print(self.search_keys)\n     \
+        \ self.repeating_panel_results.items = sorted([\n        key for key in self.search_keys\n\
+        \        if text.lower() in key['name'].lower()\n      ])\n\n  def set_result(self,\
+        \ result, **event_args):\n    \"\"\"Set the result in the result box.\"\"\"\
+        \n    self.raise_event('x-search-hints-result', result=result)\n    self.repeating_panel_results.items\
+        \ = []\n"
     - container:
         type: ColumnPanel
         properties: {role: select-customer-repeating-panel, tooltip: '', border: '',
@@ -290,7 +291,7 @@ dependency_code:
         \"\""}
     server_modules: []
     package_name: SearchHints
-    version: 895cbd347834d7c2f5ba80fa62fde5027184238e
+    version: d11e8591932e07cd09863e05163b60e703746a49
     branch: master
     depending_app: PAE3T66QQ2UXIZAI
     name: Search Hints Ticketing
