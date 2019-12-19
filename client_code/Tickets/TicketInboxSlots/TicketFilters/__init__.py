@@ -27,6 +27,7 @@ class TicketFilters(TicketFiltersTemplate):
     
   def clear_filters_link_click(self, **event_args):
     self.filters = {}
+    self.date_filters = {}
     self.refresh_data_bindings()
     self.parent.ticket_inbox.ticket_inbox_content.filter_tickets(self.filters)
 

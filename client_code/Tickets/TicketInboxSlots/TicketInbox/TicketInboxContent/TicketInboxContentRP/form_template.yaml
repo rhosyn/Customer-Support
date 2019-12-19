@@ -40,7 +40,7 @@ components:
   components:
   - type: Label
     properties: {role: muted-text, align: left, tooltip: '', border: '', foreground: '#A9A9A9',
-      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      visible: true, text: '', font_size: null, font: '', spacing_above: none, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: ''}
     name: ticket_cat_label
@@ -49,7 +49,7 @@ components:
     - {property: text, code: 'self.item[''category'']'}
   - type: Label
     properties: {role: muted-text, align: left, tooltip: '', border: '', foreground: '#332F5B',
-      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      visible: true, text: '', font_size: null, font: '', spacing_above: none, icon_align: left,
       spacing_below: small, italic: false, background: '', bold: false, underline: false,
       icon: ''}
     name: agent_name_label
@@ -98,10 +98,11 @@ components:
 - type: Link
   properties: {role: grey-link, url: '', align: left, tooltip: '', border: '', foreground: 'theme:Gray
       100', visible: true, text: '', font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
-    spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    spacing_above: small, icon_align: left, col_widths: '{}', spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: 'fa:unlock-alt'}
   name: link_1
   layout_properties: {column: HCOREJ}
+  components: []
 - type: form:Icons.AvatarTransparent
   properties: {}
   name: avatar_transparent_1

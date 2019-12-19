@@ -15,3 +15,29 @@ class TicketInbox(TicketInboxTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+
+
+  def select_all_box_change(self, **event_args):
+    if self.select_all_box.checked:
+      self.ticket_inbox_content.select_all()
+    else:
+      self.ticket_inbox_content.deselect_all()
+    
+
+  def clear_selected_link_click(self, **event_args):
+    self.ticket_inbox_content.deselect_all()
+
+  def sort_dropdown_change(self, **event_args):
+    sort = self.sort_dropdown.selected_value.lower()
+    self.ticket_inbox_content.filter_tickets(filters=None, sort=sort)
+
+  def delete_tickets_link_click(self, **event_args):
+    self.ticket_inbox_content.delete_tickets()
+
+
+
+
+
+
+
+

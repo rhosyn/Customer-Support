@@ -17,25 +17,9 @@ class DashGraphs(DashGraphsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-#     self.progress_percentage.percentage = 0.22
-#     self.progress_stats.percentage = 0.7
-#     self.progress_stats.display_value = 55
-#     self.resolution_graph.labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
-#     self.resolution_graph.datasets = [{
-#             'label': 'Resolved',
-#             'backgroundColor': '#9389DF',
-#             'borderColor': '#7D71D8',
-#             'data': [7, 10, 5, 2, 9, 11, 6]
-#         },{
-#             'label': 'Unresolved',
-#             'backgroundColor': '#00FFAF',
-#             'borderColor': '#00FFAF',
-#             'data': [2, 3, 11, 12, 5, 6, 6]
-#         }]
     
   def build_resolution_chart(self, labels, data):
-    print('labels: {}'.format(labels))
-    print('data: {}'.format(data))
+    # This is called initially in the form_show event of the DashboardFilters Form
     self.resolution_graph.labels = labels
     self.resolution_graph.datasets = [{
             'label': 'Resolved',
@@ -50,20 +34,7 @@ class DashGraphs(DashGraphsTemplate):
         }]
    
 
-#   def form_show(self, **event_args):
-#     labels, data = anvil.server.call('get_plots', self.start_date, self.end_date, self.time_period)
-#     self.resolution_graph.labels = labels
-#     self.resolution_graph.datasets = [{
-#             'label': 'Resolved',
-#             'backgroundColor': '#9389DF',
-#             'borderColor': '#7D71D8',
-#             'data': data['resolved']
-#         },{
-#             'label': 'Unresolved',
-#             'backgroundColor': '#00FFAF',
-#             'borderColor': '#00FFAF',
-#             'data': data['unresolved']
-#         }]
+
 
 
 

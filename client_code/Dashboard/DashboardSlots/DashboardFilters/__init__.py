@@ -39,7 +39,6 @@ class DashboardFilters(DashboardFiltersTemplate):
     self.parent.dash_content.dash_graphs.build_resolution_chart(labels, data)
   
   def form_show(self, **event_args):
-    print(self.parent)
     self.get_dashboard_data()
     self.get_resolution_plots()
 

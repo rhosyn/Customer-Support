@@ -2,6 +2,7 @@ container:
   type: HtmlTemplate
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
     role: background-image, html: '@theme:scroll_pane.html'}
+  event_bindings: {show: form_show}
 components:
 - type: form:Tickets.TicketDetailSlots.TicketDetail.TicketDetailHeader
   properties: {}

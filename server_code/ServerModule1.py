@@ -8,13 +8,21 @@ from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime, timedelta
 
+# Ticket functions 
 @anvil.server.callable
 def get_tickets(sort, filters={}, date_filter={}):
   ascending = True if sort == 'title' else False
   if date_filter:
-    print(date_filter['end'])
+    date_filter['end'] += timedelta(days=1)
     return app_tables.tickets.search(tables.order_by(sort, ascending=ascending), date=q.between(date_filter['start'], date_filter['end'], max_inclusive=True), **filters)
   return app_tables.tickets.search(tables.order_by(sort, ascending=ascending), **filters)
+
+@anvil.server.callable
+@tables.in_transaction
+def delete_tickets(tickets):
+  for t in tickets:
+    if app_tables.tickets.has_row(t):
+      t.delete()
 
 @anvil.server.callable
 def get_dashboard_data(start_date, end_date):
@@ -58,38 +66,4 @@ def get_customers():
 
 
 
-# @anvil.server.callable
-# def get_stats(days):
-#   start_date = datetime.today() - timedelta(days=days)
-#   resolved_tickets, new_tickets = get_ticket_data(days)
-#   unresolved = (len(new_tickets) - len(resolved_tickets)) if len(new_tickets) > len(resolved_tickets) else 0
-#   urgent = len(app_tables.tickets.search(
-#     priority='urgent',
-#     date=q.between(start_date, datetime.today(),
-#     )
-#   ))
-#   received = len(new_tickets)
-  
-#   resolved = len(resolved_tickets)
-#   return received, resolved, unresolved, urgent
-
-
-  
-
-# @anvil.server.callable
-# def get_plots(days):
-#   resolved_tickets, new_tickets = get_ticket_data(days)
-#   dates = []
-#   res = []
-#   unres = []
-#   for i in range(-days+1, 1):
-#     day = (datetime.today().date() + timedelta(days=i))
-#     dates.append(day)
-#     r = len([x for x in resolved_tickets if x['closed'].date() == day])
-#     res.append(r)
-#     u = len([x for x in new_tickets if not x['closed'] and x['date'].date() == day])
-#     unres.append(u)
-#   resolved = go.Bar(name="Resolved tickets", y=res, x=dates)
-#   unresolved = go.Bar(name="Unresolved tickets", y=unres, x=dates)
-#   return [resolved, unresolved]
 

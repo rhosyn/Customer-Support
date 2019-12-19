@@ -5,14 +5,18 @@ container:
 components:
 - type: form:Tickets.TicketInboxSlots.TicketFilters
   properties: {}
-  name: custom_1
+  name: ticket_filters
   layout_properties: {slot: slot-2}
 - type: form:Tickets.TicketDetailSlots.TicketDetail
   properties: {}
-  name: custom_2
+  name: ticket_detail
   layout_properties: {slot: slot-1}
+  data_bindings:
+  - {property: item, code: self.item}
 - type: form:Customers.CustomerOverlay.CustomerDetails
   properties: {}
-  name: custom_3
+  name: customer_details
   layout_properties: {slot: slot-3}
+  data_bindings:
+  - {property: item, code: self.item}
 is_package: true

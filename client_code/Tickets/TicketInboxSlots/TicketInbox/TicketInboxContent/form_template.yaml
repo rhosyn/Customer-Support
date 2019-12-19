@@ -4,13 +4,14 @@ components:
   properties:
     role: dash-up
     columns:
-    - {width: 48, title: Column 1, id: FEORLK, data_key: column_1, expand: false}
-    - {width: 81, title: Column 2, id: SVDJFK, data_key: column_2, expand: false}
-    - {width: 636, title: Column 3, id: DZHAXL, data_key: column_3, expand: false}
-    - {width: 160, title: Column 4, id: XZFXCS, data_key: column_4, expand: false}
-    - {width: 69, title: Column 5, id: JKSXLL, data_key: column_5, expand: false}
-    - {width: 143, title: Column 6, id: USDYWJ, data_key: column_6, expand: false}
-    - {width: 63, title: Column 7, id: HCOREJ, data_key: column_7, expand: false}
+    - {width: '60', title: select, id: FEORLK, data_key: column_1, expand: false}
+    - {width: '80', title: avatar, id: SVDJFK, data_key: column_2, expand: false}
+    - {width: '350', title: details, id: DZHAXL, data_key: column_3, expand: true}
+    - {width: '110', title: date, id: XZFXCS, data_key: column_4, expand: false}
+    - {width: '30', title: dots, id: JKSXLL, data_key: column_5, expand: false}
+    - {width: '90', title: Column 6, id: USDYWJ, data_key: column_6, expand: true}
+    - {width: '20', title: Column 7, id: HCOREJ, data_key: column_7, expand: false}
+    - {width: '30', title: Column 8, id: MDTPKA, data_key: column_8}
     auto_header: false
     tooltip: ''
     border: ''

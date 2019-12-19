@@ -22,17 +22,17 @@ class TicketInboxContentRP(TicketInboxContentRPTemplate):
 
   def ticket_title_link_click(self, **event_args):
     homepage = get_open_form()
-    homepage.current_form.remove_from_parent()
-    homepage.current_form = TicketDetailSlots(item=self.item)
-    homepage.add_component(homepage.current_form, slot="default")
+    homepage.clear(slot="default")
+    print(self.item)
     homepage.ticket_link.role = 'active'
+    homepage.add_component(TicketDetailSlots(item=self.item),slot="default")
     
-    
-
   def check_box_1_change(self, **event_args):
     if self.check_box_1.checked:
+      self.parent.raise_event('x-select-ticket', ticket=self.item)
       self.role = "tickets-repeating-panel-selected"
     else:
+      self.parent.raise_event('x-select-ticket', ticket=self.item)
       self.role = "tickets-repeating-panel"
 
 

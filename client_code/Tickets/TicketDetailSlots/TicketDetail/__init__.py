@@ -15,3 +15,7 @@ class TicketDetail(TicketDetailTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+
+  def form_show(self, **event_args):
+    print(f"Ticketd: {dict(list(self.item))}")
+
