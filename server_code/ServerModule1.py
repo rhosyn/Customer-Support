@@ -26,7 +26,6 @@ def delete_tickets(tickets):
       
 @anvil.server.callable
 def get_replies(ticket):
-  print("getting replies for {}".format(ticket['title']))
   return app_tables.replies.search(tables.order_by("date", ascending=False), ticket=ticket)
 
 @anvil.server.callable
@@ -83,8 +82,9 @@ def get_progess_data(start, end):
   
   
 @anvil.server.callable
-def get_customers():
-  return app_tables.customers.search()
+def get_customers(sort={}, filters={}):
+  ascending = True if sort == 'name' else False
+  return app_tables.customers.search(tables.order_by(sort, ascending=ascending), **filters)
 
 
 
