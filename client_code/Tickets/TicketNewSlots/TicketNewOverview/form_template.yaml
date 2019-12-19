@@ -17,8 +17,8 @@ components:
       underline: false, icon: ''}
     name: label_1
     layout_properties: {grid_position: 'QQGNMW,CJQPMC', full_width_row: false}
-- type: form:ZAQM2PN7RARG5DAA:SearchHints
-  properties: {get_keys_function: ''}
-  name: search_hints_1
-  layout_properties: {grid_position: 'UQRNYS,MREWDU', full_width_row: true, slot: slot-content}
+  - type: form:ZAQM2PN7RARG5DAA:SearchHints
+    properties: {}
+    name: search_hints_1
+    layout_properties: {grid_position: 'IKPOXQ,XNMEBB'}
 is_package: true

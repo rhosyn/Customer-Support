@@ -82,10 +82,10 @@ def get_progess_data(start, end):
   
   
 @anvil.server.callable
-def get_customers(sort={}, filters={}):
-  ascending = True if sort == 'name' else False
-  return app_tables.customers.search(tables.order_by(sort, ascending=ascending), **filters)
-
+def get_customers(filters={}):
+  customers = app_tables.customers.search(tables.order_by('name', ascending=True), **filters)
+  print(len(customers))
+  return customers
 
 
 

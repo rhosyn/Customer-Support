@@ -27,7 +27,7 @@ class TicketNewOverview(TicketNewOverviewTemplate):
   def search_customers(self, **event_args):
     self.new = False
 #     self.new_customer_box.visible = False
-    return anvil.server.call('get_customers', sort='name')
+    return anvil.server.call('get_customers')
   
   def update_result_label(self, result, **event_args):
     self.selected_customer = result
