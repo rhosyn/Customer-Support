@@ -17,7 +17,6 @@ class CustomerGrid(CustomerGridTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-    
 
   def form_refreshing_data_bindings(self, **event_args):
     if self.customer_tickets is None and self.item:
