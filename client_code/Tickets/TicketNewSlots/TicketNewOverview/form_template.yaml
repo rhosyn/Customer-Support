@@ -28,6 +28,10 @@ components:
       spacing_below: small, italic: false, background: '', bold: false, underline: false}
     name: text_box_1
     layout_properties: {grid_position: 'KSXSCS,GUSCAN', full_width_row: false}
+  - type: form:ZAQM2PN7RARG5DAA:SearchHints
+    properties: {}
+    name: search_hints_1
+    layout_properties: {grid_position: 'UQRNYS,RJLVBD'}
   - type: FlowPanel
     properties: {role: null, spacing: tiny, align: center, tooltip: '', border: '',
       foreground: '', visible: true, spacing_above: small, spacing_below: medium,
