@@ -7,9 +7,9 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-
 required_customer_keys = ['name', 'title', 'company', 'email', 'phone']
 required_ticket_keys = ['title', 'priority', 'category', 'details', 'due', 'agent']
+required_ticket_settings_keys = ['status', 'priority', 'category', 'agent']
 
 def get_customer_errors(customer_dict):
   missing_keys = []
@@ -24,6 +24,16 @@ def get_customer_errors(customer_dict):
 def get_ticket_errors(ticket_dict):
   missing_keys = []
   for k in required_ticket_keys:
+    if not ticket_dict.get(k, None):
+      missing_keys.append(k)
+  if missing_keys != []:
+    return missing_keys
+  else:
+    return None
+  
+def get_ticket_settings_errors(ticket_dict):
+  missing_keys = []
+  for k in required_ticket_settings_keys:
     if not ticket_dict.get(k, None):
       missing_keys.append(k)
   if missing_keys != []:

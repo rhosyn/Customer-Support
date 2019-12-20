@@ -30,6 +30,20 @@ def add_ticket(ticket_dict, customer):
     )
   
 @anvil.server.callable
+def update_ticket(ticket, ticket_dict):
+  if app_tables.tickets.has_row(ticket):
+    if ticket_dict['status'] == 'closed' and not ticket['status'] == 'closed':
+      ticket_dict['closed'] = datetime.now()
+    ticket.update(**ticket_dict)  
+    
+@anvil.server.callable
+@tables.in_transaction
+def delete_tickets(tickets):
+  for t in tickets:
+    if app_tables.tickets.has_row(t):
+      t.delete()
+  
+@anvil.server.callable
 def add_customer(cust_dict):
   cust_dict['created'] = datetime.now()
   return app_tables.customers.add_row(**cust_dict)
@@ -38,13 +52,6 @@ def add_customer(cust_dict):
 def update_customer(customer, customer_dict):
   if app_tables.customers.has_row(customer):
     customer.update(**customer_dict)  
-
-@anvil.server.callable
-@tables.in_transaction
-def delete_tickets(tickets):
-  for t in tickets:
-    if app_tables.tickets.has_row(t):
-      t.delete()
       
 @anvil.server.callable
 def get_replies(ticket):

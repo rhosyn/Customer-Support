@@ -39,15 +39,24 @@ class TicketInbox(TicketInboxTemplate):
 
   def previous_page_link_click(self, **event_args):
     self.ticket_inbox_content.data_grid_1.previous_page()
+    self.set_pages()
+    self.refresh_data_bindings()
 
-  def link_3_click(self, **event_args):
+  def next_page_link_click(self, **event_args):
     self.ticket_inbox_content.data_grid_1.next_page()
+    self.set_pages()
+    self.refresh_data_bindings()
     
   def set_pages(self):
-    page = self.ticket_inbox_content.data_grid_1.get_page() + 1
-    start_page = (page+1 * 8)
-    text = f"Tickets {start_page}-{start_page+8} of {len(self.ticket_inbox_content.repeating_panel_1.items)}"
-    print(text)
+    page = self.ticket_inbox_content.data_grid_1.get_page()
+    start_page = ((page + 1) * 8)
+    end_page = min(start_page, len(self.ticket_inbox_content.repeating_panel_1.items))
+    text = f"Tickets {(page * 8) + 1}-{end_page} of {len(self.ticket_inbox_content.repeating_panel_1.items)}"
+    return text
+
+
+    
+
 
 
 

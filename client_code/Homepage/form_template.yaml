@@ -76,10 +76,10 @@ components:
   layout_properties: {slot: avatar}
 - type: Label
   properties: {role: header-text, align: left, tooltip: '', border: '', foreground: '',
-    visible: true, text: Tickets, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
-  name: label_1
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: headline_label
   layout_properties: {slot: title}
 - type: LinearPanel
   properties: {}

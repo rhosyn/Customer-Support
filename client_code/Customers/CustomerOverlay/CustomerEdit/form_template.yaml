@@ -130,7 +130,7 @@ components:
   name: cancel_link
   layout_properties:
     col_widths: {}
-    grid_position: IQCJPJ,NUICVR
+    grid_position: IQCJPJ,BHPYWA
   event_bindings: {click: cancel_link_click}
 - type: Link
   properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: 'theme:Gray
