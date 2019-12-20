@@ -25,6 +25,7 @@ class Homepage(HomepageTemplate):
     self.current_form = TicketInboxSlots()
     self.add_component(self.current_form, slot="default")
     self.ticket_panel.role = 'dash-link-selected'
+    alert("hello")
     
   def dash_link_click(self, **event_args):
     self.clear(slot="overlay")

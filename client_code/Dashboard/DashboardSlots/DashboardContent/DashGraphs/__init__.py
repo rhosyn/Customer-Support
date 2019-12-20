@@ -17,9 +17,9 @@ class DashGraphs(DashGraphsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-#     self.build_progress_charts()
     
   def build_progress_charts(self, progress_dash_stats):
+    # This is called initially in the form_show event of the DashboardFilters Form
     total_resolved = progress_dash_stats['resolved']['total_resolved']
     closed_on_first = progress_dash_stats['resolved']['closed_on_first']
     closed_on_first_percent = max((closed_on_first/total_resolved), 0)

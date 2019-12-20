@@ -19,6 +19,22 @@ def get_tickets(sort, filters={}, date_filter={}):
 
 @anvil.server.callable
 @tables.in_transaction
+def add_ticket(ticket_dict, customer):
+  if not app_tables.customers.has_row(customer):
+    customer = add_customer(customer)
+  app_tables.tickets.add_row(
+      customer=customer, 
+      status='open', 
+      date=datetime.now(),
+      **ticket_dict
+    )
+  
+@anvil.server.callable
+def add_customer(cust_dict):
+  return app_tables.customers.add_row(**cust_dict)
+
+@anvil.server.callable
+@tables.in_transaction
 def delete_tickets(tickets):
   for t in tickets:
     if app_tables.tickets.has_row(t):
@@ -83,6 +99,10 @@ def get_progess_data(start, end):
 @anvil.server.callable
 def get_customers(filters={}):
   return app_tables.customers.search(tables.order_by('name', ascending=True), **filters)
+
+@anvil.server.callable
+def get_users():
+  return app_tables.users.search()
 
 
 

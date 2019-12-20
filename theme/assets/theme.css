@@ -423,6 +423,50 @@ select::-ms-expand {
   margin-left: 20px;
 }
 
+/* Notifications */
+body>div[data-notify="container"] {
+  background: #60FFCD;
+  border: none;
+  padding: 24px;
+  color: #3A3368;
+}
+
+/* Component: Dialog (alert), Notification */
+.modal-content, body>div[data-notify="container"] {
+  background-color: white;
+  color: #3A3368;
+
+}
+
+.modal-header {
+  padding: 24px 24px 0px;
+  font-size: 24px;
+  line-height: 32px;
+  border: 0;
+}
+
+.modal-body {
+  padding: 20px 24px 24px;
+  font-size: 16px;
+  color: #747474;
+}
+
+.modal-footer {
+  padding: 8px 8px 8px 24px;
+  border: 0;
+}
+
+.modal-footer .btn {
+  background: #60FFCD !important;
+  color: #3A3368;
+  border: none !important;
+}
+.modal-footer .btn, .modal-footer .btn:focus, .modal-footer .btn:active {
+  box-shadow: none;
+  top: 0;
+  background: #00DE98;
+}
+
 
 /* Style the expanded datepicker */
 .daterangepicker {
@@ -449,6 +493,13 @@ select::-ms-expand {
 .daterangepicker select.yearselect {
   border: none;
   font-size: 1em;
+}
+
+/* Style the new customer box */
+.anvil-role-new-customer-box {
+  border-radius: 20px;
+  margin: 2vh;
+  padding: 2vh 0 0 0;
 }
 
 /* Secondary search box */

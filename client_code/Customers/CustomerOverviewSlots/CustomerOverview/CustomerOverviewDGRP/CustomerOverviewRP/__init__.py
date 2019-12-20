@@ -29,7 +29,6 @@ class CustomerOverviewRP(CustomerOverviewRPTemplate):
   def customer_link_click(self, **event_args):
     homepage = get_open_form()
     homepage.clear(slot="overlay")
-    print(self.item)
     homepage.add_component(CustomerDetailsOverlay(item=self.item),slot="overlay")
 
 

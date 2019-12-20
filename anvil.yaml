@@ -40,14 +40,136 @@ dependency_code:
             \ 0 !important;\n  background-color: transparent;\n }\n\n.avatar.white\
             \ svg {\n  width:4vh;\n  fill:#2f2853;\n  }\n</style>"}
       components:
-      - type: form:Form2
+      - type: form:UserSVG
         properties: {}
         name: custom_1
         layout_properties: {slot: avatar-logo}
-      class_name: Form1
-      code: "from anvil import *\n\nclass Form1(Form1Template):\n  def __init__(self,\
-        \ **properties):\n    # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\
+      class_name: Avatar
+      code: "from ._anvil_designer import AvatarTemplate\nfrom anvil import *\n\n\
+        class Avatar(AvatarTemplate):\n  def __init__(self, **properties):\n    #\
+        \ Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\
         \n    # Any code you write here will run when the form opens."
+    - container:
+        type: ColumnPanel
+        properties: {col_widths: '{}'}
+      components:
+      - type: TextBox
+        properties: {role: search-box-secondary, align: left, hide_text: false, tooltip: '',
+          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
+          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+          italic: false, background: '', bold: false, underline: false}
+        name: text_box_search
+        layout_properties: {grid_position: 'HWFDVY,BVWKLS', full_width_row: false}
+        event_bindings: {focus: text_box_search_focus, change: text_box_search_change,
+          pressed_enter: text_box_search_pressed_enter}
+      - type: FlowPanel
+        properties: {role: null, spacing: tiny, align: center, tooltip: '', border: '',
+          foreground: '', visible: true, spacing_above: medium, spacing_below: small,
+          background: ''}
+        name: flow_panel_1
+        layout_properties: {grid_position: 'IIUCAP,CYGILX', full_width_row: true}
+        components:
+        - type: Label
+          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+            visible: true, text: 'or ', font_size: null, font: '', spacing_above: none,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: false, underline: false, icon: ''}
+          name: label_1
+          layout_properties: {grid_position: 'JFVKTS,UXJGGN'}
+        - type: Link
+          properties: {role: null, url: '', align: left, tooltip: '', border: '',
+            foreground: '#7e71da', visible: true, text: Add New, font_size: null,
+            wrap_on: mobile, font: '', col_spacing: medium, spacing_above: none, icon_align: left,
+            col_widths: '', spacing_below: small, italic: false, background: '', bold: false,
+            underline: false, icon: ''}
+          name: link_1
+          layout_properties: {}
+      - type: RepeatingPanel
+        properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+          visible: true, spacing_above: small, spacing_below: small, item_template: SearchHintsResult,
+          background: ''}
+        name: repeating_panel_results
+        layout_properties: {grid_position: 'KPHSVL,YKQCOQ', full_width_row: true}
+      custom_component: true
+      properties:
+      - {name: get_keys_function, type: string, default_value: '', default_binding_prop: true}
+      class_name: SearchHints
+      code: "from ._anvil_designer import SearchHintsTemplate\nfrom anvil import *\n\
+        \n\nclass SearchHints(SearchHintsTemplate):\n  \"\"\"A search box that produces\
+        \ a list of hints to select from.\"\"\"\n  \n  def __init__(self, **properties):\n\
+        \    # You must call self.init_components() before doing anything else in\
+        \ this function\n    self.init_components(**properties)\n\n    # Get the initial\
+        \ set of search keys\n    self.search_keys = self.raise_event('x-get-search-keys')\n\
+        \    \n    # The results panel is initially empty\n    self.repeating_panel_results.items\
+        \ = []\n\n    # Set up the result handling event\n    self.repeating_panel_results.set_event_handler('x-result-selected',\
+        \ self.set_result)\n\n  def text_box_search_focus(self, **event_args):\n \
+        \   \"\"\"Refresh the keys when the search box is selected, and populate the\
+        \ suggestions panel.\"\"\"\n    self.search_keys = self.raise_event('x-get-search-keys')\n\
+        \    self.populate_results(self.text_box_search.text)\n  \n  def text_box_search_change(self,\
+        \ **event_args):\n    \"\"\"Populate the suggestions when text is entered.\"\
+        \"\"\n    self.populate_results(self.text_box_search.text)\n\n  def text_box_search_pressed_enter(self,\
+        \ **event_args):\n    \"\"\"Choose the top result when enter is pressed.\"\
+        \"\"\n    results = self.repeating_panel_results.get_components()\n    if\
+        \ results:\n      results[0].link_search_result.raise_event('click')\n\n \
+        \ def populate_results(self, text):\n    \"\"\"Populate the suggestions panel.\"\
+        \"\"\n    if text == '':\n      self.repeating_panel_results.items = []\n\
+        \    else:\n      if not hasattr(self, 'search_keys'):\n        # If we haven't\
+        \ got the search keys yet, get them.\n        self.search_keys = self.raise_event('x-get-search-keys')\n\
+        \      #\_Populate the results list\n      self.repeating_panel_results.items\
+        \ = [\n        key for key in self.search_keys\n        if text.lower() in\
+        \ key['name'].lower()\n      ]\n\n  def set_result(self, result, **event_args):\n\
+        \    \"\"\"Set the result in the result box.\"\"\"\n    self.raise_event('x-search-hints-result',\
+        \ result=result)\n    self.repeating_panel_results.items = []\n"
+    - container:
+        type: ColumnPanel
+        properties: {role: select-customer-repeating-panel, tooltip: '', border: '',
+          foreground: '', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
+          col_widths: '{}', spacing_below: small, background: ''}
+      components:
+      - type: FlowPanel
+        properties: {role: null, spacing: medium, align: left, tooltip: '', border: '',
+          foreground: '', visible: true, spacing_above: small, spacing_below: small,
+          background: ''}
+        name: flow_panel_1
+        layout_properties: {grid_position: 'EAVGKD,ZVGJRH', full_width_row: true}
+        components:
+        - type: form:Avatar
+          properties: {}
+          name: custom_1
+          layout_properties: {grid_position: 'EESTTA,LWTFPB'}
+        - type: ColumnPanel
+          properties: {col_widths: '{}'}
+          name: column_panel_1
+          layout_properties: {grid_position: 'BEWVIP,QXGKFV', width: 145.83299999999997}
+          components:
+          - type: Link
+            properties: {role: null, url: '', align: left, tooltip: '', border: '',
+              foreground: '#7e71da', visible: true, text: link_search_result, font_size: null,
+              wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
+              icon_align: left, col_widths: '{}', spacing_below: small, italic: false,
+              background: '', bold: false, underline: false, icon: ''}
+            name: link_search_result
+            layout_properties: {grid_position: 'HFFOEP,JAGHQG', full_width_row: true}
+            event_bindings: {click: link_search_result_click}
+            components:
+            - type: Label
+              properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+                visible: false, text: '', font_size: null, font: '', spacing_above: small,
+                icon_align: left, spacing_below: small, italic: false, background: '',
+                bold: false, underline: false, icon: ''}
+              name: result_row
+              layout_properties: {grid_position: 'GPWCNZ,UCZMQT', full_width_row: true}
+      item_type: {table_id: null}
+      class_name: SearchHintsResult
+      code: "from ._anvil_designer import SearchHintsResultTemplate\nfrom anvil import\
+        \ *\n\n\nclass SearchHintsResult(SearchHintsResultTemplate):\n  \"\"\"A single\
+        \ search hint.\"\"\"\n  \n  def __init__(self, **properties):\n    # You must\
+        \ call self.init_components() before doing anything else in this function\n\
+        \    self.init_components(**properties)\n    \n    self.link_search_result.text\
+        \ = f\"{self.item['name']} {self.item['last_name']}\"\n    self.result_row.text\
+        \ = self.item\n\n  def link_search_result_click(self, **event_args):\n   \
+        \ \"\"\"Set the result box text upon click.\"\"\"\n    self.parent.raise_event('x-result-selected',\
+        \ result=self.item)\n"
     - container:
         type: HtmlTemplate
         properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
@@ -128,126 +250,11 @@ dependency_code:
             />\n        </g>\n\t</svg>\n"}
       components: []
       custom_component: true
-      class_name: Form2
-      code: "from anvil import *\n\nclass Form2(Form2Template):\n  def __init__(self,\
-        \ **properties):\n    # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\
+      class_name: UserSVG
+      code: "from ._anvil_designer import UserSVGTemplate\nfrom anvil import *\n\n\
+        class UserSVG(UserSVGTemplate):\n  def __init__(self, **properties):\n   \
+        \ # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\
         \n    # Any code you write here will run when the form opens."
-    - container:
-        type: ColumnPanel
-        properties: {col_widths: '{}'}
-      components:
-      - type: TextBox
-        properties: {role: search-box-secondary, align: left, hide_text: false, tooltip: '',
-          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
-          text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-          italic: false, background: '', bold: false, underline: false}
-        name: text_box_search
-        layout_properties: {grid_position: 'HWFDVY,BVWKLS', full_width_row: false}
-        event_bindings: {focus: text_box_search_focus, change: text_box_search_change,
-          pressed_enter: text_box_search_pressed_enter}
-      - type: FlowPanel
-        properties: {role: null, spacing: tiny, align: center, tooltip: '', border: '',
-          foreground: '', visible: true, spacing_above: small, spacing_below: small,
-          background: ''}
-        name: flow_panel_1
-        layout_properties: {grid_position: 'IIUCAP,CYGILX', full_width_row: true}
-        components:
-        - type: Label
-          properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-            visible: true, text: 'or ', font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: false, underline: false, icon: ''}
-          name: label_1
-          layout_properties: {grid_position: 'JFVKTS,UXJGGN'}
-        - type: Link
-          properties: {role: null, url: '', align: left, tooltip: '', border: '',
-            foreground: '#7e71da', visible: true, text: Add New, font_size: null,
-            wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
-            icon_align: left, col_widths: '', spacing_below: small, italic: false,
-            background: '', bold: false, underline: false, icon: ''}
-          name: link_1
-          layout_properties: {}
-      - type: RepeatingPanel
-        properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-          visible: true, spacing_above: small, spacing_below: small, item_template: SearchHintsResult,
-          background: ''}
-        name: repeating_panel_results
-        layout_properties: {grid_position: 'KPHSVL,YKQCOQ', full_width_row: false}
-      custom_component: true
-      properties:
-      - {name: get_keys_function, type: string, default_value: '', default_binding_prop: true}
-      class_name: SearchHints
-      code: "from anvil import *\n\n\nclass SearchHints(SearchHintsTemplate):\n  \"\
-        \"\"A search box that produces a list of hints to select from.\"\"\"\n  \n\
-        \  def __init__(self, **properties):\n    # You must call self.init_components()\
-        \ before doing anything else in this function\n    self.init_components(**properties)\n\
-        \n    # Get the initial set of search keys\n    self.search_keys = self.raise_event('x-get-search-keys')\n\
-        \    \n    # The results panel is initially empty\n    self.repeating_panel_results.items\
-        \ = []\n\n    # Set up the result handling event\n    self.repeating_panel_results.set_event_handler('x-result-selected',\
-        \ self.set_result)\n\n  def text_box_search_focus(self, **event_args):\n \
-        \   \"\"\"Refresh the keys when the search box is selected, and populate the\
-        \ suggestions panel.\"\"\"\n    self.search_keys = self.raise_event('x-get-search-keys')\n\
-        \    self.populate_results(self.text_box_search.text)\n  \n  def text_box_search_change(self,\
-        \ **event_args):\n    \"\"\"Populate the suggestions when text is entered.\"\
-        \"\"\n    self.populate_results(self.text_box_search.text)\n\n  def text_box_search_pressed_enter(self,\
-        \ **event_args):\n    \"\"\"Choose the top result when enter is pressed.\"\
-        \"\"\n    results = self.repeating_panel_results.get_components()\n    if\
-        \ results:\n      results[0].link_search_result.raise_event('click')\n\n \
-        \ def populate_results(self, text):\n    \"\"\"Populate the suggestions panel.\"\
-        \"\"\n    if text == '':\n      self.repeating_panel_results.items = []\n\
-        \    else:\n      if not hasattr(self, 'search_keys'):\n        # If we haven't\
-        \ got the search keys yet, get them.\n        self.search_keys = self.raise_event('x-get-search-keys')\n\
-        \      #\_Populate the results list\n      self.repeating_panel_results.items\
-        \ = [\n        key for key in self.search_keys\n        if text.lower() in\
-        \ key['name'].lower()\n      ]\n\n  def set_result(self, result, **event_args):\n\
-        \    \"\"\"Set the result in the result box.\"\"\"\n    self.raise_event('x-search-hints-result',\
-        \ result=result)\n    self.repeating_panel_results.items = []\n"
-    - container:
-        type: ColumnPanel
-        properties: {role: select-customer-repeating-panel, tooltip: '', border: '',
-          foreground: '', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: small,
-          col_widths: '{}', spacing_below: small, background: ''}
-      components:
-      - type: FlowPanel
-        properties: {}
-        name: flow_panel_1
-        layout_properties: {grid_position: 'EAVGKD,ZVGJRH'}
-        components:
-        - type: form:Form1
-          properties: {}
-          name: custom_1
-          layout_properties: {grid_position: 'EESTTA,LWTFPB'}
-        - type: ColumnPanel
-          properties: {col_widths: '{}'}
-          name: column_panel_1
-          layout_properties: {grid_position: 'BEWVIP,QXGKFV', width: 145.83299999999997}
-          components:
-          - type: Link
-            properties: {role: null, url: '', align: left, tooltip: '', border: '',
-              foreground: '#7e71da', visible: true, text: link_search_result, font_size: null,
-              wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
-              icon_align: left, col_widths: '{}', spacing_below: small, italic: false,
-              background: '', bold: false, underline: false, icon: ''}
-            name: link_search_result
-            layout_properties: {grid_position: 'HFFOEP,JAGHQG', full_width_row: true}
-            event_bindings: {click: link_search_result_click}
-            components:
-            - type: Label
-              properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
-                visible: false, text: '', font_size: null, font: '', spacing_above: small,
-                icon_align: left, spacing_below: small, italic: false, background: '',
-                bold: false, underline: false, icon: ''}
-              name: result_row
-              layout_properties: {grid_position: 'GPWCNZ,UCZMQT', full_width_row: true}
-      item_type: {table_id: null}
-      class_name: SearchHintsResult
-      code: "from anvil import *\n\n\nclass SearchHintsResult(SearchHintsResultTemplate):\n\
-        \  \"\"\"A single search hint.\"\"\"\n  \n  def __init__(self, **properties):\n\
-        \    # You must call self.init_components() before doing anything else in\
-        \ this function\n    self.init_components(**properties)\n    \n    self.link_search_result.text\
-        \ = self.item['name']\n    self.result_row.text = self.item\n\n  def link_search_result_click(self,\
-        \ **event_args):\n    \"\"\"Set the result box text upon click.\"\"\"\n  \
-        \  self.parent.raise_event('x-result-selected', result=self.item)\n"
     modules:
     - {name: LICENCE, code: "\"\"\"\n                                 Apache License\n\
         \                           Version 2.0, January 2004\n                  \
@@ -407,7 +414,7 @@ dependency_code:
         \"\""}
     server_modules: []
     package_name: SearchHints
-    version: ff38c76a61f53f82f9e952664e37e4e5f40b071e
+    version: b8146775658d955eb2f7cc14f8c99380b48b2d0e
     branch: master
     depending_app: PAE3T66QQ2UXIZAI
     name: Search Hints Ticketing

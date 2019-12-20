@@ -51,6 +51,6 @@ class TicketInboxContent(TicketInboxContentTemplate):
     if self.selected_tickets:
       if confirm("Are you sure you want to delete: \n{}?".format(' \n'.join(t['title'] for t in self.selected_tickets))):
         anvil.server.call('delete_tickets', self.selected_tickets)
-        self.refresh_data_bindings()
+        self.filter_tickets(self.filters)
     else:
       alert("No tickets selected")

@@ -35,7 +35,6 @@ class DashboardFilters(DashboardFiltersTemplate):
     self.get_headline_cards(headline_stats)
     self.get_resolution_plots(resolution_data)
     self.get_progress_plots(progress_dash_stats)
-    print(progress_dash_stats)
 
   def get_headline_cards(self, headline_stats):
     self.parent.dash_content.dashboard_header.display_dashboard_data(headline_stats, str(self.time_period))

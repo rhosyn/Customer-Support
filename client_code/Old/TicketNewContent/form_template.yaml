@@ -1,7 +1,7 @@
 components:
 - type: RepeatingPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', items: null, visible: true,
-    spacing_above: small, spacing_below: small, item_template: Tickets.TicketNewSlots.TicketNewOverview.TicketNewContent.TicketNewContentRP,
+    spacing_above: small, spacing_below: small, item_template: Old.TicketNewContent.TicketNewContentRP,
     background: ''}
   name: repeating_panel_1
   layout_properties: {grid_position: 'AJXKWY,ZSPNLX', full_width_row: true}
