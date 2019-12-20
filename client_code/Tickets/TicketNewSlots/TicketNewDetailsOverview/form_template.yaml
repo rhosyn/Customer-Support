@@ -184,5 +184,5 @@ components:
     name: text_area_1
     layout_properties: {grid_position: 'ECRLUV,EWVPUP', full_width_row: true}
     data_bindings:
-    - {property: text, code: 'self.item[''details'']', writeback: true}
+    - {property: text, code: self.details, writeback: true}
 is_package: true

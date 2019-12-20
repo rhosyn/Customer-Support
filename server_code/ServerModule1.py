@@ -20,15 +20,21 @@ def get_tickets(sort, filters={}, date_filter={}):
 
 @anvil.server.callable
 @tables.in_transaction
-def add_ticket(ticket_dict, customer):
+def add_ticket(ticket_dict, details, customer):
   if not app_tables.customers.has_row(customer):
     customer = add_customer(customer)
-  app_tables.tickets.add_row(
+  ticket = app_tables.tickets.add_row(
       customer=customer, 
       status='open', 
       date=datetime.now(),
       **ticket_dict
     )
+  app_tables.messages.add_row(
+      date=datetime.now(),
+      ticket=ticket,
+      type=app_tables.types.get(name="INTERNAL_NOTE"),
+      details=details
+  )
   
 @anvil.server.callable
 def update_ticket(ticket, ticket_dict):
@@ -55,8 +61,8 @@ def update_customer(customer, customer_dict):
     customer.update(**customer_dict)  
       
 @anvil.server.callable
-def get_replies(ticket):
-  return app_tables.replies.search(tables.order_by("date", ascending=False), ticket=ticket)
+def get_messages(ticket):
+  return app_tables.messages.search(tables.order_by("date", ascending=False), ticket=ticket)
 
 @anvil.server.callable
 def get_dashboard_data(start_date, end_date, time_period):
@@ -102,7 +108,7 @@ def get_ticket_data(start, end):
 @anvil.server.callable
 def get_progess_data(start, end):
   resolved_tickets, new_tickets = get_ticket_data(start, end)
-  closed_on_first = [t for t in resolved_tickets if len(app_tables.replies.search(ticket=t)) == 1]
+  closed_on_first = [t for t in resolved_tickets if len(app_tables.messages.search(ticket=t)) == 1]
   new_customers = app_tables.customers.search(
     created=q.between(start, end, max_inclusive=True)
   )

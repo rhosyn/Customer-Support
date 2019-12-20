@@ -18,7 +18,6 @@ class TicketDetailHeader(TicketDetailHeaderTemplate):
 
     # Any code you write here will run when the form opens.
     
-
   def form_refreshing_data_bindings(self, **event_args):
     if self.ticket == {} and self.item:
       self.ticket = self.item

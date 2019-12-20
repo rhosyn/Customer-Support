@@ -87,6 +87,7 @@ dependency_code:
             underline: false, icon: ''}
           name: link_1
           layout_properties: {}
+          event_bindings: {click: link_1_click}
       - type: RepeatingPanel
         properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
           visible: true, spacing_above: small, spacing_below: small, item_template: SearchHintsResult,
@@ -122,7 +123,8 @@ dependency_code:
         \ = [\n        key for key in self.search_keys\n        if text.lower() in\
         \ key['name'].lower()\n      ]\n\n  def set_result(self, result, **event_args):\n\
         \    \"\"\"Set the result in the result box.\"\"\"\n    self.raise_event('x-search-hints-result',\
-        \ result=result)\n    self.repeating_panel_results.items = []\n"
+        \ result=result)\n    self.repeating_panel_results.items = []\n\n  def link_1_click(self,\
+        \ **event_args):\n    self.raise_event('x-new-customer')\n\n"
     - container:
         type: ColumnPanel
         properties: {role: select-customer-repeating-panel, tooltip: '', border: '',
@@ -143,7 +145,7 @@ dependency_code:
         - type: ColumnPanel
           properties: {col_widths: '{}'}
           name: column_panel_1
-          layout_properties: {grid_position: 'BEWVIP,QXGKFV', width: 145.83299999999997}
+          layout_properties: {grid_position: 'BEWVIP,QXGKFV', width: 237.83299999999997}
           components:
           - type: Link
             properties: {role: null, url: '', align: left, tooltip: '', border: '',
@@ -417,7 +419,7 @@ dependency_code:
         \"\""}
     server_modules: []
     package_name: SearchHints
-    version: b8146775658d955eb2f7cc14f8c99380b48b2d0e
+    version: 7878251984d07511cc819b7d77f0a33944b66e73
     branch: master
     depending_app: PAE3T66QQ2UXIZAI
     name: Search Hints Ticketing

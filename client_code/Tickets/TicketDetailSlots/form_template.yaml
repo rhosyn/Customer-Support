@@ -4,12 +4,6 @@ container:
     role: null, html: '@theme:three_slots.html'}
   event_bindings: {show: form_show}
 components:
-- type: form:Tickets.TicketDetailSlots.TicketDetail
-  properties: {}
-  name: ticket_detail
-  layout_properties: {slot: slot-1}
-  data_bindings:
-  - {property: item, code: self.item}
 - type: form:Customers.CustomerOverlay.CustomerDetails
   properties: {}
   name: customer_details
@@ -20,6 +14,12 @@ components:
   properties: {}
   name: custom_1
   layout_properties: {slot: slot-2}
+  data_bindings:
+  - {property: item, code: self.item}
+- type: form:Tickets.TicketDetailSlots.TicketDetail
+  properties: {}
+  name: custom_2
+  layout_properties: {slot: slot-1}
   data_bindings:
   - {property: item, code: self.item}
 is_package: true

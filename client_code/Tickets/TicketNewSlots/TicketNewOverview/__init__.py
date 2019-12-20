@@ -45,7 +45,7 @@ class TicketNewOverview(TicketNewOverviewTemplate):
     self.search_hints_1.text_box_search.text = ""
     self.new_customer_box.visible = True
     
-  def add_ticket(self, ticket):
+  def add_ticket(self, ticket, details):
     if self.new:
       customer = self.new_customer
       cust_validation_errors = Validation.get_customer_errors(customer)
@@ -54,7 +54,7 @@ class TicketNewOverview(TicketNewOverviewTemplate):
       cust_validation_errors = None
     tick_validation_errors = Validation.get_ticket_errors(ticket)
     if not cust_validation_errors and not tick_validation_errors:
-      anvil.server.call('add_ticket', ticket, customer)
+      anvil.server.call('add_ticket', ticket, details, customer)
       Notification('ticket added').show()
       homepage = get_open_form()
       homepage.clear(slot="overlay")

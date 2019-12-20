@@ -12,18 +12,18 @@ import anvil.server
 class TicketDetailContent(TicketDetailContentTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.replies = None
+    self.messages = None
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
   
-#   def populate_replies(self):
-#     self.replies = anvil.server.call('get_replies', self.item)
-#     self.replies_repeating_panel.items = self.replies
+  def populate_messages(self):
+    self.messages = anvil.server.call('get_messages', self.item)
+    self.messages_repeating_panel.items = self.messages
 
-#   def form_refreshing_data_bindings(self, **event_args):
-#     if self.replies is None and self.item:
-#       self.populate_replies()
+  def form_refreshing_data_bindings(self, **event_args):
+    if self.messages is None and self.item:
+      self.populate_messages()
 
 
   

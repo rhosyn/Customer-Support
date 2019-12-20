@@ -13,10 +13,11 @@ class TicketNewDetailsOverview(TicketNewDetailsOverviewTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.all_agents = anvil.server.call('get_users')
+    self.details = None
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
 
   def save_ticket_button_click(self, **event_args):
-    self.parent.ticket_new_overview.add_ticket(ticket=self.item)
+    self.parent.ticket_new_overview.add_ticket(ticket=self.item, details=self.details)
 

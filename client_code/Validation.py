@@ -8,7 +8,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 required_customer_keys = ['name', 'title', 'company', 'email', 'phone']
-required_ticket_keys = ['title', 'priority', 'category', 'details', 'due', 'agent']
+required_ticket_keys = ['title', 'priority', 'category', 'due', 'agent']
 required_ticket_settings_keys = ['status', 'priority', 'category', 'agent']
 
 def get_customer_errors(customer_dict):
