@@ -479,21 +479,6 @@ body>div[data-notify="container"] {
   background: #00DE98;
 }
 
-/* Move pagination controls up */
-.data-grid-footer-panel {
-  position: absolute;
-  top: -45px;
-  right: 2vh;
-}
-
-.data-grid-footer-panel a {
-  color: #3c3569;
-}
-
-.data-grid-footer-panel a.disabled {
-  color: grey;
-}
-
 
 /* Style the expanded datepicker */
 .daterangepicker {

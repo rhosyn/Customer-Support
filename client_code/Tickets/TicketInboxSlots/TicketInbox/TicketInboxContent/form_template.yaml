@@ -16,9 +16,9 @@ components:
     tooltip: ''
     border: ''
     foreground: ''
-    rows_per_page: 4
+    rows_per_page: 8
     visible: true
-    show_page_controls: true
+    show_page_controls: false
     spacing_above: small
     spacing_below: small
     background: ''

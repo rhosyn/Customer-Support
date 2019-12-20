@@ -15,6 +15,7 @@ class TicketInbox(TicketInboxTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    self.set_pages()
 
 
   def select_all_box_change(self, **event_args):
@@ -34,6 +35,21 @@ class TicketInbox(TicketInboxTemplate):
 
   def delete_tickets_link_click(self, **event_args):
     self.ticket_inbox_content.delete_tickets()
+
+
+  def previous_page_link_click(self, **event_args):
+    self.ticket_inbox_content.data_grid_1.previous_page()
+
+  def link_3_click(self, **event_args):
+    self.ticket_inbox_content.data_grid_1.next_page()
+    
+  def set_pages(self):
+    page = self.ticket_inbox_content.data_grid_1.get_page() + 1
+    start_page = (page+1 * 8)
+    text = f"Tickets {start_page}-{start_page+8} of {len(self.ticket_inbox_content.repeating_panel_1.items)}"
+    print(text)
+
+
 
 
 

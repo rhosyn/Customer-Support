@@ -81,5 +81,36 @@ components:
       name: sort_dropdown
       layout_properties: {}
       event_bindings: {change: sort_dropdown_change}
+  - type: FlowPanel
+    properties: {role: null, spacing: tiny, align: left, tooltip: '', border: '',
+      foreground: '', visible: true, spacing_above: none, spacing_below: none, background: ''}
+    name: flow_panel_4
+    layout_properties: {}
+    components:
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: 1-10 of 200, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {}
+      data_bindings:
+      - {property: text, code: len(self.ticket_inbox_content.repeating_panel_1.items)}
+    - type: Link
+      properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: <, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+        spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      name: previous_page_link
+      layout_properties: {}
+      event_bindings: {click: previous_page_link_click}
+    - type: Link
+      properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: '>', font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+        spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+        italic: false, background: '', bold: false, underline: false, icon: ''}
+      name: next_page_link
+      layout_properties: {}
+      event_bindings: {click: link_3_click}
 custom_component: true
 is_package: true
