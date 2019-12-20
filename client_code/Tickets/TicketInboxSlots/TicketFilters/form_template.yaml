@@ -1,7 +1,7 @@
 container:
   type: ColumnPanel
   properties: {role: filter-form-shadow, tooltip: '', border: '', foreground: '',
-    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"GBUXLP":32,"LSRQZB":15,"JFHZOB":45,"CPYPSZ":10,"MQCXCH":15,"SUMKER":45,"HINAVG":15,"KFKMPR":45}',
+    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"GBUXLP":32,"LSRQZB":15,"JFHZOB":45,"CPYPSZ":10,"MQCXCH":15,"SUMKER":45,"HINAVG":15,"KFKMPR":45,"WEIHXK":15,"CSFZBC":45}',
     spacing_below: none, background: ''}
   event_bindings: {show: form_show, refreshing_data_bindings: form_refreshing_data_bindings}
 components:
