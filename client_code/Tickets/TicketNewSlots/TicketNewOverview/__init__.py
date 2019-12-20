@@ -34,7 +34,7 @@ class TicketNewOverview(TicketNewOverviewTemplate):
     self.customer_copy = dict(list(self.selected_customer))
     self.refresh_data_bindings()
 #     self.selected_customer_box.visible = True
-    self.search_hints_1.text_box_search.text = result['name']
+    self.search_hints_1.text_box_search.text = f"{result['name']} {result['last_name']}"
     
   def new_customer_button_click(self, **event_args):
     self.new = True
