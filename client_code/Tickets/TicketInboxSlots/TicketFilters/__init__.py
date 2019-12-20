@@ -27,13 +27,13 @@ class TicketFilters(TicketFiltersTemplate):
     
   def clear_filters_link_click(self, **event_args):
     self.filters = {}
-    self.date_filters = {}
+    self.date_filter = {}
     self.refresh_data_bindings()
     self.parent.ticket_inbox.ticket_inbox_content.filter_tickets(self.filters)
 
   def date_picker_change(self, **event_args):
     if self.start_date_picker.date and self.end_date_picker.date:
-      self.parent.ticket_inbox.ticket_inbox_content.filter_tickets(self.filters, self.date_filter)
+      self.parent.ticket_inbox.ticket_inbox_content.filter_tickets(filters=self.filters, date_filter=self.date_filter)
       
       
 

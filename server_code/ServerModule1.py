@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 # Ticket functions 
 @anvil.server.callable
 def get_tickets(sort, filters={}, date_filter={}):
-  ascending = True if sort == 'title' else False
+  ascending = True if sort == 'title' or sort == 'priority' else False
   if date_filter:
     date_filter['end'] += timedelta(days=1)
     return app_tables.tickets.search(tables.order_by(sort, ascending=ascending), date=q.between(date_filter['start'], date_filter['end'], max_inclusive=True), **filters)
@@ -31,7 +31,13 @@ def add_ticket(ticket_dict, customer):
   
 @anvil.server.callable
 def add_customer(cust_dict):
+  cust_dict['created'] = datetime.now()
   return app_tables.customers.add_row(**cust_dict)
+
+@anvil.server.callable
+def update_customer(customer, customer_dict):
+  if app_tables.customers.has_row(customer):
+    customer.update(**customer_dict)  
 
 @anvil.server.callable
 @tables.in_transaction

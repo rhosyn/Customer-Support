@@ -23,7 +23,6 @@ class TicketDetailContent(TicketDetailContentTemplate):
 
   def form_refreshing_data_bindings(self, **event_args):
     if self.replies is None and self.item:
-      print(f"getting replies for {self.item['title']}")
       self.populate_replies()
 
 

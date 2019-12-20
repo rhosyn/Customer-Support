@@ -22,7 +22,7 @@ container:
       \ = d3.interpolate(this._current, d);\n      this._current = interpolate(0);\n\
       \      return function(t) {\n        return arc(interpolate(t));\n      }\n\
       \    });\n\n    g.append('text')\n      .attr('text-anchor', 'middle')\n   \
-      \   .attr('dy', '.35em')\n      .text(text);\n  }\n  \n  drawChart2(0.5, 50);\n\
+      \   .attr('dy', '.35em')\n      .text(text);\n  }\n  \n // drawChart2(0.5, 50);\n\
       \n</script>"}
   event_bindings: {show: form_show}
 is_package: true

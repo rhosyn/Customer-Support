@@ -14,6 +14,7 @@ from ..Dashboard.DashboardSlots import DashboardSlots
 from ..Tickets.TicketDetailSlots import TicketDetailSlots
 from ..Customers.CustomerOverviewSlots import CustomerOverviewSlots
 from ..Tickets.TicketNewSlots import TicketNewSlots
+from ..Tickets.TicketDetailSlots import TicketDetailSlots
 
 class Homepage(HomepageTemplate):
   def __init__(self, **properties):
@@ -25,43 +26,68 @@ class Homepage(HomepageTemplate):
     self.current_form = TicketInboxSlots()
     self.add_component(self.current_form, slot="default")
     self.ticket_panel.role = 'dash-link-selected'
-    alert("hello")
     
-  def dash_link_click(self, **event_args):
+  def open_dashboard(self):
     self.clear(slot="overlay")
     self.clear(slot="default")
     self.current_form = DashboardSlots()
     self.add_component(self.current_form, slot="default")
     self.clear_links()
     self.dash_panel.role = 'dash-link-selected'
-    
-  def ticket_link_click(self, **event_args):
+  
+  def open_tickets(self):
     self.clear(slot="overlay")
     self.clear(slot="default")
     self.current_form = TicketInboxSlots()
     self.add_component(self.current_form, slot="default")
     self.clear_links()
     self.ticket_panel.role = 'dash-link-selected'
-
-  def clear_links(self):
-    for panel in self.links_panel.get_components():
-      panel.role = "dash-link"
-
-  def customer_link_click(self, **event_args):
+    
+  def open_ticket_details_form(self, item):
     self.clear(slot="overlay")
     self.clear(slot="default")
-    self.current_form = CustomerOverviewSlots()
+    self.current_form = TicketDetailSlots(item=item)
     self.add_component(self.current_form, slot="default")
     self.clear_links()
-    self.customer_panel.role = 'dash-link-selected'
-
-  def new_ticket_button_click(self, **event_args):
+    self.ticket_panel.role = 'dash-link-selected'
+    
+  def open_new_ticket_form(self):
     self.clear(slot="overlay")
     self.clear(slot="default")
     self.current_form = TicketNewSlots()
     self.add_component(self.current_form, slot="default")
     self.clear_links()
     self.ticket_panel.role = 'dash-link-selected'
+    
+  def open_customers(self):
+    self.clear(slot="overlay")
+    self.clear(slot="default")
+    self.current_form = CustomerOverviewSlots()
+    self.add_component(self.current_form, slot="default")
+    self.clear_links()
+    self.customer_panel.role = 'dash-link-selected'
+    
+  def dash_link_click(self, **event_args):
+    self.open_dashboard()
+    
+  def ticket_link_click(self, **event_args):
+    self.open_tickets()
+  
+  def customer_link_click(self, **event_args):
+    self.open_customers()
+    
+  def new_ticket_button_click(self, **event_args):
+    self.open_new_ticket_form()
+    
+  def clear_links(self):
+    for panel in self.links_panel.get_components():
+      panel.role = "dash-link"
+
+
+    
+
+
+    
 
 
 

@@ -26,6 +26,7 @@ class TicketInbox(TicketInboxTemplate):
 
   def clear_selected_link_click(self, **event_args):
     self.ticket_inbox_content.deselect_all()
+    self.select_all_box.checked = False
 
   def sort_dropdown_change(self, **event_args):
     sort = self.sort_dropdown.selected_value.lower()

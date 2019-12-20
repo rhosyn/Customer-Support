@@ -18,13 +18,12 @@ class TicketInboxContentRP(TicketInboxContentRPTemplate):
 
     # Any code you write here will run when the form opens.
     self.date_label.text = self.item['date'].strftime("%d %b %Y")
+    self.overdue_label.visible = self.item['due'] < datetime.now()
 
 
   def ticket_title_link_click(self, **event_args):
     homepage = get_open_form()
-    homepage.clear(slot="default")
-    homepage.ticket_link.role = 'active'
-    homepage.add_component(TicketDetailSlots(item=self.item),slot="default")
+    homepage.open_ticket_details_form(item=self.item)
     
   def check_box_1_change(self, **event_args):
     if self.check_box_1.checked:

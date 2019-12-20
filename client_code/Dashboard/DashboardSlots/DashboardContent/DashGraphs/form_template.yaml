@@ -16,8 +16,10 @@ components:
     name: progress_percentage
     layout_properties: {}
   - type: ColumnPanel
-    properties: {col_widths: '{}'}
-    name: column_panel_3
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: progress_graph_1_text
     layout_properties: {width: 274}
     components:
     - type: Label
@@ -41,8 +43,10 @@ components:
     name: progress_stats
     layout_properties: {}
   - type: ColumnPanel
-    properties: {col_widths: '{}'}
-    name: column_panel_4
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: progress_graph_2_text
     layout_properties: {width: 197}
     components:
     - type: Label

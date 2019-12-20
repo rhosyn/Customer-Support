@@ -46,6 +46,7 @@ class TicketNewOverview(TicketNewOverviewTemplate):
     self.new_customer_box.visible = True
     
   def add_ticket(self, ticket):
+    print(ticket['due'])
     if self.new:
       customer = self.new_customer
       cust_validation_errors = Validation.get_customer_errors(customer)

@@ -41,8 +41,8 @@ components:
     layout_properties: {grid_position: 'LFFXAI,UJQYJN IRBXRG,HVUNCA'}
   - type: TextBox
     properties: {role: textbox-input, align: left, hide_text: false, tooltip: '',
-      placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      placeholder: first name, border: '', enabled: true, foreground: '', visible: true,
+      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
       italic: false, background: '', bold: false, underline: false}
     name: text_box_1
     layout_properties: {grid_position: 'LFFXAI,UJQYJN IRBXRG,MDWWCD'}
@@ -57,8 +57,8 @@ components:
     layout_properties: {grid_position: 'LFFXAI,UJQYJN IKSEHS,BWPKKD'}
   - type: TextBox
     properties: {role: textbox-input, align: left, hide_text: false, tooltip: '',
-      placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      placeholder: last name, border: '', enabled: true, foreground: '', visible: true,
+      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
       italic: false, background: '', bold: false, underline: false}
     name: text_box_2
     layout_properties: {grid_position: 'LFFXAI,UJQYJN IKSEHS,DTANNH'}
@@ -73,8 +73,8 @@ components:
     layout_properties: {grid_position: 'LFFXAI,UJQYJN EHCGNU,THNTGX'}
   - type: TextBox
     properties: {role: textbox-input, align: left, hide_text: false, tooltip: '',
-      placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      placeholder: title, border: '', enabled: true, foreground: '', visible: true,
+      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
       italic: false, background: '', bold: false, underline: false}
     name: text_box_3
     layout_properties: {grid_position: 'LFFXAI,UJQYJN EHCGNU,GFBTNM'}
@@ -89,8 +89,8 @@ components:
     layout_properties: {grid_position: 'LFFXAI,UJQYJN RWLNFX,ZHRWXD'}
   - type: TextBox
     properties: {role: textbox-input, align: left, hide_text: false, tooltip: '',
-      placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      placeholder: company, border: '', enabled: true, foreground: '', visible: true,
+      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
       italic: false, background: '', bold: false, underline: false}
     name: text_box_4
     layout_properties: {grid_position: 'LFFXAI,UJQYJN RWLNFX,RBHMWA'}
@@ -106,8 +106,8 @@ components:
     layout_properties: {grid_position: 'LFFXAI,UJQYJN PGJESI,UJMMYJ'}
   - type: TextBox
     properties: {role: textbox-input, align: left, hide_text: false, tooltip: '',
-      placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      placeholder: email, border: '', enabled: true, foreground: '', visible: true,
+      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
       italic: false, background: '', bold: false, underline: false}
     name: text_box_5
     layout_properties: {grid_position: 'LFFXAI,UJQYJN PGJESI,XPFYSO'}
@@ -122,8 +122,8 @@ components:
     layout_properties: {grid_position: 'LFFXAI,UJQYJN BHTJFH,CGLFTE'}
   - type: TextBox
     properties: {role: textbox-input, align: left, hide_text: false, tooltip: '',
-      placeholder: '', border: '', enabled: true, foreground: '', visible: true, text: '',
-      font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+      placeholder: phone number, border: '', enabled: true, foreground: '', visible: true,
+      text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
       italic: false, background: '', bold: false, underline: false}
     name: text_box_6
     layout_properties: {grid_position: 'LFFXAI,UJQYJN BHTJFH,VDUBRH'}

@@ -392,6 +392,18 @@ select::-ms-expand {
   width: 12vw !important!;
 }
 
+/* Overdue label for TicketInbox */
+.anvil-role-overdue-label {
+  margin: -1vh 0 0 -20px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #FF5658;
+  font-size: 1vh;
+}
+
+.anvil-role-overdue-label .label-text {
+  margin-left: 10px;
+  color: white;
+}
 /* Style the clear button */
 /* .anvil-role-clear-button button {
     background-color: white;
@@ -465,6 +477,21 @@ body>div[data-notify="container"] {
   box-shadow: none;
   top: 0;
   background: #00DE98;
+}
+
+/* Move pagination controls up */
+.data-grid-footer-panel {
+  position: absolute;
+  top: -45px;
+  right: 2vh;
+}
+
+.data-grid-footer-panel a {
+  color: #3c3569;
+}
+
+.data-grid-footer-panel a.disabled {
+  color: grey;
 }
 
 

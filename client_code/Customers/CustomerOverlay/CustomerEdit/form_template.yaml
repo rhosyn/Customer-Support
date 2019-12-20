@@ -24,48 +24,30 @@ components:
     icon: ''}
   name: label_2
   layout_properties: {grid_position: 'SRNBSQ,XGAUAD OVFEPL,BEFSNO'}
-- type: DropDown
-  properties:
-    role: dropdown-border
-    align: full
-    tooltip: ''
-    placeholder: ''
-    border: ''
-    enabled: true
-    foreground: ''
-    items: [Mr]
-    visible: true
-    font_size: null
-    font: ''
-    spacing_above: small
-    spacing_below: small
-    italic: false
-    background: ''
-    bold: false
-    underline: false
-    include_placeholder: false
-  name: drop_down_1
-  layout_properties: {grid_position: 'OSNJJA,GBUXLP'}
 - type: Spacer
   properties: {height: 32}
   name: spacer_2
   layout_properties: {grid_position: 'OSNJJA,LOJGXT'}
 - type: TextBox
-  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: Daniel, font_size: null,
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: First name,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
     background: '', bold: false, underline: false}
-  name: text_box_1
+  name: first_name_box
   layout_properties: {grid_position: 'NGNFMP,IIFMFM'}
+  data_bindings:
+  - {property: text, code: 'self.customer_copy[''name'']', writeback: true}
 - type: TextBox
-  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: Barnes, font_size: null,
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: Last name,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
     font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
     background: '', bold: false, underline: false}
-  name: text_box_1_copy
+  name: last_name_box
   layout_properties:
     col_widths: {}
     grid_position: EBMUCZ,GRZIUE
+  data_bindings:
+  - {property: text, code: 'self.customer_copy[''last_name'']', writeback: true}
 - type: Spacer
   properties: {height: 32}
   name: spacer_4
@@ -80,23 +62,27 @@ components:
     col_widths: {}
     grid_position: FAYHFO,SDGHZV
 - type: TextBox
-  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: Forty8Creates,
-    font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-    italic: false, background: '', bold: false, underline: false}
-  name: text_box_1_copy_2
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: Company,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: company_box
   layout_properties:
     col_widths: {}
     grid_position: RGHRBZ,UICOFX
+  data_bindings:
+  - {property: text, code: 'self.customer_copy[''company'']', writeback: true}
 - type: TextBox
-  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: Managing Director,
-    font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-    italic: false, background: '', bold: false, underline: false}
-  name: text_box_1_copy_3
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: Title,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: title_box
   layout_properties:
     col_widths: {}
     grid_position: UEAYHD,QUBIEC
+  data_bindings:
+  - {property: text, code: 'self.customer_copy[''title'']', writeback: true}
 - type: Spacer
   properties: {height: 32}
   name: spacer_3
@@ -111,47 +97,54 @@ components:
     col_widths: {}
     grid_position: MJHLGN,QGRACK
 - type: TextBox
-  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: '+44781234567',
-    font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-    italic: false, background: '', bold: false, underline: false}
-  name: text_box_1_copy_4
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: Phone number,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: phone_box
   layout_properties:
     col_widths: {}
     grid_position: BGURKK,QYMAHX
+  data_bindings:
+  - {property: text, code: 'self.customer_copy[''phone'']', writeback: true}
 - type: TextBox
-  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: '',
-    border: '', enabled: true, foreground: '', visible: true, text: daniel@forty8creates.com,
-    font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
-    italic: false, background: '', bold: false, underline: false}
-  name: text_box_1_copy_5
+  properties: {role: textbox-input, align: left, hide_text: false, tooltip: '', placeholder: Email,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: email_box
   layout_properties:
     col_widths: {}
     grid_position: DRWNJN,XEMJYY
+  data_bindings:
+  - {property: text, code: 'self.customer_copy[''email'']', writeback: true}
 - type: Spacer
   properties: {height: 32}
   name: spacer_5
   layout_properties: {grid_position: 'YQAYSS,JXHSMM'}
 - type: Link
   properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: 'theme:Gray
+      800', visible: true, text: Cancel, font_size: null, wrap_on: mobile, font: '',
+    col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: cancel_link
+  layout_properties:
+    col_widths: {}
+    grid_position: IQCJPJ,NUICVR
+  event_bindings: {click: cancel_link_click}
+- type: Link
+  properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: 'theme:Gray
       800', visible: true, text: Save, font_size: null, wrap_on: mobile, font: '',
     col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
     italic: false, background: '', bold: false, underline: false, icon: ''}
-  name: link_1
+  name: save_link
   layout_properties: {grid_position: 'IQCJPJ,ZRRLRC'}
-- type: Link
-  properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: 'theme:Gray
-      800', visible: true, text: Delete, font_size: null, wrap_on: mobile, font: '',
-    col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
-    italic: false, background: '', bold: false, underline: false, icon: ''}
-  name: link_1_copy
-  layout_properties:
-    col_widths: {}
-    grid_position: IQCJPJ,QHRJLF
+  event_bindings: {click: save_link_click}
 container:
   type: ColumnPanel
   properties: {role: filter-form-no-shadow, tooltip: '', border: '', foreground: '',
-    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"AWNMSI":2,"XGAUAD":58,"GBUXLP":25,"LOJGXT":35,"SDGHZV":131,"KCQTGL":2,"QGRACK":58,"SWANDH":3}',
+    visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"AWNMSI":2,"XGAUAD":58,"LOJGXT":35,"SDGHZV":131,"KCQTGL":2,"QGRACK":58,"SWANDH":3}',
     spacing_below: none, background: ''}
+  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
 is_package: true
 custom_component: true
