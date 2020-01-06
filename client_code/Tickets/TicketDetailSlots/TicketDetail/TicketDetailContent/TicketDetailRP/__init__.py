@@ -22,7 +22,7 @@ class TicketDetailRP(TicketDetailRPTemplate):
     elif self.item['type']['name'] == "INCOMING_EMAIL":
       return "To: Support"
     else:
-      return f"To:{self.item['ticket']['customer']['name']} {self.item['ticket']['customer']['last_name']}"
+      return f"To: {self.item['ticket']['customer']['name']} {self.item['ticket']['customer']['last_name']}"
 
     # In case we want to also bind colour to whether it's internal or external 
     # "white" if self.item['type']['name'] == "INCOMING_EMAIL" else "rgb(191, 186, 223)"
