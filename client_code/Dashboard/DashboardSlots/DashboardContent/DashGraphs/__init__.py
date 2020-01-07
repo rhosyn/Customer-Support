@@ -37,7 +37,7 @@ class DashGraphs(DashGraphsTemplate):
       new_customers = progress_dash_stats['customers']['new_customers']
       returning_customers = progress_dash_stats['customers']['returning_customers']
       if returning_customers > 0:
-        self.progress_stats.percentage = max((returning_customers / (new_customers + returning_customers)),0)
+        self.progress_stats.percentage = max((returning_customers / (new_customers + returning_customers)), 0)
       else:
         self.progress_stats.percentage = 0
       self.progress_stats.display_value = new_customers

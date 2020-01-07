@@ -1,4 +1,124 @@
 components:
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: false,
+    wrap_on: mobile, col_spacing: tiny, spacing_above: small, col_widths: '{"ZWFEYX":70,"FBZRMI":5,"AKVDTG":5}',
+    spacing_below: small, background: ''}
+  name: ticket_reply
+  layout_properties:
+    col_widths: {}
+    grid_position: WOLIPG,HKNRKF
+    full_width_row: true
+  components:
+  - type: Spacer
+    properties: {visible: true, spacing_above: small, spacing_below: small, height: 295,
+      tooltip: ''}
+    name: spacer_1_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: GCMCJG,AKVDTG
+    data_bindings: []
+  - type: ColumnPanel
+    properties: {role: thick-grey-border, tooltip: '', border: '', foreground: '',
+      visible: true, wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: white}
+    name: column_panel_1
+    layout_properties: {width: 913, grid_position: 'GCMCJG,ZWFEYX'}
+    components:
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: column_panel_2
+      layout_properties: {grid_position: 'LROXNR,EMHHAK'}
+      components: []
+    - type: FlowPanel
+      properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+        foreground: '', visible: true, spacing_above: small, spacing_below: small,
+        background: ''}
+      name: flow_panel_3
+      layout_properties: {grid_position: 'LROXNR,XUHPNK'}
+      components:
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'To:', font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+          underline: false, icon: ''}
+        name: label_1
+        layout_properties: {grid_position: 'LROXNR,YUUXWU'}
+      - type: DropDown
+        properties:
+          role: dropdown-border
+          align: full
+          tooltip: ''
+          placeholder: ''
+          border: ''
+          enabled: true
+          foreground: ''
+          items: []
+          visible: true
+          font_size: null
+          font: ''
+          spacing_above: small
+          spacing_below: small
+          italic: false
+          background: ''
+          bold: false
+          underline: false
+          include_placeholder: false
+        name: to_dropdown
+        layout_properties: {grid_position: 'LROXNR,LLDNQP'}
+        data_bindings:
+        - {property: selected_value, code: 'self.message[''type'']', writeback: true}
+    - type: TextArea
+      properties: {role: textarea-input, align: left, height: 165.13330000000002,
+        tooltip: '', placeholder: '', border: '', enabled: true, foreground: '', visible: true,
+        text: '', font_size: null, auto_expand: false, font: '', spacing_above: small,
+        spacing_below: small, italic: false, background: '', bold: false, underline: false}
+      name: reply_details_box
+      layout_properties: {grid_position: 'OCWSFD,DEFXJX'}
+      data_bindings:
+      - {property: text, code: 'self.message[''details'']', writeback: true}
+    - type: FlowPanel
+      properties: {role: null, spacing: medium, align: justify, tooltip: '', border: '',
+        foreground: '', visible: true, spacing_above: small, spacing_below: small,
+        background: ''}
+      name: flow_panel_1
+      layout_properties:
+        col_widths: {}
+        grid_position: TSZCOL,UBEZWU
+      components:
+      - type: form:Icons.AvatarSmall
+        properties: {}
+        name: avatar_small_1
+        layout_properties: {grid_position: 'GCMCJG,ZWFEYX LPXMKY,QQOBTK'}
+      - type: FlowPanel
+        properties: {}
+        name: flow_panel_2
+        layout_properties: {}
+        components:
+        - type: Button
+          properties: {role: primary-button, align: center, tooltip: '', border: '',
+            enabled: true, foreground: '', visible: true, text: Cancel, font_size: null,
+            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            italic: false, background: 'theme:Gray 600', bold: false, underline: false,
+            icon: 'fa:ban'}
+          name: cancel_reply_button
+          layout_properties: {grid_position: 'TSZCOL,IHGWJF'}
+          event_bindings: {click: cancel_reply_button_click}
+        - type: Button
+          properties: {role: primary-button, align: right, tooltip: '', border: '',
+            enabled: true, foreground: '', visible: true, text: Send, font_size: null,
+            font: '', spacing_above: small, icon_align: left, spacing_below: small,
+            italic: false, background: '', bold: false, underline: false, icon: 'fa:paper-plane'}
+          name: send_reply_button
+          layout_properties: {grid_position: 'TSZCOL,KOZKVC'}
+          event_bindings: {click: send_reply_button_click}
+      data_bindings: []
+    data_bindings: []
+  - type: Spacer
+    properties: {visible: true, spacing_above: small, spacing_below: small, height: 295,
+      tooltip: ''}
+    name: spacer_1
+    layout_properties: {grid_position: 'GCMCJG,FBZRMI'}
+    data_bindings: []
 - type: RepeatingPanel
   properties: {role: card-with-border, tooltip: '', border: '', foreground: '', items: null,
     visible: true, spacing_above: small, spacing_below: small, item_template: Tickets.TicketDetailSlots.TicketDetail.TicketDetailContent.TicketDetailRP,

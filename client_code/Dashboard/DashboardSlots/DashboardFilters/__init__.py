@@ -25,7 +25,9 @@ class DashboardFilters(DashboardFiltersTemplate):
     
   def end_date_picker_change(self, **event_args):
     self.get_dashboard_data()
-    self.get_resolution_plots()
+    
+  def start_date_picker_change(self, **event_args):
+    self.get_dashboard_data()
     
   def get_dashboard_data(self):
     self.start_date = self.start_date_picker.date
@@ -48,4 +50,6 @@ class DashboardFilters(DashboardFiltersTemplate):
   
   def form_show(self, **event_args):
     self.get_dashboard_data()
+
+
 

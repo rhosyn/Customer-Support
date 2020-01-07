@@ -108,11 +108,15 @@ def get_ticket_data(start, end):
 @anvil.server.callable
 def get_progess_data(start, end):
   resolved_tickets, new_tickets = get_ticket_data(start, end)
+#   TODO: condition on the message being one reply to the customer from internal
   closed_on_first = [t for t in resolved_tickets if len(app_tables.messages.search(ticket=t)) == 1]
   new_customers = app_tables.customers.search(
     created=q.between(start, end, max_inclusive=True)
   )
+  # Returning customers are those with new tickets who aren't in new_customers
   returning_customers = [x for x in new_tickets if x['customer'] not in new_customers]
+  # Returning customers also includes those whose tickets have been resolved during the period (and aren't already acounted for)
+  returning_customers += [x for x in resolved_tickets if x['customer'] not in new_customers and x['customer'] not in returning_customers]
   return {'resolved': {'total_resolved': len(resolved_tickets), 'closed_on_first':len(closed_on_first)}, 'customers':{'new_customers':len(new_customers), 'returning_customers':len(returning_customers)}}
   
   

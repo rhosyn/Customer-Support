@@ -82,6 +82,7 @@ components:
       format: '%d/%m/%Y'}
     name: start_date_picker
     layout_properties: {grid_position: 'KVEOCQ,WYSPAY', width: 172.433}
+    event_bindings: {change: start_date_picker_change}
   - type: DatePicker
     properties: {role: dropdown-border, align: left, max_date: '', pick_time: false,
       tooltip: '', placeholder: end date, border: '', enabled: true, foreground: '',

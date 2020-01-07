@@ -24,3 +24,18 @@ class TicketDetailHeader(TicketDetailHeaderTemplate):
       if self.item['due'] < datetime.now():
         self.overdue_label.visible = True
 
+  def delete_ticket_button_click(self, **event_args):
+    if confirm(f"Are you sure you want to delete: \n{self.item['title']}?"):
+      # Delete tickets expects a list of tickets so pass self.item as a list 
+      anvil.server.call('delete_tickets', [self.item])
+      homepage = get_open_form()
+      homepage.open_tickets()
+
+  def reply_button_click(self, **event_args):
+    self.parent.ticket_detail_content.ticket_reply.visible = True
+
+
+
+
+
+

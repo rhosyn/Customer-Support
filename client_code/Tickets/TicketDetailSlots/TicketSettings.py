@@ -29,7 +29,7 @@ class TicketSettings(TicketSettingsTemplate):
       anvil.server.call('update_ticket', self.item, self.ticket_copy)
       Notification('Ticket updated').show()
       homepage = get_open_form()
-      homepage.open_tickets()     
+      homepage.open_ticket_details_form(self.item)
     else:
       alert("\nThe following field are missing for your ticket: \n{}".format(
         ' \n'.join(word for word in tick_validation_errors)
