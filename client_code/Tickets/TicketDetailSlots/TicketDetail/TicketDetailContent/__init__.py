@@ -8,6 +8,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from datetime import datetime
+from .....Validation import Validation
 
 class TicketDetailContent(TicketDetailContentTemplate):
   def __init__(self, **properties):
@@ -26,7 +28,7 @@ class TicketDetailContent(TicketDetailContentTemplate):
     internal = app_tables.types.search(name="INTERNAL_NOTE")
     external = app_tables.types.search(name="OUTGOING_EMAIL")
     self.to_dropdown.items = [(f"{self.item['customer']['name']} {self.item['customer']['last_name']}", external), ('Internal Note', internal)]
-    self.to_dropdown.selected_value = external
+    self.message['type'] = external
 
   def form_refreshing_data_bindings(self, **event_args):
     if self.messages is None and self.item:
@@ -34,21 +36,20 @@ class TicketDetailContent(TicketDetailContentTemplate):
       self.populate_to_dropdown()
 
   def send_reply_button_click(self, **event_args):
-    message_validation_errors = Validation.get_message_errors(self.ticket_copy)
+    message_validation_errors = Validation.get_message_errors(self.message)
     if not message_validation_errors:
-      anvil.server.call('update_ticket', self.item, self.ticket_copy)
-      Notification('Ticket updated').show()
+      anvil.server.call('add_message', self.message, self.item)
+      Notification('Reply added').show()
       homepage = get_open_form()
       homepage.open_ticket_details_form(self.item)
     else:
-      alert("\nThe following field are missing for your ticket: \n{}".format(
-        ' \n'.join(word for word in tick_validation_errors)
+      alert("\nThe following field are missing for your reply: \n{}".format(
+        ' \n'.join(word for word in message_validation_errors)
       ))
-    self.message['ticket'] = self.item
     
-
   def cancel_reply_button_click(self, **event_args):
-    self.reply_details_box.text = ""
+    self.message = {}
+    self.refresh_data_bindings()
     self.ticket_reply.visible = False
 
 

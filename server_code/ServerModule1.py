@@ -37,6 +37,17 @@ def add_ticket(ticket_dict, details, customer):
   )
   
 @anvil.server.callable
+def add_message(message_dict, ticket):
+  print(dict(list(message_dict)))
+  print(dict(list(ticket)))
+#   app_tables.messages.add_row(
+#       date=datetime.now(),
+#       ticket=ticket,
+#       **message_dict
+#   )
+  
+  
+@anvil.server.callable
 def update_ticket(ticket, ticket_dict):
   if app_tables.tickets.has_row(ticket):
     if ticket_dict['status'] == 'closed' and not ticket['status'] == 'closed':
