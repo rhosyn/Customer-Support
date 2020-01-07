@@ -38,13 +38,13 @@ def add_ticket(ticket_dict, details, customer):
   
 @anvil.server.callable
 def add_message(message_dict, ticket):
-  print(dict(list(message_dict)))
-  print(dict(list(ticket)))
-#   app_tables.messages.add_row(
-#       date=datetime.now(),
-#       ticket=ticket,
-#       **message_dict
-#   )
+  app_tables.messages.add_row(
+      date=datetime.now(),
+      ticket=ticket,
+      **message_dict
+  )
+#   TODO: send email to customer if type is OUTGOING_EMAIL
+# TODO: call add_message when we receive an email from a customer, storing it as INCOMING_EMAIL
   
   
 @anvil.server.callable

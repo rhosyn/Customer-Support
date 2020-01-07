@@ -72,6 +72,15 @@ components:
     layout_properties: {}
     data_bindings:
     - {property: text, code: 'self.item[''agent''][''email'']'}
+  - type: Label
+    properties: {role: muted-text, align: left, tooltip: '', border: '', foreground: 'theme:Secondary
+        500', visible: true, text: CLOSED, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: closed_label
+    layout_properties: {}
+    data_bindings:
+    - {property: visible, code: 'self.item[''status''] == ''closed'''}
 - type: Label
   properties: {role: muted-text, align: left, tooltip: '', border: '', foreground: '#A9A9A9',
     visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,

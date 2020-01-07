@@ -10,7 +10,7 @@ from anvil.tables import app_tables
 required_customer_keys = ['name', 'title', 'company', 'email', 'phone']
 required_ticket_keys = ['title', 'priority', 'category', 'due', 'agent']
 required_ticket_settings_keys = ['title', 'status', 'priority', 'category', 'agent', 'due']
-required_message_keys = ['ticket', 'type', 'date', 'details']
+required_message_keys = ['type', 'details']
 
 def get_customer_errors(customer_dict):
   missing_keys = []

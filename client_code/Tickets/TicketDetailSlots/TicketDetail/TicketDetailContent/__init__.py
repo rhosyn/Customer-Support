@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime
-from .....Validation import Validation
+from ..... import Validation
 
 class TicketDetailContent(TicketDetailContentTemplate):
   def __init__(self, **properties):
@@ -25,8 +25,8 @@ class TicketDetailContent(TicketDetailContentTemplate):
     self.messages_repeating_panel.items = self.messages
     
   def populate_to_dropdown(self):
-    internal = app_tables.types.search(name="INTERNAL_NOTE")
-    external = app_tables.types.search(name="OUTGOING_EMAIL")
+    internal = app_tables.types.get(name="INTERNAL_NOTE")
+    external = app_tables.types.get(name="OUTGOING_EMAIL")
     self.to_dropdown.items = [(f"{self.item['customer']['name']} {self.item['customer']['last_name']}", external), ('Internal Note', internal)]
     self.message['type'] = external
 
@@ -48,8 +48,8 @@ class TicketDetailContent(TicketDetailContentTemplate):
       ))
     
   def cancel_reply_button_click(self, **event_args):
-    self.message = {}
-    self.refresh_data_bindings()
+    self.reply_details_box.text = ""
+    self.populate_to_dropdown()
     self.ticket_reply.visible = False
 
 
