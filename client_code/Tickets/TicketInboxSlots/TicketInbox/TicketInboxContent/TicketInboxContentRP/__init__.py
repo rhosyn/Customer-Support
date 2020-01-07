@@ -30,7 +30,7 @@ class TicketInboxContentRP(TicketInboxContentRPTemplate):
       self.parent.raise_event('x-select-ticket', ticket=self.item)
       self.role = "tickets-repeating-panel-selected"
     else:
-      self.parent.raise_event('x-select-ticket', ticket=self.item)
+      self.parent.raise_event('x-deselect-ticket', ticket=self.item)
       self.role = "tickets-repeating-panel"
 
 
