@@ -406,6 +406,19 @@ select::-ms-expand {
   margin-left: 10px;
   color: white;
 }
+
+/* Closed label for TicketInbox */
+.anvil-role-closed-label {
+  margin: -1vh 0 0 -20px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #00FEAF;
+  font-size: 1vh;
+}
+
+.anvil-role-closed-label .label-text {
+  margin-left: 10px;
+  color: white;
+}
 /* Style the clear button */
 /* .anvil-role-clear-button button {
     background-color: white;

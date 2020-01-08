@@ -15,3 +15,7 @@ class Avatar(AvatarTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    current_user = anvil.users.get_user()
+    self.name_label.text = current_user['name']
+
+    

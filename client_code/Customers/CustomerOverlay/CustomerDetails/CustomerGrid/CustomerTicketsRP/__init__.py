@@ -21,3 +21,8 @@ class CustomerTicketsRP(CustomerTicketsRPTemplate):
   def title_link_click(self, **event_args):
     homepage = get_open_form()
     homepage.open_ticket_details_form(item=self.item)
+    
+  def get_message(self):
+    messages = anvil.server.call('get_messages', self.item)
+    first_message = messages[len(messages) - 1]
+    return f"{first_message['details'][0:25]}..."

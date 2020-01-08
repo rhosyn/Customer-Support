@@ -18,8 +18,15 @@ class TicketInboxContentRP(TicketInboxContentRPTemplate):
 
     # Any code you write here will run when the form opens.
     self.date_label.text = self.item['date'].strftime("%d %b %Y")
-    self.overdue_label.visible = self.item['due'] < datetime.now()
-
+    if self.item['status'] is "closed":
+      self.status_label.visible = True
+      self.status_label.role = "closed-label"
+      self.status_label_text.text = "Closed"
+    elif self.item['due'] < datetime.now():
+      self.status_label.visible = True
+      self.status_label.role = "overdue-label"
+    else:
+      self.status_label.visible = False
 
   def ticket_title_link_click(self, **event_args):
     homepage = get_open_form()
